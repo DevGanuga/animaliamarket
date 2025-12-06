@@ -56,16 +56,10 @@ export function Header() {
             <nav className="hidden lg:flex items-center gap-1">
               <MegaMenu />
               <Link
-                href="/collections/all"
+                href="/collections"
                 className="px-4 py-2 text-[var(--stone-600)] hover:text-[var(--stone-800)] font-medium transition-colors"
               >
-                All Products
-              </Link>
-              <Link
-                href="/about"
-                className="px-4 py-2 text-[var(--stone-600)] hover:text-[var(--stone-800)] font-medium transition-colors"
-              >
-                About
+                Collections
               </Link>
             </nav>
 
@@ -174,14 +168,11 @@ export function Header() {
 
             <nav className="p-4 space-y-1">
               <p className="text-xs font-medium text-[var(--stone-500)] uppercase tracking-wider px-3 mb-2">
-                Shop
+                Shop by Pet
               </p>
               {[
-                { label: "All Products", href: "/collections/all" },
-                { label: "Dogs", href: "/collections/organic-canine-supplements-hip-and-joint" },
-                { label: "Cats", href: "/collections/calm-feline-supplements" },
-                { label: "Supplements", href: "/collections/organic-canine-supplements-hip-and-joint" },
-                { label: "Food", href: "/collections/canine-dry-foods" },
+                { label: "🐕 Dogs", href: "/collections/dog" },
+                { label: "🐱 Cats", href: "/collections/calm-feline-supplements" },
               ].map((link) => (
                 <Link
                   key={link.label}
@@ -196,13 +187,34 @@ export function Header() {
               <hr className="my-4 border-[var(--stone-200)]" />
 
               <p className="text-xs font-medium text-[var(--stone-500)] uppercase tracking-wider px-3 mb-2">
-                Info
+                Popular Brands
               </p>
               {[
-                { label: "About Us", href: "/about" },
-                { label: "Contact", href: "/contact" },
-                { label: "Shipping", href: "/shipping" },
-                { label: "Returns", href: "/returns" },
+                { label: "VetriScience", href: "/brands/vetriscience" },
+                { label: "Cosequin", href: "/brands/cosequin" },
+                { label: "The Honest Kitchen", href: "/brands/the-honest-kitchen" },
+                { label: "Stella & Chewy's", href: "/brands/stella-chewys" },
+                { label: "View All Brands", href: "/brands" },
+              ].map((link) => (
+                <Link
+                  key={link.label}
+                  href={link.href}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="block px-3 py-3 text-[var(--stone-700)] hover:bg-[var(--stone-50)] rounded-lg transition-colors"
+                >
+                  {link.label}
+                </Link>
+              ))}
+
+              <hr className="my-4 border-[var(--stone-200)]" />
+
+              <p className="text-xs font-medium text-[var(--stone-500)] uppercase tracking-wider px-3 mb-2">
+                Browse
+              </p>
+              {[
+                { label: "All Collections", href: "/collections" },
+                { label: "Supplements", href: "/collections/organic-supplements" },
+                { label: "Food", href: "/collections/organic-canine-food" },
               ].map((link) => (
                 <Link
                   key={link.label}

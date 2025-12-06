@@ -16,30 +16,28 @@ const menuData = {
       {
         title: "Food",
         links: [
-          { label: "Dry Food", href: "/collections/canine-dry-foods" },
-          { label: "Wet Food", href: "/collections/canine-wet-foods" },
-          { label: "Dehydrated", href: "/collections/canine-dehydrated-foods" },
-          { label: "Freeze-Dried", href: "/collections/canine-freeze-dried-foods" },
-          { label: "All Dog Food", href: "/collections/canine-dry-foods" },
+          { label: "Dry Food", href: "/collections/canine-dry-food" },
+          { label: "Wet Food", href: "/collections/canine-wet-food" },
+          { label: "Dehydrated", href: "/collections/canine-dehydrated-goods" },
+          { label: "All Dog Food", href: "/collections/organic-canine-food" },
         ],
       },
       {
         title: "Supplements",
         links: [
           { label: "Hip & Joint", href: "/collections/organic-canine-supplements-hip-and-joint" },
-          { label: "Calming", href: "/collections/calm-canine-supplements" },
-          { label: "Skin & Coat", href: "/collections/organic-canine-supplements-skin-and-coat" },
-          { label: "Digestive", href: "/collections/canine-digestive-supplements" },
-          { label: "All Supplements", href: "/collections/organic-canine-supplements-hip-and-joint" },
+          { label: "Calming", href: "/collections/dog" },
+          { label: "Skin & Coat", href: "/collections/dog" },
+          { label: "All Supplements", href: "/collections/organic-supplements" },
         ],
       },
       {
-        title: "Shop by Need",
+        title: "Popular Brands",
         links: [
-          { label: "Senior Dogs", href: "/collections/organic-canine-supplements-hip-and-joint" },
-          { label: "Puppies", href: "/collections/canine-dry-foods" },
-          { label: "Active Dogs", href: "/collections/organic-canine-supplements-hip-and-joint" },
-          { label: "Anxious Dogs", href: "/collections/calm-canine-supplements" },
+          { label: "VetriScience", href: "/brands/vetriscience" },
+          { label: "Cosequin", href: "/brands/cosequin" },
+          { label: "Grizzly", href: "/brands/grizzly-pet-products" },
+          { label: "View All Brands →", href: "/brands" },
         ],
       },
     ],
@@ -57,8 +55,8 @@ const menuData = {
         title: "Food",
         links: [
           { label: "Dry Food", href: "/collections/feline-dry-foods" },
-          { label: "Wet Food", href: "/collections/feline-wet-foods" },
-          { label: "Freeze-Dried", href: "/collections/feline-freeze-dried-foods" },
+          { label: "Dehydrated", href: "/collections/feline-dehydrated-goods" },
+          { label: "Freeze-Dried", href: "/collections/feline-freeze-dried-goods" },
           { label: "All Cat Food", href: "/collections/feline-dry-foods" },
         ],
       },
@@ -66,19 +64,56 @@ const menuData = {
         title: "Supplements",
         links: [
           { label: "Calming", href: "/collections/calm-feline-supplements" },
-          { label: "Hip & Joint", href: "/collections/feline-hip-and-joint-supplements" },
+          { label: "Hip & Joint", href: "/collections/feline-supplements-hip-joint" },
           { label: "Dental Health", href: "/collections/feline-dental-supplements" },
           { label: "Digestive", href: "/collections/feline-digestive-supplements" },
-          { label: "All Supplements", href: "/collections/calm-feline-supplements" },
         ],
       },
       {
-        title: "Shop by Need",
+        title: "Popular Brands",
         links: [
-          { label: "Senior Cats", href: "/collections/feline-hip-and-joint-supplements" },
-          { label: "Kittens", href: "/collections/feline-dry-foods" },
-          { label: "Indoor Cats", href: "/collections/calm-feline-supplements" },
-          { label: "Multi-Cat Homes", href: "/collections/calm-feline-supplements" },
+          { label: "Tiki Pets", href: "/brands/tiki-pets" },
+          { label: "Comfort Zone", href: "/brands/comfort-zone" },
+          { label: "Stella & Chewy's", href: "/brands/stella-chewys" },
+          { label: "View All Brands →", href: "/brands" },
+        ],
+      },
+    ],
+  },
+  brands: {
+    label: "Brands",
+    emoji: "✦",
+    featured: {
+      title: "New Arrivals",
+      description: "Latest products from top brands",
+      href: "/collections/frontpage",
+    },
+    columns: [
+      {
+        title: "Supplements",
+        links: [
+          { label: "VetriScience", href: "/brands/vetriscience" },
+          { label: "Cosequin", href: "/brands/cosequin" },
+          { label: "Pet Naturals", href: "/brands/pet-naturals-of-vermont" },
+          { label: "Grizzly", href: "/brands/grizzly-pet-products" },
+        ],
+      },
+      {
+        title: "Food & Nutrition",
+        links: [
+          { label: "The Honest Kitchen", href: "/brands/the-honest-kitchen" },
+          { label: "Stella & Chewy's", href: "/brands/stella-chewys" },
+          { label: "Vital Essentials", href: "/brands/vital-essentials" },
+          { label: "Tiki Pets", href: "/brands/tiki-pets" },
+        ],
+      },
+      {
+        title: "Dental & Wellness",
+        links: [
+          { label: "Ark Naturals", href: "/brands/ark-naturals" },
+          { label: "Greenies", href: "/brands/greenies" },
+          { label: "Comfort Zone", href: "/brands/comfort-zone" },
+          { label: "All Brands →", href: "/brands" },
         ],
       },
     ],
@@ -138,7 +173,11 @@ export function MegaMenu() {
                         <li key={link.label}>
                           <Link
                             href={link.href}
-                            className="text-[var(--stone-600)] hover:text-[var(--sage-600)] transition-colors text-sm"
+                            className={`transition-colors text-sm ${
+                              link.label.includes("→") 
+                                ? "text-[var(--sage-600)] hover:text-[var(--sage-700)] font-medium"
+                                : "text-[var(--stone-600)] hover:text-[var(--sage-600)]"
+                            }`}
                           >
                             {link.label}
                           </Link>
@@ -174,10 +213,10 @@ export function MegaMenu() {
               {/* Bottom Bar */}
               <div className="mt-6 pt-4 border-t border-[var(--stone-100)] flex items-center justify-between">
                 <Link
-                  href={key === "dogs" ? "/collections/organic-canine-supplements-hip-and-joint" : "/collections/calm-feline-supplements"}
+                  href={key === "brands" ? "/brands" : key === "dogs" ? "/collections/dog" : "/collections/calm-feline-supplements"}
                   className="text-sm font-medium text-[var(--sage-600)] hover:text-[var(--sage-700)] flex items-center gap-1"
                 >
-                  View All {menu.label}
+                  {key === "brands" ? "Browse All Brands" : `View All ${menu.label}`}
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
@@ -193,7 +232,7 @@ export function MegaMenu() {
                     <svg className="w-4 h-4 text-[var(--sage-500)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                     </svg>
-                    Vet approved
+                    Trusted brands only
                   </span>
                 </div>
               </div>

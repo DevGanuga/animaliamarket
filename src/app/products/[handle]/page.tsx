@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import { storefrontClient } from "@/lib/shopify/client";
 import { GET_PRODUCT_BY_HANDLE } from "@/lib/shopify/queries/products";
 import { Header, Footer } from "@/components/layout";
@@ -67,7 +68,10 @@ async function getProductData(handle: string): Promise<FetchResult> {
       { handle }
     );
     
-    if (errors && errors.length > 0) {
+    // Only treat as error if we have no data at all
+    // GraphQL can return partial data with some errors (e.g., missing metafields)
+    if (!data?.product && errors && errors.length > 0) {
+      console.error(`Product fetch errors for ${handle}:`, errors);
       return { product: null, error: true };
     }
     
@@ -198,8 +202,68 @@ export default async function ProductPage({ params }: ProductPageProps) {
           description={product.descriptionHtml}
           vendor={product.vendor}
         />
+      </div>
 
-        {/* Related Products */}
+      {/* Trust Section */}
+      <section className="bg-white py-16 border-y border-[var(--stone-100)]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="font-serif text-2xl lg:text-3xl text-[var(--stone-800)] mb-3">
+              Why Pet Parents Trust Animalia
+            </h2>
+            <p className="text-[var(--stone-600)]">Quality you can count on</p>
+          </div>
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              { icon: "🩺", title: "Vet Formulated", desc: "Developed with veterinary experts" },
+              { icon: "🌿", title: "Natural Ingredients", desc: "No artificial fillers or additives" },
+              { icon: "✅", title: "Quality Tested", desc: "Third-party verified for purity" },
+              { icon: "🇺🇸", title: "Made in USA", desc: "Manufactured in certified facilities" },
+            ].map((item) => (
+              <div key={item.title} className="text-center">
+                <span className="text-4xl mb-4 block">{item.icon}</span>
+                <h3 className="font-semibold text-[var(--stone-800)] mb-2">{item.title}</h3>
+                <p className="text-sm text-[var(--stone-600)]">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Lifestyle Banner */}
+      <section className="relative h-[40vh] min-h-[300px]">
+        <Image
+          src="/images/lifestyle-family.jpg"
+          alt="Happy pets with their family"
+          fill
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-[var(--stone-900)]/70 to-transparent" />
+        <div className="absolute inset-0 flex items-center">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div className="max-w-lg">
+              <h2 className="font-serif text-3xl lg:text-4xl text-white mb-4">
+                For Pets Who Are Family
+              </h2>
+              <p className="text-white/90 mb-6">
+                Every product we carry is one we&apos;d give our own pets. That&apos;s our promise.
+              </p>
+              <Link
+                href="/about"
+                className="inline-flex items-center gap-2 text-white font-medium hover:gap-3 transition-all"
+              >
+                Learn About Our Mission
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Related Products */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <RelatedProducts
           productType={product.productType}
           currentProductId={product.id}

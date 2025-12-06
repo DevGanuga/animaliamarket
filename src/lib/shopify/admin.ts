@@ -338,13 +338,15 @@ export async function getAllProducts(): Promise<AdminProductFull[]> {
     }
   `;
 
+  type ProductsResponse = {
+    products: {
+      edges: { node: AdminProductFull }[];
+      pageInfo: { hasNextPage: boolean; endCursor: string | null };
+    };
+  };
+
   while (hasNextPage) {
-    const data = await adminFetch<{
-      products: {
-        edges: { node: AdminProductFull }[];
-        pageInfo: { hasNextPage: boolean; endCursor: string | null };
-      };
-    }>({
+    const data: ProductsResponse = await adminFetch<ProductsResponse>({
       query,
       variables: { first: 50, after: cursor },
     });
@@ -388,13 +390,15 @@ export async function getAllCollections(): Promise<AdminCollection[]> {
     }
   `;
 
+  type CollectionsResponse = {
+    collections: {
+      edges: { node: AdminCollection }[];
+      pageInfo: { hasNextPage: boolean; endCursor: string | null };
+    };
+  };
+
   while (hasNextPage) {
-    const data = await adminFetch<{
-      collections: {
-        edges: { node: AdminCollection }[];
-        pageInfo: { hasNextPage: boolean; endCursor: string | null };
-      };
-    }>({
+    const data: CollectionsResponse = await adminFetch<CollectionsResponse>({
       query,
       variables: { first: 50, after: cursor },
     });

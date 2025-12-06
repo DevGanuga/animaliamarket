@@ -53,7 +53,10 @@ async function getCollectionData(handle: string): Promise<FetchResult> {
       { handle, first: 100 }
     );
     
-    if (errors && errors.length > 0) {
+    // Only treat as error if we have no data at all
+    // GraphQL can return partial data with some errors
+    if (!data?.collection && errors && errors.length > 0) {
+      console.error(`Collection fetch errors for ${handle}:`, errors);
       return { collection: null, error: true };
     }
     

@@ -31,6 +31,7 @@ const PRODUCT_CARD_FRAGMENT = `
     description
     availableForSale
     vendor
+    tags
     priceRange {
       minVariantPrice {
         amount

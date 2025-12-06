@@ -1,0 +1,107 @@
+{
+  "generated": "2025-12-06T12:03:12.445Z",
+  "images": [
+    {
+      "id": "hero-main",
+      "filename": "hero-main.jpg",
+      "path": "/images/hero-main.jpg",
+      "category": "hero"
+    },
+    {
+      "id": "hero-wellness",
+      "filename": "hero-wellness.jpg",
+      "path": "/images/hero-wellness.jpg",
+      "category": "hero"
+    },
+    {
+      "id": "collection-dogs",
+      "filename": "collection-dogs.jpg",
+      "path": "/images/collection-dogs.jpg",
+      "category": "collection"
+    },
+    {
+      "id": "collection-dog-supplements",
+      "filename": "collection-dog-supplements.jpg",
+      "path": "/images/collection-dog-supplements.jpg",
+      "category": "collection"
+    },
+    {
+      "id": "collection-dog-joint",
+      "filename": "collection-dog-joint.jpg",
+      "path": "/images/collection-dog-joint.jpg",
+      "category": "collection"
+    },
+    {
+      "id": "collection-dog-calming",
+      "filename": "collection-dog-calming.jpg",
+      "path": "/images/collection-dog-calming.jpg",
+      "category": "collection"
+    },
+    {
+      "id": "collection-cats",
+      "filename": "collection-cats.jpg",
+      "path": "/images/collection-cats.jpg",
+      "category": "collection"
+    },
+    {
+      "id": "collection-cat-supplements",
+      "filename": "collection-cat-supplements.jpg",
+      "path": "/images/collection-cat-supplements.jpg",
+      "category": "collection"
+    },
+    {
+      "id": "collection-cat-calming",
+      "filename": "collection-cat-calming.jpg",
+      "path": "/images/collection-cat-calming.jpg",
+      "category": "collection"
+    },
+    {
+      "id": "lifestyle-family",
+      "filename": "lifestyle-family.jpg",
+      "path": "/images/lifestyle-family.jpg",
+      "category": "lifestyle"
+    },
+    {
+      "id": "lifestyle-outdoor",
+      "filename": "lifestyle-outdoor.jpg",
+      "path": "/images/lifestyle-outdoor.jpg",
+      "category": "lifestyle"
+    },
+    {
+      "id": "lifestyle-vet-approved",
+      "filename": "lifestyle-vet-approved.jpg",
+      "path": "/images/lifestyle-vet-approved.jpg",
+      "category": "lifestyle"
+    },
+    {
+      "id": "feature-ingredients",
+      "filename": "feature-ingredients.jpg",
+      "path": "/images/feature-ingredients.jpg",
+      "category": "feature"
+    },
+    {
+      "id": "feature-quality",
+      "filename": "feature-quality.jpg",
+      "path": "/images/feature-quality.jpg",
+      "category": "feature"
+    },
+    {
+      "id": "about-story",
+      "filename": "about-story.jpg",
+      "path": "/images/about-story.jpg",
+      "category": "feature"
+    },
+    {
+      "id": "category-food",
+      "filename": "category-food.jpg",
+      "path": "/images/category-food.jpg",
+      "category": "collection"
+    },
+    {
+      "id": "category-treats",
+      "filename": "category-treats.jpg",
+      "path": "/images/category-treats.jpg",
+      "category": "collection"
+    }
+  ]
+}
