@@ -1,0 +1,2178 @@
+{
+  "timestamp": "2025-12-07T10:36:36.765Z",
+  "toActivate": [
+    {
+      "id": "gid://shopify/Product/10166421651758",
+      "title": "Ark Naturals Dog Joint Rescue Beef 9Oz",
+      "vendor": "Ark Naturals",
+      "price": "23.99",
+      "inventory": 33,
+      "collections": [
+        "organic-canine-supplements-hip-and-joint"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166421717294",
+      "title": "Ark Naturals Dog Joint Rescue Lamb 9Oz",
+      "vendor": "Ark Naturals",
+      "price": "23.99",
+      "inventory": 26,
+      "collections": [
+        "organic-canine-supplements-hip-and-joint"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166421750062",
+      "title": "Ark Naturals Dog Joint Rescue Venison 9Oz",
+      "vendor": "Ark Naturals",
+      "price": "26.99",
+      "inventory": 24,
+      "collections": [
+        "organic-canine-supplements-hip-and-joint"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166421881134",
+      "title": "Cosequin Joint Supplement With MSM Chews For Dogs 120 Count",
+      "vendor": "Cosequin",
+      "price": "75.99",
+      "inventory": 62,
+      "collections": [
+        "organic-canine-supplements-hip-and-joint"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166421913902",
+      "title": "Cosequin Joint Supplement With MSM Chews For Dogs 60 Count",
+      "vendor": "Cosequin",
+      "price": "42.99",
+      "inventory": 698,
+      "collections": [
+        "organic-canine-supplements-hip-and-joint"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166421946670",
+      "title": "Cosequin Joint Supplement With MSM Mini Chews 4 Count",
+      "vendor": "Cosequin",
+      "price": "24.99",
+      "inventory": 119,
+      "collections": [
+        "organic-canine-supplements-hip-and-joint"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166421979438",
+      "title": "Cosequin Joint Supplement With MSM Tabs For Dogs 120 Count",
+      "vendor": "Cosequin",
+      "price": "67.99",
+      "inventory": 45,
+      "collections": [
+        "organic-canine-supplements-hip-and-joint"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166422012206",
+      "title": "Cosequin Joint Supplement With MSM Tabs For Dogs 60 Count",
+      "vendor": "Cosequin",
+      "price": "36.99",
+      "inventory": 205,
+      "collections": [
+        "organic-canine-supplements-hip-and-joint"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166422044974",
+      "title": "Cosequin Senior Joint Chews For Dogs 60 Count",
+      "vendor": "Cosequin",
+      "price": "44.99",
+      "inventory": 71,
+      "collections": [
+        "organic-canine-supplements-hip-and-joint"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166422143278",
+      "title": "Flexadin Advanced W/UCII Collagen Joint Supplement 30 Ct",
+      "vendor": "Flexadine Advanced",
+      "price": "56.99",
+      "inventory": 91,
+      "collections": [
+        "organic-canine-supplements-hip-and-joint"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166423224622",
+      "title": "Flexadin Advanced withUcii Collagen Joint Supplement 60 Ct",
+      "vendor": "Flexadine Advanced",
+      "price": "106.99",
+      "inventory": 120,
+      "collections": [
+        "organic-canine-supplements-hip-and-joint"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166423355694",
+      "title": "Grizzly Dog Joint Aid Liquid 16oz.",
+      "vendor": "Grizzly Pet Products",
+      "price": "28.99",
+      "inventory": 188,
+      "collections": [
+        "organic-canine-supplements-hip-and-joint"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166423388462",
+      "title": "Grizzly Dog Joint Aid Liquid 32oz.",
+      "vendor": "Grizzly Pet Products",
+      "price": "48.99",
+      "inventory": 37,
+      "collections": [
+        "organic-canine-supplements-hip-and-joint"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166423716142",
+      "title": "Nootie Dog Progility Max Calm Melatonin 90 Count",
+      "vendor": "Nootie",
+      "price": "46.99",
+      "inventory": 254,
+      "collections": [
+        "organic-canine-supplements-hip-and-joint"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166423748910",
+      "title": "Nootie Dog Progility Max Hip And Joint Turmeric 90 Count",
+      "vendor": "Nootie",
+      "price": "46.99",
+      "inventory": 213,
+      "collections": [
+        "organic-canine-supplements-hip-and-joint"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166423814446",
+      "title": "Nupro Joint Supplement 30 Oz..",
+      "vendor": "Nupro",
+      "price": "43.99",
+      "inventory": 66,
+      "collections": [
+        "organic-canine-supplements-hip-and-joint"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166423847214",
+      "title": "Nupro Joint Supplement 5 Lbs.",
+      "vendor": "Nupro",
+      "price": "95.99",
+      "inventory": 83,
+      "collections": [
+        "organic-canine-supplements-hip-and-joint"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166423879982",
+      "title": "Nupro Joint Support For Dogs 1 Lbs.",
+      "vendor": "Nupro",
+      "price": "27.99",
+      "inventory": 26,
+      "collections": [
+        "organic-canine-supplements-hip-and-joint"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166424043822",
+      "title": "Pet Naturals Of Vermont Dog Max Chewable Hip And Joint 60Ct",
+      "vendor": "Pet Naturals of Vermont",
+      "price": "34.99",
+      "inventory": 48,
+      "collections": [
+        "organic-canine-supplements-hip-and-joint"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166424076590",
+      "title": "Pet Releaf Hip & Joint Edibites Cbd Dog 2.5oz. Peanut Butter Banana 3Mg Travel",
+      "vendor": "Pet Releaf",
+      "price": "10.99",
+      "inventory": 36,
+      "collections": [
+        "organic-canine-supplements-hip-and-joint"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166424109358",
+      "title": "Pet Releaf Hip & Joint Edibites Cbd Medium /Large Dog 7.5oz. Peanut Butter Banana 6Mg",
+      "vendor": "Pet Releaf",
+      "price": "31.99",
+      "inventory": 36,
+      "collections": [
+        "organic-canine-supplements-hip-and-joint"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166424142126",
+      "title": "Pet Releaf Hip & Joint Edibites Cbd Small Dog 7.5oz. Peanut Butter Banana 3Mg",
+      "vendor": "Pet Releaf",
+      "price": "25.99",
+      "inventory": 36,
+      "collections": [
+        "organic-canine-supplements-hip-and-joint"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166424174894",
+      "title": "Pets Prefer Flex Max Soft Chews for Dogs 30 count",
+      "vendor": "Pets Prefer",
+      "price": "19.99",
+      "inventory": 317,
+      "collections": [
+        "organic-canine-supplements-hip-and-joint"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166424240430",
+      "title": "Pollock Oil For Dogs Pollock 8oz.",
+      "vendor": "Alaska Naturals",
+      "price": "19.99",
+      "inventory": 54,
+      "collections": [
+        "organic-canine-supplements-hip-and-joint"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166424469806",
+      "title": "Salmon Oil Formula For Dogs Salmon 15.5oz.",
+      "vendor": "Alaska Naturals",
+      "price": "30.99",
+      "inventory": 245,
+      "collections": [
+        "organic-canine-supplements-hip-and-joint"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166424502574",
+      "title": "Salmon Oil Formula For Dogs Salmon 32oz.",
+      "vendor": "Alaska Naturals",
+      "price": "55.99",
+      "inventory": 94,
+      "collections": [
+        "organic-canine-supplements-hip-and-joint"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166424535342",
+      "title": "Salmon Oil Formula For Dogs Salmon 64oz.",
+      "vendor": "Alaska Naturals",
+      "price": "117.99",
+      "inventory": 68,
+      "collections": [
+        "organic-canine-supplements-hip-and-joint"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166424633646",
+      "title": "Salmon Oil Formula For Dogs Salmon 8oz.",
+      "vendor": "Alaska Naturals",
+      "price": "22.99",
+      "inventory": 259,
+      "collections": [
+        "organic-canine-supplements-hip-and-joint"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166428369198",
+      "title": "Against the Grain Hand Pulled Adult Wet Dog Food Beef w/Gravy 12oz",
+      "vendor": "Against the Grain",
+      "price": "65.99",
+      "inventory": 120,
+      "collections": [
+        "canine-wet-food",
+        "organic-canine-food"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166428434734",
+      "title": "Against the Grain Nothing Else 100% One Ingredient Adult Wet Dog Food Beef 11oz",
+      "vendor": "Against the Grain",
+      "price": "42.99",
+      "inventory": 192,
+      "collections": [
+        "canine-wet-food",
+        "organic-canine-food"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166428467502",
+      "title": "Against the Grain Nothing Else 100% One Ingredient Adult Wet Dog Food Chicken 11oz",
+      "vendor": "Against the Grain",
+      "price": "42.99",
+      "inventory": 348,
+      "collections": [
+        "canine-wet-food",
+        "organic-canine-food"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166428500270",
+      "title": "Against the Grain Nothing Else 100% One Ingredient Adult Wet Dog Food Duck 11oz",
+      "vendor": "Against the Grain",
+      "price": "42.99",
+      "inventory": 444,
+      "collections": [
+        "canine-wet-food",
+        "organic-canine-food"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166428565806",
+      "title": "Against the Grain Nothing Else 100% One Ingredient Adult Wet Dog Food Pork 11oz",
+      "vendor": "Against the Grain",
+      "price": "42.99",
+      "inventory": 1272,
+      "collections": [
+        "canine-wet-food",
+        "organic-canine-food"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166428598574",
+      "title": "Against the Grain Nothing Else 100% One Ingredient Adult Wet Dog Food Salmon 11oz",
+      "vendor": "Against the Grain",
+      "price": "42.99",
+      "inventory": 1092,
+      "collections": [
+        "canine-wet-food",
+        "organic-canine-food"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166428696878",
+      "title": "Against the Grain The Good Egg Bacon and Eggs Canned Dog Food 12ea/10.5 oz (Case of 12)",
+      "vendor": "Against the Grain",
+      "price": "65.99",
+      "inventory": 372,
+      "collections": [
+        "canine-wet-food",
+        "organic-canine-food"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166428729646",
+      "title": "Against the Grain The Good Egg Denver Omelet Canned Dog Food 12ea/10.5 oz (Case of 12)",
+      "vendor": "Against the Grain",
+      "price": "65.99",
+      "inventory": 264,
+      "collections": [
+        "canine-wet-food",
+        "organic-canine-food"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166428762414",
+      "title": "Against the Grain The Good Egg Steak 'n' Egg Canned Dog Food 12ea/10.5 oz (Case of 12)",
+      "vendor": "Against the Grain",
+      "price": "65.99",
+      "inventory": 588,
+      "collections": [
+        "canine-wet-food",
+        "organic-canine-food"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166428827950",
+      "title": "ARTH ANIMAL DOG WISDOM AIR-DRIED FROM THE SEED 8LB",
+      "vendor": "Earth Animal",
+      "price": "151.99",
+      "inventory": 14,
+      "collections": [
+        "canine-dry-food",
+        "organic-canine-food"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166428893486",
+      "title": "Bff Dog I'M In Luck Rice & Duck Cup 2.7oz. (Case of 12)",
+      "vendor": "BFF",
+      "price": "28.99",
+      "inventory": 113,
+      "collections": [
+        "canine-wet-food",
+        "organic-canine-food"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166428926254",
+      "title": "Bff Dog Kiss Me Thrice Chicken, Veggies & Rice Cup 2.7oz. (Case of 12)",
+      "vendor": "BFF",
+      "price": "28.99",
+      "inventory": 79,
+      "collections": [
+        "canine-wet-food",
+        "organic-canine-food"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166428991790",
+      "title": "Bff Dog Oh So Nice Beef & Rice Cup 2.7oz. (Case of 12)",
+      "vendor": "BFF",
+      "price": "28.99",
+      "inventory": 89,
+      "collections": [
+        "canine-wet-food",
+        "organic-canine-food"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166439018798",
+      "title": "Primal Pet Foods Freeze Dried Food For Cats 5.5oz. Rabbit",
+      "vendor": "Primal Pet Food",
+      "price": "23.99",
+      "inventory": 17,
+      "collections": [
+        "feline-dehydrated-goods"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166439051566",
+      "title": "Savage Cat Dog Cat Dehydrated Rabbit Strips & Scalp Chips 3oz.",
+      "vendor": "Savage Cat",
+      "price": "20.99",
+      "inventory": 36,
+      "collections": [
+        "feline-dehydrated-goods"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166439084334",
+      "title": "Steves Cat Quest Freeze Dried Nuggets Chicken 10oz.",
+      "vendor": "Steves Real Food",
+      "price": "24.99",
+      "inventory": 12,
+      "collections": [
+        "feline-dehydrated-goods"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166439117102",
+      "title": "Steves Cat Quest Freeze Dried Nuggets Pork 10oz.",
+      "vendor": "Steves Real Food",
+      "price": "24.99",
+      "inventory": 27,
+      "collections": [
+        "feline-dehydrated-goods"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166439149870",
+      "title": "Steves Cat Quest Freeze Dried Nuggets Whitefish 10oz.",
+      "vendor": "Steves Real Food",
+      "price": "29.99",
+      "inventory": 34,
+      "collections": [
+        "feline-dehydrated-goods"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166444261678",
+      "title": "Buttons & Bows Cat Food Chicken 20 Lb",
+      "vendor": "Buttons & Bows",
+      "price": "30.99",
+      "inventory": 100,
+      "collections": [
+        "feline-dry-foods"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166444294446",
+      "title": "Buttons & Bows Gourmet Blend Cat Food 18 Lb",
+      "vendor": "Buttons & Bows",
+      "price": "28.99",
+      "inventory": 79,
+      "collections": [
+        "feline-dry-foods"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166444327214",
+      "title": "Dave's Pet Food Naturally Healthy Adult Dry Cat Food 20 Lbs.",
+      "vendor": "Daves Pet Food",
+      "price": "79.99",
+      "inventory": 18,
+      "collections": [
+        "feline-dry-foods"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166444425518",
+      "title": "Daves Cats Naturally Healthy Adult Dog Food 4 Lbs",
+      "vendor": "Daves Pet Food",
+      "price": "25.99",
+      "inventory": 56,
+      "collections": [
+        "feline-dry-foods"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166444458286",
+      "title": "Daves Pet Food Naturally Healthy Adult Dry Cat Food 4 Lbs.",
+      "vendor": "Daves Pet Food",
+      "price": "21.99",
+      "inventory": 93,
+      "collections": [
+        "feline-dry-foods"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166444687662",
+      "title": "Feline Natural Cat Grain Free Beef & Hoki 3oz.",
+      "vendor": "K9 Naturals",
+      "price": "92.99",
+      "inventory": 27,
+      "collections": [
+        "feline-dry-foods"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166444720430",
+      "title": "Feline Natural Cat Grain Free Beef 3oz.",
+      "vendor": "K9 Naturals",
+      "price": "92.99",
+      "inventory": 18,
+      "collections": [
+        "feline-dry-foods"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166444753198",
+      "title": "Feline Natural Cat Grain Free Chicken & Venison 3oz.",
+      "vendor": "K9 Naturals",
+      "price": "92.99",
+      "inventory": 41,
+      "collections": [
+        "feline-dry-foods"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166444818734",
+      "title": "Feline Natural Cat Grain Free Chicken 3oz.",
+      "vendor": "K9 Naturals",
+      "price": "92.99",
+      "inventory": 24,
+      "collections": [
+        "feline-dry-foods"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166444851502",
+      "title": "Feline Natural Cat Grain Free Lamb 3oz.",
+      "vendor": "K9 Naturals",
+      "price": "92.99",
+      "inventory": 17,
+      "collections": [
+        "feline-dry-foods"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166444917038",
+      "title": "Feline Natural Cat Grain Free Lamb Salmon 3oz.",
+      "vendor": "K9 Naturals",
+      "price": "92.99",
+      "inventory": 23,
+      "collections": [
+        "feline-dry-foods"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166444949806",
+      "title": "Feline Natural Cat Grain Free Lamb Salmon 3oz. Pouch (Case of 12)",
+      "vendor": "K9 Naturals",
+      "price": "40.99",
+      "inventory": 38,
+      "collections": [
+        "feline-dry-foods"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166455042350",
+      "title": "Comfort Zone Comfort Zone Cat Calming Collar White, 1ea/2 pk",
+      "vendor": "Comfort Zone",
+      "price": "44.99",
+      "inventory": 104,
+      "collections": [
+        "calm-feline-supplements"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166455107886",
+      "title": "Comfort Zone Comfort Zone Cat Calming Collar White, 1ea/Single pk",
+      "vendor": "Comfort Zone",
+      "price": "26.99",
+      "inventory": 283,
+      "collections": [
+        "calm-feline-supplements"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166455140654",
+      "title": "Comfort Zone Comfort Zone Cat Calming Diffuser 1ea/2Diffusers And 21.62 Fl Oz 48Ml Refills",
+      "vendor": "Comfort Zone",
+      "price": "49.99",
+      "inventory": 74,
+      "collections": [
+        "calm-feline-supplements"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166455206190",
+      "title": "Comfort Zone Comfort Zone Cat Calming Diffuser Refills 1ea/1 pk, 48 ml, 30 Day Use",
+      "vendor": "Comfort Zone",
+      "price": "20.99",
+      "inventory": 147,
+      "collections": [
+        "calm-feline-supplements"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166455238958",
+      "title": "Comfort Zone Comfort Zone Cat Calming Diffuser Refills 1ea/2 pk, 48 ml, 60 Day Use",
+      "vendor": "Comfort Zone",
+      "price": "33.99",
+      "inventory": 134,
+      "collections": [
+        "calm-feline-supplements"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166455271726",
+      "title": "Comfort Zone Comfort Zone Cat Calming Diffuser Single Diffuser Kit, 1 Diffuser, 1 Refill, 1ea/1 Diffuser And 1 Refill",
+      "vendor": "Comfort Zone",
+      "price": "33.99",
+      "inventory": 207,
+      "collections": [
+        "calm-feline-supplements"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166455304494",
+      "title": "Comfort Zone Comfort Zone Multi Cat Calming Diffuser 1ea/Two pk Diffuser Kit",
+      "vendor": "Comfort Zone",
+      "price": "49.99",
+      "inventory": 111,
+      "collections": [
+        "calm-feline-supplements"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166455337262",
+      "title": "Comfort Zone Comfort Zone Multi Cat Calming Diffuser Refills 1pack 1ea/1 Refill",
+      "vendor": "Comfort Zone",
+      "price": "20.99",
+      "inventory": 101,
+      "collections": [
+        "calm-feline-supplements"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166455370030",
+      "title": "Comfort Zone Comfort Zone Multi Cat Calming Diffuser Refills 1pack 1ea/2 pk",
+      "vendor": "Comfort Zone",
+      "price": "33.99",
+      "inventory": 103,
+      "collections": [
+        "calm-feline-supplements"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166455435566",
+      "title": "Comfort Zone Comfort Zone Multi Cat Calming Diffuser Single Diffuser Kit, 1 Diffuser, 1 Refill, 1ea/1Diffuser And 11.62 Fl Oz 48Ml",
+      "vendor": "Comfort Zone",
+      "price": "33.99",
+      "inventory": 171,
+      "collections": [
+        "calm-feline-supplements"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166455501102",
+      "title": "Comfort Zone Comfort Zone Scratch Deterrent and Cat Calming Spray, 2 ounces59.2 mL 1ea/2 oz",
+      "vendor": "Comfort Zone",
+      "price": "16.99",
+      "inventory": 331,
+      "collections": [
+        "calm-feline-supplements"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166455566638",
+      "title": "Pet Naturals Of Vermont Cat Chewable Calm 30Ct",
+      "vendor": "Pet Naturals of Vermont",
+      "price": "9.99",
+      "inventory": 114,
+      "collections": [
+        "calm-feline-supplements"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166455632174",
+      "title": "SENTRY Behavior Calming Spray for Cats 1ea/1.62 oz",
+      "vendor": "SENTRY",
+      "price": "20.99",
+      "inventory": 53,
+      "collections": [
+        "calm-feline-supplements"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166455697710",
+      "title": "SENTRY Calming Chews for Cats 1ea/4 oz",
+      "vendor": "SENTRY",
+      "price": "11.99",
+      "inventory": 20,
+      "collections": [
+        "calm-feline-supplements"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166455730478",
+      "title": "SENTRY Calming Collar for Cats Purple 1ea/1 ct, One Size",
+      "vendor": "Sentry",
+      "price": "17.99",
+      "inventory": 86,
+      "collections": [
+        "calm-feline-supplements"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166455796014",
+      "title": "SENTRY Stop That Behavior Correction Cat Spray 1ea/1 fl oz",
+      "vendor": "SENTRY",
+      "price": "17.99",
+      "inventory": 46,
+      "collections": [
+        "calm-feline-supplements"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166455828782",
+      "title": "Ark Naturals Cat Dental Chews Kiss Me-Ow Cleaning Chicken 3oz.",
+      "vendor": "Ark Naturals",
+      "price": "4.99",
+      "inventory": 500,
+      "collections": [
+        "feline-dental-supplements"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166455894318",
+      "title": "Ark Naturals Cat Dental Chews Kiss Me-Ow Cleaning Chicken 6oz.",
+      "vendor": "Ark Naturals",
+      "price": "6.99",
+      "inventory": 331,
+      "collections": [
+        "feline-dental-supplements"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166455959854",
+      "title": "Ark Naturals Cat Dental Chews Kiss Me-Ow Cleaning Tuna 3oz.",
+      "vendor": "Ark Naturals",
+      "price": "4.99",
+      "inventory": 520,
+      "collections": [
+        "feline-dental-supplements"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166455992622",
+      "title": "Ark Naturals Cat Dental Chews Kiss Me-Ow Cleaning Tuna 6oz.",
+      "vendor": "Ark Naturals",
+      "price": "6.99",
+      "inventory": 310,
+      "collections": [
+        "feline-dental-supplements"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166456058158",
+      "title": "Ark Naturals Cat Dental Chews Kiss Me-Ow Strengthing Chicken 3oz.",
+      "vendor": "Ark Naturals",
+      "price": "4.99",
+      "inventory": 607,
+      "collections": [
+        "feline-dental-supplements"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166456090926",
+      "title": "Ark Naturals Cat Dental Chews Kiss Me-Ow Strengthing Chicken 6oz.",
+      "vendor": "Ark Naturals",
+      "price": "6.99",
+      "inventory": 294,
+      "collections": [
+        "feline-dental-supplements"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166456123694",
+      "title": "Ark Naturals Cat Dental Chews Kiss Me-Ow Strengthing Tuna 3oz.",
+      "vendor": "Ark Naturals",
+      "price": "4.99",
+      "inventory": 722,
+      "collections": [
+        "feline-dental-supplements"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166456156462",
+      "title": "Ark Naturals Cat Dental Chews Kiss Me-Ow Strengthing Tuna 6oz.",
+      "vendor": "Ark Naturals",
+      "price": "6.99",
+      "inventory": 121,
+      "collections": [
+        "feline-dental-supplements"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166456287534",
+      "title": "Greenies Feline Adult Cat Dental Treats Tempting Tuna, 1ea/21 oz",
+      "vendor": "Greenies",
+      "price": "29.99",
+      "inventory": 155,
+      "collections": [
+        "feline-dental-supplements"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166456353070",
+      "title": "Nylabone Advanced Oral Care Cat Dental Kit Original, 1ea/2.5 oz 3 ct",
+      "vendor": "Nylabone",
+      "price": "9.99",
+      "inventory": 283,
+      "collections": [
+        "feline-dental-supplements"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166456385838",
+      "title": "Petrodex Dental Care Kit for Cats with Malt Toothpaste 1ea/Toothpaste: 2.5 oz",
+      "vendor": "Petrodex",
+      "price": "9.99",
+      "inventory": 56,
+      "collections": [
+        "feline-dental-supplements"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166456418606",
+      "title": "Proden Cat Plaqueoff Bites Kitten 3oz",
+      "vendor": "ProDen Plaqueoff",
+      "price": "11.99",
+      "inventory": 19,
+      "collections": [
+        "feline-dental-supplements"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166456451374",
+      "title": "Proden Cat Plaqueoff Chew 45 Count",
+      "vendor": "ProDen Plaqueoff",
+      "price": "16.99",
+      "inventory": 74,
+      "collections": [
+        "feline-dental-supplements"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166456484142",
+      "title": "ProDen Dog Vegetable Fusion Display 26 Piece",
+      "vendor": "ProDen Plaqueoff",
+      "price": "39.99",
+      "inventory": 22,
+      "collections": [
+        "feline-dental-supplements"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166456516910",
+      "title": "Proden Plaqueoff Cat 40 Grams",
+      "vendor": "ProDen Plaqueoff",
+      "price": "17.99",
+      "inventory": 93,
+      "collections": [
+        "feline-dental-supplements"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166456549678",
+      "title": "Synergy Labs Dental Fresh for Cats 1ea/8 Fl. oz",
+      "vendor": "Synergy Labs",
+      "price": "8.99",
+      "inventory": 16,
+      "collections": [
+        "feline-dental-supplements"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166456942894",
+      "title": "Tropiclean Cat Enticers Cleaning Gel Chicken 2Oz",
+      "vendor": "Tiki Pets",
+      "price": "12.99",
+      "inventory": 29,
+      "collections": [
+        "feline-dental-supplements"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166457139502",
+      "title": "TropiClean Fresh Breath Oral Care Water Additive for Cats 1ea/16 Fl. oz",
+      "vendor": "TropiClean",
+      "price": "14.99",
+      "inventory": 30,
+      "collections": [
+        "feline-dental-supplements"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166457172270",
+      "title": "TropiClean Fresh Breath Oral Care Water Additive for Cats 1ea/2.2 Fl. oz",
+      "vendor": "TropiClean",
+      "price": "12.99",
+      "inventory": 31,
+      "collections": [
+        "feline-dental-supplements"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166457303342",
+      "title": "discontinued",
+      "vendor": "VetriScience",
+      "price": "10.99",
+      "inventory": 12,
+      "collections": [
+        "feline-digestive-supplements"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166457336110",
+      "title": "Pet Naturals Of Vermont - Daily Digest Cat Chews",
+      "vendor": "Pet Naturals of Vermont",
+      "price": "8.99",
+      "inventory": 51,
+      "collections": [
+        "feline-digestive-supplements"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166457532718",
+      "title": "Purina Pro Plan Veterinary Diets FortiFlora Powder Probiotic Digestive Supplement for Cats, 30 count",
+      "vendor": "Purina Veterinary",
+      "price": "39.99",
+      "inventory": 48,
+      "collections": [
+        "feline-digestive-supplements"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166457565486",
+      "title": "Tiki Pet Cat Solutions Digestion Lamb 2.8Lb",
+      "vendor": "Tiki Pets",
+      "price": "35.99",
+      "inventory": 14,
+      "collections": [
+        "feline-digestive-supplements"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166457631022",
+      "title": "Four Paws Healthy Promise Aloe Ear Mite Treatment For Cats 1ea/0.75 oz",
+      "vendor": "Four Paws",
+      "price": "9.99",
+      "inventory": 654,
+      "collections": [
+        "feline-ear-eyes-supplements"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166457696558",
+      "title": "Pet Naturals Of Vermont L-Lysine",
+      "vendor": "Pet Naturals of Vermont",
+      "price": "13.99",
+      "inventory": 38,
+      "collections": [
+        "feline-ear-eyes-supplements"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166457729326",
+      "title": "Vetericyn Plus Feline Antimicrobial Facial Therapy 1ea/2 fl oz",
+      "vendor": "Vetericyn",
+      "price": "16.99",
+      "inventory": 22,
+      "collections": [
+        "feline-ear-eyes-supplements"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166457794862",
+      "title": "Cosequin Max Strength Spinkle Capsules For Cats 60 Ct",
+      "vendor": "Cosequin",
+      "price": "21.99",
+      "inventory": 79,
+      "collections": [
+        "feline-supplements-hip-joint"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166457860398",
+      "title": "Cosequin Nutramax Dasuquin Joint Health Chews For Cats 84 Ct",
+      "vendor": "Cosequin",
+      "price": "19.99",
+      "inventory": 136,
+      "collections": [
+        "feline-supplements-hip-joint"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166457893166",
+      "title": "Flexadin With Ucii Cat Supplement 30 Ct",
+      "vendor": "Flexadine Advanced",
+      "price": "33.99",
+      "inventory": 124,
+      "collections": [
+        "feline-supplements-hip-joint"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166457925934",
+      "title": "Pet Naturals Of Vermont Hip and Joint For Cats 30 Count",
+      "vendor": "Pet Naturals of Vermont",
+      "price": "10.99",
+      "inventory": 45,
+      "collections": [
+        "feline-supplements-hip-joint"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166457958702",
+      "title": "Tiki Pet Cat Solutions Mobility Chicken & Turkey 2.8Lb",
+      "vendor": "Tiki Pets",
+      "price": "35.99",
+      "inventory": 21,
+      "collections": [
+        "feline-supplements-hip-joint"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166458155310",
+      "title": "Esbilac 2nd Step Kitten Weaning Food 14 oz",
+      "vendor": "Esbilac",
+      "price": "22.99",
+      "inventory": 91,
+      "collections": [
+        "kitten-supplements"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166458188078",
+      "title": "KMR Kitten Milk Replacer Liquid 11 fl. oz",
+      "vendor": "KMR",
+      "price": "11.99",
+      "inventory": 2219,
+      "collections": [
+        "kitten-supplements"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166458220846",
+      "title": "KMR Kitten Milk Replacer Powder 12 oz",
+      "vendor": "KMR",
+      "price": "37.99",
+      "inventory": 183,
+      "collections": [
+        "kitten-supplements"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166458286382",
+      "title": "KMR Kitten Milk Replacer Powder 6 oz",
+      "vendor": "KMR",
+      "price": "26.99",
+      "inventory": 403,
+      "collections": [
+        "kitten-supplements"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166458351918",
+      "title": "PetLac Kitten Milk Replacement Liquid 32 fl. oz",
+      "vendor": "PetLac",
+      "price": "22.99",
+      "inventory": 36,
+      "collections": [
+        "kitten-supplements"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166458417454",
+      "title": "PetLac Kitten Milk Replacer Powder 10.5 oz",
+      "vendor": "PetLac",
+      "price": "19.99",
+      "inventory": 79,
+      "collections": [
+        "kitten-supplements"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166458515758",
+      "title": "Tiki Pet Cat Milk Replacer Kitten Goat Milk 6oz. (Case of 6)",
+      "vendor": "Tiki Pets",
+      "price": "55.0",
+      "inventory": 18,
+      "collections": [
+        "kitten-supplements"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166458810670",
+      "title": "Pet Naturals Of Vermont Cat Daily Multi 30Ct",
+      "vendor": "Pet Naturals of Vermont",
+      "price": "10.99",
+      "inventory": 31,
+      "collections": [
+        "feline-skin-coat-supplements"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166458843438",
+      "title": "Salmon Oil Formula For Cats Salmon 4oz.",
+      "vendor": "Alaska Naturals",
+      "price": "9.99",
+      "inventory": 53,
+      "collections": [
+        "feline-skin-coat-supplements"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10166459007278",
+      "title": "Vetericyn Plus Feline Wound & Skin Care 1ea/3 fl oz",
+      "vendor": "Vetericyn",
+      "price": "19.99",
+      "inventory": 24,
+      "collections": [
+        "feline-skin-coat-supplements"
+      ]
+    }
+  ],
+  "stayingDraft": [
+    {
+      "id": "gid://shopify/Product/10166421487918",
+      "title": "!!PPW D MBLTY SAFLWR 150MG SM 1",
+      "vendor": "Prospect Pet Wellness",
+      "reason": "Weak product - missing data or discontinued"
+    },
+    {
+      "id": "gid://shopify/Product/10166421520686",
+      "title": "!!PPW D MBLTY SAFLWR 300MG MD 1",
+      "vendor": "Prospect Pet Wellness",
+      "reason": "Weak product - missing data or discontinued"
+    },
+    {
+      "id": "gid://shopify/Product/10166421553454",
+      "title": "!!PPW D MBLTY SMN 150MG SM 1OZ",
+      "vendor": "Prospect Pet Wellness",
+      "reason": "Weak product - missing data or discontinued"
+    },
+    {
+      "id": "gid://shopify/Product/10166421586222",
+      "title": "!!PPW D MBLTY SMN 450MG LG 1OZ",
+      "vendor": "Prospect Pet Wellness",
+      "reason": "Weak product - missing data or discontinued"
+    },
+    {
+      "id": "gid://shopify/Product/10166421684526",
+      "title": "Ark Naturals Dog Joint Rescue Chicken 9Oz",
+      "vendor": "Ark Naturals",
+      "reason": "Weak product - missing data or discontinued"
+    },
+    {
+      "id": "gid://shopify/Product/10166421782830",
+      "title": "Ark Naturals Gray Muzzle Joint Health Senior Dog Treats, 3.17-oz. Bag, 90 Count",
+      "vendor": "Ark Naturals",
+      "reason": "Weak product - missing data or discontinued"
+    },
+    {
+      "id": "gid://shopify/Product/10166421815598",
+      "title": "Ark Naturals Gray Muzzle Old Dogs! Happy Joints! Max Strength- Large",
+      "vendor": "Ark Naturals",
+      "reason": "Weak product - missing data or discontinued"
+    },
+    {
+      "id": "gid://shopify/Product/10166421848366",
+      "title": "Bocces Bakery Dog Supplement Hip And Joint 6.35oz.",
+      "vendor": "Bocces Bakery",
+      "reason": "Weak product - missing data or discontinued"
+    },
+    {
+      "id": "gid://shopify/Product/10166422077742",
+      "title": "Earth Animal NatureS Comfort Potion For Dogs And Cats - Full Spectrum Hemp Oil Drops With Naturally Occurring Cbd, 150Mg",
+      "vendor": "Earth Animal",
+      "reason": "Weak product - missing data or discontinued"
+    },
+    {
+      "id": "gid://shopify/Product/10166422110510",
+      "title": "Earth Animal NatureS Comfort Potion For Dogs And Cats - Full Spectrum Hemp Oil Drops With Naturally Occurring Cbd, 600Mg",
+      "vendor": "Earth Animal",
+      "reason": "Weak product - missing data or discontinued"
+    },
+    {
+      "id": "gid://shopify/Product/10166423257390",
+      "title": "Greenies Hip & Joint Supplements Chicken 1ea/80 ct",
+      "vendor": "Greenies",
+      "reason": "Weak product - missing data or discontinued"
+    },
+    {
+      "id": "gid://shopify/Product/10166423290158",
+      "title": "Grizzly Dog Cat Pcr Joint Aid Liquid 16oz.",
+      "vendor": "Grizzly Pet Products",
+      "reason": "Weak product - missing data or discontinued"
+    },
+    {
+      "id": "gid://shopify/Product/10166423322926",
+      "title": "Grizzly Dog Cat Pcr Joint Aid Pellet 10oz.",
+      "vendor": "Grizzly Pet Products",
+      "reason": "Weak product - missing data or discontinued"
+    },
+    {
+      "id": "gid://shopify/Product/10166423421230",
+      "title": "Grizzly Dog Joint Aid Pellet 10oz.",
+      "vendor": "Grizzly Pet Products",
+      "reason": "Weak product - missing data or discontinued"
+    },
+    {
+      "id": "gid://shopify/Product/10166423486766",
+      "title": "Grizzly Dog Joint Aid Pellet 20oz.",
+      "vendor": "Grizzly Pet Products",
+      "reason": "Weak product - missing data or discontinued"
+    },
+    {
+      "id": "gid://shopify/Product/10166423519534",
+      "title": "Grizzly Dog Joint Aid Pellet 32oz.",
+      "vendor": "Grizzly Pet Products",
+      "reason": "Weak product - missing data or discontinued"
+    },
+    {
+      "id": "gid://shopify/Product/10166423552302",
+      "title": "Grizzly Pet Dog/Cat  Pcr Joint Aid Pellet  20oz.",
+      "vendor": "Grizzly Pet Products",
+      "reason": "Weak product - missing data or discontinued"
+    },
+    {
+      "id": "gid://shopify/Product/10166423585070",
+      "title": "Kauffman's Fortitude Canine Joint 1800Grams",
+      "vendor": "Kauffman",
+      "reason": "Weak product - missing data or discontinued"
+    },
+    {
+      "id": "gid://shopify/Product/10166423617838",
+      "title": "KONG Mobilty Soft Chews Dog Treats 1ea/28Pc",
+      "vendor": "Kong",
+      "reason": "Weak product - missing data or discontinued"
+    },
+    {
+      "id": "gid://shopify/Product/10166423650606",
+      "title": "KONG Mobilty Soft Chews Dog Treats 1ea/60Pc",
+      "vendor": "Kong",
+      "reason": "Weak product - missing data or discontinued"
+    },
+    {
+      "id": "gid://shopify/Product/10166423683374",
+      "title": "Nootie Dog Progility Hip & Joint Mini 60Ct",
+      "vendor": "Nootie",
+      "reason": "Weak product - missing data or discontinued"
+    },
+    {
+      "id": "gid://shopify/Product/10166423781678",
+      "title": "Nupro Dog Joint Support 20Lb",
+      "vendor": "Nupro",
+      "reason": "Weak product - missing data or discontinued"
+    },
+    {
+      "id": "gid://shopify/Product/10166423912750",
+      "title": "Nutri-Vet Hip & Joint Early Care Liver Chewables 1ea/180 ct",
+      "vendor": "Discontinued",
+      "reason": "Weak product - missing data or discontinued"
+    },
+    {
+      "id": "gid://shopify/Product/10166423945518",
+      "title": "Nutri-Vet Hip & Joint Plus Liver Chewables 1ea/75 ct",
+      "vendor": "Discontinued",
+      "reason": "Weak product - missing data or discontinued"
+    },
+    {
+      "id": "gid://shopify/Product/10166423978286",
+      "title": "Nutri-Vet Hip & Joint Veterinary Strength Liver Chewables 1ea/90 ct",
+      "vendor": "Discontinued",
+      "reason": "Weak product - missing data or discontinued"
+    },
+    {
+      "id": "gid://shopify/Product/10166424011054",
+      "title": "Nutri-Vet K9 Aspirin Liver Chewables Small Dogs 1ea/100 ct",
+      "vendor": "Discontinued",
+      "reason": "Weak product - missing data or discontinued"
+    },
+    {
+      "id": "gid://shopify/Product/10166424207662",
+      "title": "Pollock Oil For Dogs Pollock 32oz.",
+      "vendor": "Alaska Naturals",
+      "reason": "Weak product - missing data or discontinued"
+    },
+    {
+      "id": "gid://shopify/Product/10166424338734",
+      "title": "Prospect Pet Wellness Dog Mobility Salmon 300Mg Medium 1oz.",
+      "vendor": "Discontinued",
+      "reason": "Weak product - missing data or discontinued"
+    },
+    {
+      "id": "gid://shopify/Product/10166424404270",
+      "title": "Purina Pro Plan Veterinary Diets Joint Supplement for Dogs, Hip & Joint Soft Chews for Large Dogs, 30 count",
+      "vendor": "Purina Veterinary",
+      "reason": "Weak product - missing data or discontinued"
+    },
+    {
+      "id": "gid://shopify/Product/10166424437038",
+      "title": "Purina Pro Plan Veterinary Diets Joint Supplement for Dogs, Hip & Joint Soft Chews for Small Dogs, 30 count",
+      "vendor": "Purina Veterinary",
+      "reason": "Weak product - missing data or discontinued"
+    },
+    {
+      "id": "gid://shopify/Product/10166424666414",
+      "title": "Sojo Dog Mix In Joint Health 8.4 oz.",
+      "vendor": "Sojos",
+      "reason": "Weak product - missing data or discontinued"
+    },
+    {
+      "id": "gid://shopify/Product/10166424699182",
+      "title": "The Missing Link Hip & Joint Dog Supplement Powder 1 Lb",
+      "vendor": "The Missing Link",
+      "reason": "Weak product - missing data or discontinued"
+    },
+    {
+      "id": "gid://shopify/Product/10166428172590",
+      "title": "!HK D POUR SUPRFD TKY 5.5OZ",
+      "vendor": "The Honest Kitchen",
+      "reason": "Weak product - missing data or discontinued"
+    },
+    {
+      "id": "gid://shopify/Product/10166428205358",
+      "title": "!sub NOW D GF PUP TKY 3.5#",
+      "vendor": "Petcurean",
+      "reason": "Weak product - missing data or discontinued"
+    },
+    {
+      "id": "gid://shopify/Product/10166428238126",
+      "title": "A Pup Above Dog Cubies Chicken 2Lb 4 Count",
+      "vendor": "A Pup Above",
+      "reason": "Weak product - missing data or discontinued"
+    },
+    {
+      "id": "gid://shopify/Product/10166428303662",
+      "title": "A Pup Above Dog Cubies Turkey 2Lb 4 Count",
+      "vendor": "A Pup Above",
+      "reason": "Weak product - missing data or discontinued"
+    },
+    {
+      "id": "gid://shopify/Product/10166428336430",
+      "title": "A Pup Above Dog Grain Free Cubies Beef 2Lb 4 Count",
+      "vendor": "A Pup Above",
+      "reason": "Weak product - missing data or discontinued"
+    },
+    {
+      "id": "gid://shopify/Product/10166428401966",
+      "title": "Against the Grain Hand Pulled Adult Wet Dog Food Chicken 12oz",
+      "vendor": "Against the Grain",
+      "reason": "Weak product - missing data or discontinued"
+    },
+    {
+      "id": "gid://shopify/Product/10166428631342",
+      "title": "Against the Grain Nothing Else 100% One Ingredient Adult Wet Dog Food Turkey 11oz",
+      "vendor": "Against the Grain",
+      "reason": "Weak product - missing data or discontinued"
+    },
+    {
+      "id": "gid://shopify/Product/10166438658350",
+      "title": "Honest Kitchen Cat Grain Free Dehydrated 1Oz Vareity Pack",
+      "vendor": "The Honest Kitchen",
+      "reason": "Weak product - missing data or discontinued"
+    },
+    {
+      "id": "gid://shopify/Product/10166438691118",
+      "title": "Honest Kitchen Cat Grain Free Dehydrated Chicken 2Lb",
+      "vendor": "The Honest Kitchen",
+      "reason": "Weak product - missing data or discontinued"
+    },
+    {
+      "id": "gid://shopify/Product/10166438723886",
+      "title": "Honest Kitchen Cat Grain Free Dehydrated Chicken 4Lb",
+      "vendor": "The Honest Kitchen",
+      "reason": "Weak product - missing data or discontinued"
+    },
+    {
+      "id": "gid://shopify/Product/10166438756654",
+      "title": "Honest Kitchen Cat Grain Free Dehydrated Chicken Whitefish 1oz. (Case of 10)",
+      "vendor": "The Honest Kitchen",
+      "reason": "Weak product - missing data or discontinued"
+    },
+    {
+      "id": "gid://shopify/Product/10166438789422",
+      "title": "Honest Kitchen Cat Grain Free Dehydrated Chicken Whitefish 4Lb",
+      "vendor": "The Honest Kitchen",
+      "reason": "Weak product - missing data or discontinued"
+    },
+    {
+      "id": "gid://shopify/Product/10166438822190",
+      "title": "Honest Kitchen Cat Grain Free Dehydrated Turkey 1oz. (Case of 10)",
+      "vendor": "The Honest Kitchen",
+      "reason": "Weak product - missing data or discontinued"
+    },
+    {
+      "id": "gid://shopify/Product/10166438854958",
+      "title": "Honest Kitchen Cat Grain Free Dehydrated Turkey 2Lb",
+      "vendor": "The Honest Kitchen",
+      "reason": "Weak product - missing data or discontinued"
+    },
+    {
+      "id": "gid://shopify/Product/10166438887726",
+      "title": "Honest Kitchen Cat Grain Free Dehydrated Turkey 4Lb",
+      "vendor": "The Honest Kitchen",
+      "reason": "Weak product - missing data or discontinued"
+    },
+    {
+      "id": "gid://shopify/Product/10166438920494",
+      "title": "Honest Kitchen Cat Grain Free Dehydrted Chicken Whitefish 2Lb",
+      "vendor": "The Honest Kitchen",
+      "reason": "Weak product - missing data or discontinued"
+    },
+    {
+      "id": "gid://shopify/Product/10166438953262",
+      "title": "Primal Pet Foods Freeze Dried Cat Food 5.5oz.-Duck",
+      "vendor": "Primal Pet Food",
+      "reason": "Weak product - missing data or discontinued"
+    },
+    {
+      "id": "gid://shopify/Product/10166439182638",
+      "title": "The Honest Kitchen Grace Dehydrated Cat Food 2 Pounds",
+      "vendor": "The Honest Kitchen",
+      "reason": "Weak product - missing data or discontinued"
+    },
+    {
+      "id": "gid://shopify/Product/10166439215406",
+      "title": "The Honest Kitchen Grace Dehydrated Cat Food 4Pounds",
+      "vendor": "The Honest Kitchen",
+      "reason": "Weak product - missing data or discontinued"
+    },
+    {
+      "id": "gid://shopify/Product/10166439248174",
+      "title": "The Honest Kitchen Prowl Dehydrated Cat Food 2 Pounds",
+      "vendor": "The Honest Kitchen",
+      "reason": "Weak product - missing data or discontinued"
+    },
+    {
+      "id": "gid://shopify/Product/10166439280942",
+      "title": "The Honest Kitchen Prowl Dehydrated Cat Food 4Pounds",
+      "vendor": "The Honest Kitchen",
+      "reason": "Weak product - missing data or discontinued"
+    },
+    {
+      "id": "gid://shopify/Product/10166439313710",
+      "title": "Tickled Pet Cat 3oz. Cod Topper",
+      "vendor": "Tickeld Pet",
+      "reason": "Weak product - missing data or discontinued"
+    },
+    {
+      "id": "gid://shopify/Product/10166444359982",
+      "title": "Dave's Pet Food Naturally Healthy Adult Dry Dog Food 18Lbs.",
+      "vendor": "Daves Pet Food",
+      "reason": "Weak product - missing data or discontinued"
+    },
+    {
+      "id": "gid://shopify/Product/10166444392750",
+      "title": "Daves Cats Naturally Healthy Adult Cat Food 8 Lbs",
+      "vendor": "Daves Pet Food",
+      "reason": "Weak product - missing data or discontinued"
+    },
+    {
+      "id": "gid://shopify/Product/10166444491054",
+      "title": "Earth Farms Cat Grain Free Chicken 5Lb",
+      "vendor": "Merrick",
+      "reason": "Weak product - missing data or discontinued"
+    },
+    {
+      "id": "gid://shopify/Product/10166444523822",
+      "title": "Earthborn Holistic Primitive Feline Grain Free Dry Cat Food 5lb",
+      "vendor": "Earthborn",
+      "reason": "Weak product - missing data or discontinued"
+    },
+    {
+      "id": "gid://shopify/Product/10166444556590",
+      "title": "Earthborn Holistic Wild Sea Catch Grain Free Dry Cat Food 14lb",
+      "vendor": "Earthborn",
+      "reason": "Weak product - missing data or discontinued"
+    },
+    {
+      "id": "gid://shopify/Product/10166444589358",
+      "title": "Earthborn Holistic Wild Sea Catch Grain Free Dry Cat Food 1ea/5 lb",
+      "vendor": "Earthborn",
+      "reason": "Weak product - missing data or discontinued"
+    },
+    {
+      "id": "gid://shopify/Product/10166444622126",
+      "title": "Evanger's Grain-Free Dry Cat & Kitten Food Catch of the Day 4.4lb",
+      "vendor": "Evanger's",
+      "reason": "Weak product - missing data or discontinued"
+    },
+    {
+      "id": "gid://shopify/Product/10166444654894",
+      "title": "Evanger's Grain-Free Dry Cat & Kitten Food Meat Lover's Medley with Rabbit 4.4lb",
+      "vendor": "Evanger's",
+      "reason": "Weak product - missing data or discontinued"
+    },
+    {
+      "id": "gid://shopify/Product/10166454976814",
+      "title": "Calm Paws Calming Disk Medallion Cat One Size",
+      "vendor": "Calm Paws",
+      "reason": "Weak product - missing data or discontinued"
+    },
+    {
+      "id": "gid://shopify/Product/10166455009582",
+      "title": "Comfort Zone Calming Refill Bonus 3Pk",
+      "vendor": "Comfort Zone",
+      "reason": "Weak product - missing data or discontinued"
+    },
+    {
+      "id": "gid://shopify/Product/10166455402798",
+      "title": "Comfort Zone Comfort Zone Multi Cat Calming Diffuser Refills: 1-pack 1ea/1 Refill",
+      "vendor": "Comfort Zone",
+      "reason": "Weak product - missing data or discontinued"
+    },
+    {
+      "id": "gid://shopify/Product/10166455533870",
+      "title": "Four Paws Healthy Promise Cat Calming Chews Calming 1ea/110 ct",
+      "vendor": "Four Paws",
+      "reason": "Weak product - missing data or discontinued"
+    },
+    {
+      "id": "gid://shopify/Product/10166455599406",
+      "title": "Purina Pro Plan Veterinary Diets Calming Care Cat Supplement, 30 count",
+      "vendor": "Purina Veterinary",
+      "reason": "Weak product - missing data or discontinued"
+    },
+    {
+      "id": "gid://shopify/Product/10166456221998",
+      "title": "Greenies Feline Adult Cat Dental Treats Succulent Shrimp 1ea/2.1 oz",
+      "vendor": "Greenies",
+      "reason": "Weak product - missing data or discontinued"
+    },
+    {
+      "id": "gid://shopify/Product/10166456254766",
+      "title": "Greenies Feline Adult Cat Dental Treats Succulent Shrimp 1ea/4.6 oz",
+      "vendor": "Greenies",
+      "reason": "Weak product - missing data or discontinued"
+    },
+    {
+      "id": "gid://shopify/Product/10166456582446",
+      "title": "Tiki Pet Cat Solutions Dental Chicken 2.8Lb",
+      "vendor": "Tiki Pets",
+      "reason": "Weak product - missing data or discontinued"
+    },
+    {
+      "id": "gid://shopify/Product/10166456680750",
+      "title": "Tiki Pet Cat Solutions Dental Chicken 5.6Lb",
+      "vendor": "Tiki Pets",
+      "reason": "Weak product - missing data or discontinued"
+    },
+    {
+      "id": "gid://shopify/Product/10166456779054",
+      "title": "Tiki Pet Cat Solutions Mousse Dental 2.4oz. (Case of 12)",
+      "vendor": "Tiki Pets",
+      "reason": "Weak product - missing data or discontinued"
+    },
+    {
+      "id": "gid://shopify/Product/10166456811822",
+      "title": "Tiki Pet Cat Solutions Mousse Digestion 2.4oz. (Case of 12)",
+      "vendor": "Tiki Pets",
+      "reason": "Weak product - missing data or discontinued"
+    },
+    {
+      "id": "gid://shopify/Product/10166456910126",
+      "title": "Tiki Pet Cat Solutions Mousse Fussy 2.4oz. (Case of 12)",
+      "vendor": "Tiki Pets",
+      "reason": "Weak product - missing data or discontinued"
+    },
+    {
+      "id": "gid://shopify/Product/10166456975662",
+      "title": "Tropiclean Cat Enticers Cleaning Gel Seafood Medley 2Oz",
+      "vendor": "Tiki Pets",
+      "reason": "Weak product - missing data or discontinued"
+    },
+    {
+      "id": "gid://shopify/Product/10166457073966",
+      "title": "TropiClean Fresh Breath Clean Teeth Oral Care Gel For Cats 1ea/2 Fl. oz",
+      "vendor": "TropiClean",
+      "reason": "Weak product - missing data or discontinued"
+    },
+    {
+      "id": "gid://shopify/Product/10166457106734",
+      "title": "TropiClean Fresh Breath Drops for Cats 6pc Display 1ea/2.2 Fl. oz, 6 Piece",
+      "vendor": "TropiClean",
+      "reason": "Weak product - missing data or discontinued"
+    },
+    {
+      "id": "gid://shopify/Product/10166457237806",
+      "title": "Cat Person Cat Supplements Digestive Support Turkey 1.05Oz Pouch 14 Pack",
+      "vendor": "Cat Person",
+      "reason": "Weak product - missing data or discontinued"
+    },
+    {
+      "id": "gid://shopify/Product/10166457368878",
+      "title": "Primal 100 Mg Organic Full Spectrum Hemp Oil W- Cbg For Small Dogs",
+      "vendor": "Primal Pet Food",
+      "reason": "Weak product - missing data or discontinued"
+    },
+    {
+      "id": "gid://shopify/Product/10166457401646",
+      "title": "Primal 1000 Mg Organic Full Spectrum Hemp Oil W- Cbg For Giant Dogs",
+      "vendor": "Primal Pet Food",
+      "reason": "Weak product - missing data or discontinued"
+    },
+    {
+      "id": "gid://shopify/Product/10166457434414",
+      "title": "Primal 125 Mg Organic Full Spectrum Hemp Oil W- Cbg For Cats",
+      "vendor": "Primal Pet Food",
+      "reason": "Weak product - missing data or discontinued"
+    },
+    {
+      "id": "gid://shopify/Product/10166457467182",
+      "title": "Primal 250 Mg Organic Full Spectrum Hemp Oil W- Cbg For Medium Dogs",
+      "vendor": "Primal Pet Food",
+      "reason": "Weak product - missing data or discontinued"
+    },
+    {
+      "id": "gid://shopify/Product/10166457499950",
+      "title": "Primal 500 Mg Organic Full Spectrum Hemp Oil W- Cbg For Large Dogs",
+      "vendor": "Primal Pet Food",
+      "reason": "Weak product - missing data or discontinued"
+    },
+    {
+      "id": "gid://shopify/Product/10166457598254",
+      "title": "Tiki Pet Cat Solutions Digestion Lamb 5.6Lb",
+      "vendor": "Tiki Pets",
+      "reason": "Weak product - missing data or discontinued"
+    },
+    {
+      "id": "gid://shopify/Product/10166457762094",
+      "title": "Cat Person Cat Supplements Bone & Joint Chicken 1.05Oz Pouch 14 Pack",
+      "vendor": "Cat Person",
+      "reason": "Weak product - missing data or discontinued"
+    },
+    {
+      "id": "gid://shopify/Product/10166458057006",
+      "title": "Tiki Pet Cat Solutions Topper Mobility 1.5oz. (Case of 12)",
+      "vendor": "Tiki Pets",
+      "reason": "Weak product - missing data or discontinued"
+    },
+    {
+      "id": "gid://shopify/Product/10166458122542",
+      "title": "Tiki Pet Cat Solutions Topper Skin & Coat 1.5oz. (Case of 12)",
+      "vendor": "Tiki Pets",
+      "reason": "Weak product - missing data or discontinued"
+    },
+    {
+      "id": "gid://shopify/Product/10166458319150",
+      "title": "Pet-Ag Goat's Milk KMR Kitten Milk Replacer - Powder 12oz",
+      "vendor": "Pet-Ag",
+      "reason": "Weak product - missing data or discontinued"
+    },
+    {
+      "id": "gid://shopify/Product/10166458450222",
+      "title": "Tiki Pet Cat Born Carnivore Kitten Chicken & Egg 5.6Lb",
+      "vendor": "Tiki Pets",
+      "reason": "Weak product - missing data or discontinued"
+    },
+    {
+      "id": "gid://shopify/Product/10166458548526",
+      "title": "Tiki Pet Cat Puree Kitten Weaning Chicken 6oz. (Case of 6)",
+      "vendor": "Tiki Pets",
+      "reason": "Weak product - missing data or discontinued"
+    },
+    {
+      "id": "gid://shopify/Product/10166458646830",
+      "title": "Tiki Pet Cat Solutions Meal Replacement Tuna 6oz. (Case of 6)",
+      "vendor": "Tiki Pets",
+      "reason": "Weak product - missing data or discontinued"
+    },
+    {
+      "id": "gid://shopify/Product/10166458679598",
+      "title": "Alaska Naturals Cat - Pollock Oil 4 Oz",
+      "vendor": "Alaska Naturals",
+      "reason": "Weak product - missing data or discontinued"
+    },
+    {
+      "id": "gid://shopify/Product/10166458712366",
+      "title": "Bayer Protect Omega-3 Medium/Large Dogs 60 Count",
+      "vendor": "Elanco",
+      "reason": "Weak product - missing data or discontinued"
+    },
+    {
+      "id": "gid://shopify/Product/10166458777902",
+      "title": "Cat Person Cat Supplements Skin & Coat Chicken 1.05Oz Pouch 14 Pack",
+      "vendor": "Cat Person",
+      "reason": "Weak product - missing data or discontinued"
+    },
+    {
+      "id": "gid://shopify/Product/10166458908974",
+      "title": "Tiki Pet Cat Solutions Skin & Coat Salmon 2.8Lb",
+      "vendor": "Tiki Pets",
+      "reason": "Weak product - missing data or discontinued"
+    },
+    {
+      "id": "gid://shopify/Product/10166458941742",
+      "title": "Tiki Pet Cat Solutions Skin & Coat Salmon 5.6Lb",
+      "vendor": "Tiki Pets",
+      "reason": "Weak product - missing data or discontinued"
+    }
+  ],
+  "mergeGroups": [
+    {
+      "baseName": "cosequin joint supplement with msm chews for dogs",
+      "vendor": "cosequin",
+      "products": [
+        {
+          "id": "gid://shopify/Product/10166421881134",
+          "title": "Cosequin Joint Supplement With MSM Chews For Dogs 120 Count"
+        },
+        {
+          "id": "gid://shopify/Product/10166421913902",
+          "title": "Cosequin Joint Supplement With MSM Chews For Dogs 60 Count"
+        }
+      ]
+    },
+    {
+      "baseName": "cosequin joint supplement with msm tabs for dogs",
+      "vendor": "cosequin",
+      "products": [
+        {
+          "id": "gid://shopify/Product/10166421979438",
+          "title": "Cosequin Joint Supplement With MSM Tabs For Dogs 120 Count"
+        },
+        {
+          "id": "gid://shopify/Product/10166422012206",
+          "title": "Cosequin Joint Supplement With MSM Tabs For Dogs 60 Count"
+        }
+      ]
+    },
+    {
+      "baseName": "grizzly dog joint aid liquid .",
+      "vendor": "grizzly pet products",
+      "products": [
+        {
+          "id": "gid://shopify/Product/10166423355694",
+          "title": "Grizzly Dog Joint Aid Liquid 16oz."
+        },
+        {
+          "id": "gid://shopify/Product/10166423388462",
+          "title": "Grizzly Dog Joint Aid Liquid 32oz."
+        }
+      ]
+    },
+    {
+      "baseName": "grizzly dog joint aid pellet .",
+      "vendor": "grizzly pet products",
+      "products": [
+        {
+          "id": "gid://shopify/Product/10166423421230",
+          "title": "Grizzly Dog Joint Aid Pellet 10oz."
+        },
+        {
+          "id": "gid://shopify/Product/10166423486766",
+          "title": "Grizzly Dog Joint Aid Pellet 20oz."
+        },
+        {
+          "id": "gid://shopify/Product/10166423519534",
+          "title": "Grizzly Dog Joint Aid Pellet 32oz."
+        }
+      ]
+    },
+    {
+      "baseName": "pollock oil for dogs pollock .",
+      "vendor": "alaska naturals",
+      "products": [
+        {
+          "id": "gid://shopify/Product/10166424207662",
+          "title": "Pollock Oil For Dogs Pollock 32oz."
+        },
+        {
+          "id": "gid://shopify/Product/10166424240430",
+          "title": "Pollock Oil For Dogs Pollock 8oz."
+        }
+      ]
+    },
+    {
+      "baseName": "salmon oil formula for dogs salmon .",
+      "vendor": "alaska naturals",
+      "products": [
+        {
+          "id": "gid://shopify/Product/10166424502574",
+          "title": "Salmon Oil Formula For Dogs Salmon 32oz."
+        },
+        {
+          "id": "gid://shopify/Product/10166424535342",
+          "title": "Salmon Oil Formula For Dogs Salmon 64oz."
+        },
+        {
+          "id": "gid://shopify/Product/10166424633646",
+          "title": "Salmon Oil Formula For Dogs Salmon 8oz."
+        }
+      ]
+    },
+    {
+      "baseName": "honest kitchen cat grain free dehydrated chicken",
+      "vendor": "the honest kitchen",
+      "products": [
+        {
+          "id": "gid://shopify/Product/10166438691118",
+          "title": "Honest Kitchen Cat Grain Free Dehydrated Chicken 2Lb"
+        },
+        {
+          "id": "gid://shopify/Product/10166438723886",
+          "title": "Honest Kitchen Cat Grain Free Dehydrated Chicken 4Lb"
+        }
+      ]
+    },
+    {
+      "baseName": "honest kitchen cat grain free dehydrated turkey",
+      "vendor": "the honest kitchen",
+      "products": [
+        {
+          "id": "gid://shopify/Product/10166438854958",
+          "title": "Honest Kitchen Cat Grain Free Dehydrated Turkey 2Lb"
+        },
+        {
+          "id": "gid://shopify/Product/10166438887726",
+          "title": "Honest Kitchen Cat Grain Free Dehydrated Turkey 4Lb"
+        }
+      ]
+    },
+    {
+      "baseName": "the honest kitchen grace dehydrated cat food s",
+      "vendor": "the honest kitchen",
+      "products": [
+        {
+          "id": "gid://shopify/Product/10166439182638",
+          "title": "The Honest Kitchen Grace Dehydrated Cat Food 2 Pounds"
+        },
+        {
+          "id": "gid://shopify/Product/10166439215406",
+          "title": "The Honest Kitchen Grace Dehydrated Cat Food 4Pounds"
+        }
+      ]
+    },
+    {
+      "baseName": "the honest kitchen prowl dehydrated cat food s",
+      "vendor": "the honest kitchen",
+      "products": [
+        {
+          "id": "gid://shopify/Product/10166439248174",
+          "title": "The Honest Kitchen Prowl Dehydrated Cat Food 2 Pounds"
+        },
+        {
+          "id": "gid://shopify/Product/10166439280942",
+          "title": "The Honest Kitchen Prowl Dehydrated Cat Food 4Pounds"
+        }
+      ]
+    },
+    {
+      "baseName": "ark naturals cat dental chews kiss me-ow cleaning chicken .",
+      "vendor": "ark naturals",
+      "products": [
+        {
+          "id": "gid://shopify/Product/10166455828782",
+          "title": "Ark Naturals Cat Dental Chews Kiss Me-Ow Cleaning Chicken 3oz."
+        },
+        {
+          "id": "gid://shopify/Product/10166455894318",
+          "title": "Ark Naturals Cat Dental Chews Kiss Me-Ow Cleaning Chicken 6oz."
+        }
+      ]
+    },
+    {
+      "baseName": "ark naturals cat dental chews kiss me-ow cleaning tuna .",
+      "vendor": "ark naturals",
+      "products": [
+        {
+          "id": "gid://shopify/Product/10166455959854",
+          "title": "Ark Naturals Cat Dental Chews Kiss Me-Ow Cleaning Tuna 3oz."
+        },
+        {
+          "id": "gid://shopify/Product/10166455992622",
+          "title": "Ark Naturals Cat Dental Chews Kiss Me-Ow Cleaning Tuna 6oz."
+        }
+      ]
+    },
+    {
+      "baseName": "ark naturals cat dental chews kiss me-ow strengthing chicken .",
+      "vendor": "ark naturals",
+      "products": [
+        {
+          "id": "gid://shopify/Product/10166456058158",
+          "title": "Ark Naturals Cat Dental Chews Kiss Me-Ow Strengthing Chicken 3oz."
+        },
+        {
+          "id": "gid://shopify/Product/10166456090926",
+          "title": "Ark Naturals Cat Dental Chews Kiss Me-Ow Strengthing Chicken 6oz."
+        }
+      ]
+    },
+    {
+      "baseName": "ark naturals cat dental chews kiss me-ow strengthing tuna .",
+      "vendor": "ark naturals",
+      "products": [
+        {
+          "id": "gid://shopify/Product/10166456123694",
+          "title": "Ark Naturals Cat Dental Chews Kiss Me-Ow Strengthing Tuna 3oz."
+        },
+        {
+          "id": "gid://shopify/Product/10166456156462",
+          "title": "Ark Naturals Cat Dental Chews Kiss Me-Ow Strengthing Tuna 6oz."
+        }
+      ]
+    },
+    {
+      "baseName": "kmr kitten milk replacer powder",
+      "vendor": "kmr",
+      "products": [
+        {
+          "id": "gid://shopify/Product/10166458220846",
+          "title": "KMR Kitten Milk Replacer Powder 12 oz"
+        },
+        {
+          "id": "gid://shopify/Product/10166458286382",
+          "title": "KMR Kitten Milk Replacer Powder 6 oz"
+        }
+      ]
+    }
+  ],
+  "navbarCollections": [
+    {
+      "handle": "canine-dry-food",
+      "found": true,
+      "productCount": 3,
+      "collection": {
+        "id": "gid://shopify/Collection/526486208814",
+        "title": "Canine Dry Food",
+        "handle": "canine-dry-food",
+        "description": "",
+        "image": null,
+        "productsCount": {
+          "count": 3
+        }
+      }
+    },
+    {
+      "handle": "canine-wet-food",
+      "found": true,
+      "productCount": 14,
+      "collection": {
+        "id": "gid://shopify/Collection/526486307118",
+        "title": "Canine Wet Food",
+        "handle": "canine-wet-food",
+        "description": "",
+        "image": null,
+        "productsCount": {
+          "count": 14
+        }
+      }
+    },
+    {
+      "handle": "canine-dehydrated-goods",
+      "found": true,
+      "productCount": 3,
+      "collection": {
+        "id": "gid://shopify/Collection/526486274350",
+        "title": "Canine Dehydrated Goods",
+        "handle": "canine-dehydrated-goods",
+        "description": "",
+        "image": null,
+        "productsCount": {
+          "count": 3
+        }
+      }
+    },
+    {
+      "handle": "organic-canine-food",
+      "found": true,
+      "productCount": 20,
+      "collection": {
+        "id": "gid://shopify/Collection/526486438190",
+        "title": "Organic Canine Food",
+        "handle": "organic-canine-food",
+        "description": "",
+        "image": null,
+        "productsCount": {
+          "count": 20
+        }
+      }
+    },
+    {
+      "handle": "organic-canine-supplements-hip-and-joint",
+      "found": true,
+      "productCount": 60,
+      "collection": {
+        "id": "gid://shopify/Collection/526485684526",
+        "title": "Organic Canine Supplements: Hip and Joint",
+        "handle": "organic-canine-supplements-hip-and-joint",
+        "description": "",
+        "image": null,
+        "productsCount": {
+          "count": 60
+        }
+      }
+    },
+    {
+      "handle": "organic-supplements",
+      "found": true,
+      "productCount": 19,
+      "collection": {
+        "id": "gid://shopify/Collection/526485586222",
+        "title": "Organic Supplements",
+        "handle": "organic-supplements",
+        "description": "",
+        "image": null,
+        "productsCount": {
+          "count": 19
+        }
+      }
+    },
+    {
+      "handle": "feline-dry-foods",
+      "found": true,
+      "productCount": 20,
+      "collection": {
+        "id": "gid://shopify/Collection/526488437038",
+        "title": "Feline Dry Foods",
+        "handle": "feline-dry-foods",
+        "description": "",
+        "image": null,
+        "productsCount": {
+          "count": 20
+        }
+      }
+    },
+    {
+      "handle": "feline-dehydrated-goods",
+      "found": true,
+      "productCount": 20,
+      "collection": {
+        "id": "gid://shopify/Collection/526487879982",
+        "title": "Feline Dehydrated Goods",
+        "handle": "feline-dehydrated-goods",
+        "description": "",
+        "image": null,
+        "productsCount": {
+          "count": 20
+        }
+      }
+    },
+    {
+      "handle": "feline-freeze-dried-goods",
+      "found": true,
+      "productCount": 0,
+      "collection": {
+        "id": "gid://shopify/Collection/526487978286",
+        "title": "Feline Freeze Dried Goods",
+        "handle": "feline-freeze-dried-goods",
+        "description": "",
+        "image": null,
+        "productsCount": {
+          "count": 0
+        }
+      }
+    },
+    {
+      "handle": "calm-feline-supplements",
+      "found": true,
+      "productCount": 21,
+      "collection": {
+        "id": "gid://shopify/Collection/526488076590",
+        "title": "Calm Feline Supplements",
+        "handle": "calm-feline-supplements",
+        "description": "",
+        "image": null,
+        "productsCount": {
+          "count": 21
+        }
+      }
+    },
+    {
+      "handle": "feline-supplements-hip-joint",
+      "found": true,
+      "productCount": 8,
+      "collection": {
+        "id": "gid://shopify/Collection/526488240430",
+        "title": "Feline Supplements Hip & Joint",
+        "handle": "feline-supplements-hip-joint",
+        "description": "",
+        "image": null,
+        "productsCount": {
+          "count": 8
+        }
+      }
+    },
+    {
+      "handle": "feline-dental-supplements",
+      "found": true,
+      "productCount": 29,
+      "collection": {
+        "id": "gid://shopify/Collection/526488109358",
+        "title": "Feline Dental Supplements",
+        "handle": "feline-dental-supplements",
+        "description": "",
+        "image": null,
+        "productsCount": {
+          "count": 29
+        }
+      }
+    },
+    {
+      "handle": "feline-digestive-supplements",
+      "found": true,
+      "productCount": 11,
+      "collection": {
+        "id": "gid://shopify/Collection/526488142126",
+        "title": "Feline Digestive Supplements",
+        "handle": "feline-digestive-supplements",
+        "description": "",
+        "image": null,
+        "productsCount": {
+          "count": 11
+        }
+      }
+    },
+    {
+      "handle": "frontpage",
+      "found": true,
+      "productCount": 19,
+      "collection": {
+        "id": "gid://shopify/Collection/519472677166",
+        "title": "Home page",
+        "handle": "frontpage",
+        "description": "",
+        "image": null,
+        "productsCount": {
+          "count": 19
+        }
+      }
+    }
+  ]
+}

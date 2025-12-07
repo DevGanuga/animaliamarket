@@ -18,7 +18,6 @@ const menuData = {
         links: [
           { label: "Dry Food", href: "/collections/canine-dry-food" },
           { label: "Wet Food", href: "/collections/canine-wet-food" },
-          { label: "Dehydrated", href: "/collections/canine-dehydrated-goods" },
           { label: "All Dog Food", href: "/collections/organic-canine-food" },
         ],
       },
@@ -26,8 +25,6 @@ const menuData = {
         title: "Supplements",
         links: [
           { label: "Hip & Joint", href: "/collections/organic-canine-supplements-hip-and-joint" },
-          { label: "Calming", href: "/collections/dog" },
-          { label: "Skin & Coat", href: "/collections/dog" },
           { label: "All Supplements", href: "/collections/organic-supplements" },
         ],
       },
@@ -37,6 +34,7 @@ const menuData = {
           { label: "VetriScience", href: "/brands/vetriscience" },
           { label: "Cosequin", href: "/brands/cosequin" },
           { label: "Grizzly", href: "/brands/grizzly-pet-products" },
+          { label: "Nupro", href: "/brands/nupro" },
           { label: "View All Brands →", href: "/brands" },
         ],
       },
@@ -56,8 +54,6 @@ const menuData = {
         links: [
           { label: "Dry Food", href: "/collections/feline-dry-foods" },
           { label: "Dehydrated", href: "/collections/feline-dehydrated-goods" },
-          { label: "Freeze-Dried", href: "/collections/feline-freeze-dried-goods" },
-          { label: "All Cat Food", href: "/collections/feline-dry-foods" },
         ],
       },
       {
@@ -67,14 +63,18 @@ const menuData = {
           { label: "Hip & Joint", href: "/collections/feline-supplements-hip-joint" },
           { label: "Dental Health", href: "/collections/feline-dental-supplements" },
           { label: "Digestive", href: "/collections/feline-digestive-supplements" },
+          { label: "Skin & Coat", href: "/collections/feline-skin-coat-supplements" },
+          { label: "Ear & Eye Care", href: "/collections/feline-ear-eyes-supplements" },
+          { label: "Kitten Care", href: "/collections/kitten-supplements" },
         ],
       },
       {
         title: "Popular Brands",
         links: [
-          { label: "Tiki Pets", href: "/brands/tiki-pets" },
           { label: "Comfort Zone", href: "/brands/comfort-zone" },
-          { label: "Stella & Chewy's", href: "/brands/stella-chewys" },
+          { label: "Tiki Pets", href: "/brands/tiki-pets" },
+          { label: "Greenies", href: "/brands/greenies" },
+          { label: "Ark Naturals", href: "/brands/ark-naturals" },
           { label: "View All Brands →", href: "/brands" },
         ],
       },
@@ -84,8 +84,8 @@ const menuData = {
     label: "Brands",
     emoji: "✦",
     featured: {
-      title: "New Arrivals",
-      description: "Latest products from top brands",
+      title: "Featured Products",
+      description: "Top picks from our catalog",
       href: "/collections/frontpage",
     },
     columns: [
@@ -96,14 +96,15 @@ const menuData = {
           { label: "Cosequin", href: "/brands/cosequin" },
           { label: "Pet Naturals", href: "/brands/pet-naturals-of-vermont" },
           { label: "Grizzly", href: "/brands/grizzly-pet-products" },
+          { label: "Nupro", href: "/brands/nupro" },
         ],
       },
       {
         title: "Food & Nutrition",
         links: [
           { label: "The Honest Kitchen", href: "/brands/the-honest-kitchen" },
-          { label: "Stella & Chewy's", href: "/brands/stella-chewys" },
-          { label: "Vital Essentials", href: "/brands/vital-essentials" },
+          { label: "Primal Pet Foods", href: "/brands/primal-pet-food" },
+          { label: "Steve's Real Food", href: "/brands/steves-real-food" },
           { label: "Tiki Pets", href: "/brands/tiki-pets" },
         ],
       },
@@ -113,6 +114,7 @@ const menuData = {
           { label: "Ark Naturals", href: "/brands/ark-naturals" },
           { label: "Greenies", href: "/brands/greenies" },
           { label: "Comfort Zone", href: "/brands/comfort-zone" },
+          { label: "TropiClean", href: "/brands/tropicclean" },
           { label: "All Brands →", href: "/brands" },
         ],
       },
@@ -160,7 +162,7 @@ export function MegaMenu() {
                 : "opacity-0 invisible -translate-y-2"
             }`}
           >
-            <div className="bg-white rounded-2xl shadow-2xl border border-[var(--stone-100)] p-6 min-w-[600px]">
+            <div className="bg-white rounded-2xl shadow-2xl border border-[var(--stone-100)] p-6 min-w-[650px]">
               <div className="grid grid-cols-4 gap-6">
                 {/* Columns */}
                 {menu.columns.map((column) => (
@@ -213,10 +215,10 @@ export function MegaMenu() {
               {/* Bottom Bar */}
               <div className="mt-6 pt-4 border-t border-[var(--stone-100)] flex items-center justify-between">
                 <Link
-                  href={key === "brands" ? "/brands" : key === "dogs" ? "/collections/dog" : "/collections/calm-feline-supplements"}
+                  href={key === "brands" ? "/brands" : key === "dogs" ? "/collections/organic-canine-food" : "/collections/feline-dry-foods"}
                   className="text-sm font-medium text-[var(--sage-600)] hover:text-[var(--sage-700)] flex items-center gap-1"
                 >
-                  {key === "brands" ? "Browse All Brands" : `View All ${menu.label}`}
+                  {key === "brands" ? "Browse All Brands" : `View All ${menu.label} Products`}
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>

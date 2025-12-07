@@ -168,11 +168,40 @@ export function Header() {
 
             <nav className="p-4 space-y-1">
               <p className="text-xs font-medium text-[var(--stone-500)] uppercase tracking-wider px-3 mb-2">
-                Shop by Pet
+                🐕 Dogs
               </p>
               {[
-                { label: "🐕 Dogs", href: "/collections/dog" },
-                { label: "🐱 Cats", href: "/collections/calm-feline-supplements" },
+                { label: "Hip & Joint Supplements", href: "/collections/organic-canine-supplements-hip-and-joint" },
+                { label: "All Supplements", href: "/collections/organic-supplements" },
+                { label: "Dry Food", href: "/collections/canine-dry-food" },
+                { label: "Wet Food", href: "/collections/canine-wet-food" },
+                { label: "All Dog Food", href: "/collections/organic-canine-food" },
+              ].map((link) => (
+                <Link
+                  key={link.label}
+                  href={link.href}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="block px-3 py-3 text-[var(--stone-700)] hover:bg-[var(--stone-50)] rounded-lg transition-colors"
+                >
+                  {link.label}
+                </Link>
+              ))}
+
+              <hr className="my-4 border-[var(--stone-200)]" />
+
+              <p className="text-xs font-medium text-[var(--stone-500)] uppercase tracking-wider px-3 mb-2">
+                🐱 Cats
+              </p>
+              {[
+                { label: "Calming", href: "/collections/calm-feline-supplements" },
+                { label: "Hip & Joint", href: "/collections/feline-supplements-hip-joint" },
+                { label: "Dental Health", href: "/collections/feline-dental-supplements" },
+                { label: "Digestive", href: "/collections/feline-digestive-supplements" },
+                { label: "Skin & Coat", href: "/collections/feline-skin-coat-supplements" },
+                { label: "Ear & Eye Care", href: "/collections/feline-ear-eyes-supplements" },
+                { label: "Dry Food", href: "/collections/feline-dry-foods" },
+                { label: "Dehydrated Food", href: "/collections/feline-dehydrated-goods" },
+                { label: "Kitten Care", href: "/collections/kitten-supplements" },
               ].map((link) => (
                 <Link
                   key={link.label}
@@ -192,9 +221,10 @@ export function Header() {
               {[
                 { label: "VetriScience", href: "/brands/vetriscience" },
                 { label: "Cosequin", href: "/brands/cosequin" },
-                { label: "The Honest Kitchen", href: "/brands/the-honest-kitchen" },
-                { label: "Stella & Chewy's", href: "/brands/stella-chewys" },
-                { label: "View All Brands", href: "/brands" },
+                { label: "Comfort Zone", href: "/brands/comfort-zone" },
+                { label: "Tiki Pets", href: "/brands/tiki-pets" },
+                { label: "Ark Naturals", href: "/brands/ark-naturals" },
+                { label: "View All Brands →", href: "/brands" },
               ].map((link) => (
                 <Link
                   key={link.label}
@@ -213,8 +243,7 @@ export function Header() {
               </p>
               {[
                 { label: "All Collections", href: "/collections" },
-                { label: "Supplements", href: "/collections/organic-supplements" },
-                { label: "Food", href: "/collections/organic-canine-food" },
+                { label: "Featured Products", href: "/collections/frontpage" },
               ].map((link) => (
                 <Link
                   key={link.label}

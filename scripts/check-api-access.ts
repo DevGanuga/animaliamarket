@@ -2,6 +2,9 @@
  * Check what Admin API access we have
  */
 
+import { config } from 'dotenv';
+config({ path: '.env.local' });
+
 const SHOPIFY_STORE_DOMAIN = process.env.SHOPIFY_STORE_DOMAIN!;
 const SHOPIFY_ADMIN_ACCESS_TOKEN = process.env.SHOPIFY_ADMIN_ACCESS_TOKEN!;
 const SHOPIFY_API_VERSION = process.env.SHOPIFY_API_VERSION || '2025-01';
