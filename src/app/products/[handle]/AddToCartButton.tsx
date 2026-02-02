@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { addToCart } from "@/app/actions/cart";
 
 interface AddToCartButtonProps {
   variantId: string;
@@ -11,23 +12,26 @@ interface AddToCartButtonProps {
 export function AddToCartButton({ variantId, quantity, available }: AddToCartButtonProps) {
   const [isLoading, setIsLoading] = useState(false);
   const [isAdded, setIsAdded] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const handleAddToCart = async () => {
     if (!available || isLoading) return;
 
     setIsLoading(true);
+    setError(null);
     
     try {
-      // TODO: Implement actual cart logic with server action
-      // For now, simulate adding to cart
-      await new Promise((resolve) => setTimeout(resolve, 1000));
+      await addToCart(variantId, quantity);
       
       setIsAdded(true);
       setTimeout(() => setIsAdded(false), 2000);
       
-      console.log("Added to cart:", { variantId, quantity });
-    } catch (error) {
-      console.error("Error adding to cart:", error);
+      // Dispatch custom event to update cart drawer
+      window.dispatchEvent(new CustomEvent("cart-updated"));
+    } catch (err) {
+      console.error("Error adding to cart:", err);
+      setError(err instanceof Error ? err.message : "Failed to add to cart");
+      setTimeout(() => setError(null), 3000);
     } finally {
       setIsLoading(false);
     }
@@ -79,6 +83,13 @@ export function AddToCartButton({ variantId, quantity, available }: AddToCartBut
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
           </svg>
           Added to Cart!
+        </>
+      ) : error ? (
+        <>
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          {error}
         </>
       ) : (
         <>

@@ -287,11 +287,11 @@ export default async function HomePage() {
             </h1>
             
             <p className="text-xl lg:text-2xl text-white/60 mb-5 max-w-lg leading-relaxed font-light">
-              The curated marketplace for modern pet parents.
+              The pet wellness marketplace that puts quality first.
             </p>
             
             <p className="text-base text-white/40 mb-10 max-w-lg">
-              Premium brands • Clean ingredients • Transparent sourcing
+              50+ trusted brands • No middlemen • Direct to your door
             </p>
             
             <div className="flex flex-wrap gap-4 mb-14">
@@ -344,9 +344,9 @@ export default async function HomePage() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center gap-x-12 gap-y-2 text-center">
             {[
-              "Curated, Not Cluttered",
-              "Clean Ingredients",
-              "Transparent Sourcing",
+              "Skip the Big-Box Markup",
+              "Vet-Trusted Brands",
+              "Same Products, Better Experience",
               "30-Day Guarantee",
             ].map((item, i) => (
               <p key={item} className="text-sm font-medium tracking-wide flex items-center gap-3">
@@ -721,18 +721,18 @@ export default async function HomePage() {
                 The Animalia Difference
               </span>
               <h2 className="font-serif text-4xl lg:text-5xl mb-8 leading-tight">
-                Curated, <span className="text-[var(--sage-400)]">Not Cluttered</span>
+                Your Pet Store, <span className="text-[var(--sage-400)]">Reimagined</span>
               </h2>
               <p className="text-xl text-white/60 leading-relaxed mb-10">
-                We&apos;re not a big-box pet store. We&apos;re a marketplace that carefully 
-                selects every product from brands that share our values.
+                Get the brands you trust—from premium naturals to vet-recommended essentials—without 
+                the corporate clutter. Same products, better experience, direct to you.
               </p>
               <ul className="space-y-5 mb-12">
                 {[
-                  "Every brand is vetted by our team",
-                  "No artificial fillers or harmful additives",
-                  "Transparent ingredient sourcing",
-                  "Real reviews from real pet parents",
+                  "50+ brands from naturals to trusted essentials",
+                  "Skip the markup—go direct to the source",
+                  "No algorithms, just products we stand behind",
+                  "Real support from real pet people",
                 ].map((item) => (
                   <li key={item} className="flex items-center gap-4 text-white/80">
                     <span className="w-6 h-6 rounded-full bg-[var(--sage-500)]/30 flex items-center justify-center flex-shrink-0">
@@ -759,8 +759,8 @@ export default async function HomePage() {
             <div className="grid grid-cols-2 gap-5">
               {[
                 { value: "50+", label: "Trusted Brands" },
-                { value: "230+", label: "Curated Products" },
-                { value: "100%", label: "Satisfaction Rate" },
+                { value: "370+", label: "Products Available" },
+                { value: "100%", label: "Quality Guarantee" },
                 { value: "$50+", label: "Free Shipping" },
               ].map((stat) => (
                 <div key={stat.label} className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/10 hover:bg-white/10 transition-colors">
@@ -779,8 +779,8 @@ export default async function HomePage() {
       <section className="py-6 bg-[var(--stone-100)]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-sm text-[var(--stone-400)]">
-            Animalia is an independent marketplace curating premium pet products from trusted manufacturers. 
-            Product information is provided by the respective brands.
+            Animalia brings together 50+ brands—from boutique naturals to trusted household names—all 
+            in one place. Why shop corporate when you can shop smarter?
           </p>
         </div>
       </section>
