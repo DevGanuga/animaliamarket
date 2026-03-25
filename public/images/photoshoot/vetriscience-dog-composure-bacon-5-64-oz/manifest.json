@@ -1,0 +1,79 @@
+{
+  "product": {
+    "id": "gid://shopify/Product/9867778490670",
+    "title": "VetriScience Dog Composure Calming Chews",
+    "handle": "vetriscience-dog-composure-bacon-5-64-oz"
+  },
+  "vendor": "VetriScience",
+  "productType": "Dog Supplements Calming",
+  "model": "fal-ai/nano-banana-pro/edit",
+  "resolution": "4K",
+  "generated": "2026-02-19T16:50:35.291Z",
+  "sourceImage": "https://cdn.shopify.com/s/files/1/0944/8629/8926/files/026664016065.jpg?v=1752533668",
+  "context": {
+    "physicalDescription": "resealable stand-up pouch bag containing soft chew supplements. square product image on white background",
+    "shortDescription": "Composure is a fast-acting formula that promotes calm behavior in dogs that are anxious or stressed. Its great for thunderstorms, fireworks, traveling, vet visits, routine changes and more. Composure is clinically shown to work within 30 minutes and last up to 4 hours",
+    "variants": [
+      "Bacon",
+      "Chicken",
+      "Peanut Butter",
+      "Original"
+    ]
+  },
+  "shots": [
+    {
+      "id": "studio-white",
+      "filename": "01-studio-white.png",
+      "aspect_ratio": "1:1",
+      "path": "/Users/Dev/Desktop/development/animaliamarket/public/images/photoshoot/vetriscience-dog-composure-bacon-5-64-oz/01-studio-white.png"
+    },
+    {
+      "id": "hero-banner",
+      "filename": "02-hero-banner.png",
+      "aspect_ratio": "16:9",
+      "path": "/Users/Dev/Desktop/development/animaliamarket/public/images/photoshoot/vetriscience-dog-composure-bacon-5-64-oz/02-hero-banner.png"
+    },
+    {
+      "id": "warm-marble",
+      "filename": "03-warm-marble.png",
+      "aspect_ratio": "1:1",
+      "path": "/Users/Dev/Desktop/development/animaliamarket/public/images/photoshoot/vetriscience-dog-composure-bacon-5-64-oz/03-warm-marble.png"
+    },
+    {
+      "id": "sage-backdrop",
+      "filename": "04-sage-backdrop.png",
+      "aspect_ratio": "4:5",
+      "path": "/Users/Dev/Desktop/development/animaliamarket/public/images/photoshoot/vetriscience-dog-composure-bacon-5-64-oz/04-sage-backdrop.png"
+    },
+    {
+      "id": "three-quarter-angle",
+      "filename": "05-three-quarter.png",
+      "aspect_ratio": "1:1",
+      "path": "/Users/Dev/Desktop/development/animaliamarket/public/images/photoshoot/vetriscience-dog-composure-bacon-5-64-oz/05-three-quarter.png"
+    },
+    {
+      "id": "elevated-display",
+      "filename": "06-elevated-display.png",
+      "aspect_ratio": "4:5",
+      "path": "/Users/Dev/Desktop/development/animaliamarket/public/images/photoshoot/vetriscience-dog-composure-bacon-5-64-oz/06-elevated-display.png"
+    },
+    {
+      "id": "natural-linen",
+      "filename": "07-natural-linen.png",
+      "aspect_ratio": "1:1",
+      "path": "/Users/Dev/Desktop/development/animaliamarket/public/images/photoshoot/vetriscience-dog-composure-bacon-5-64-oz/07-natural-linen.png"
+    },
+    {
+      "id": "botanical-accent",
+      "filename": "08-botanical-accent.png",
+      "aspect_ratio": "1:1",
+      "path": "/Users/Dev/Desktop/development/animaliamarket/public/images/photoshoot/vetriscience-dog-composure-bacon-5-64-oz/08-botanical-accent.png"
+    },
+    {
+      "id": "warm-wood",
+      "filename": "09-warm-wood.png",
+      "aspect_ratio": "16:9",
+      "path": "/Users/Dev/Desktop/development/animaliamarket/public/images/photoshoot/vetriscience-dog-composure-bacon-5-64-oz/09-warm-wood.png"
+    }
+  ]
+}
