@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   description:
     "Premium, intentionally curated pet wellness products. Clean ingredients, transparent origins, and products we trust for our own furry family members.",
   verification: {
-    google: "0te42NYe6j-RXo9dZYKjuQuafnL_Vf-P8w4xuD9H0Y0",
+    google: "Ote42NYe6j-RXo9dZYKjuQuafnL_Vf-P8w4xuD9H0Y0",
   },
   keywords: [
     "pet wellness",
