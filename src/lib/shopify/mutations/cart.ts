@@ -22,7 +22,6 @@ const CART_FRAGMENT = `
               id
               title
               availableForSale
-              quantityAvailable
               selectedOptions {
                 name
                 value

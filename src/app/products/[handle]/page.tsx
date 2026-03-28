@@ -9,6 +9,14 @@ import { ProductGallery } from "./ProductGallery";
 import { ProductInfo } from "./ProductInfo";
 import { ProductTabs } from "./ProductTabs";
 import { RelatedProducts } from "./RelatedProducts";
+import {
+  getCleanProductDescription,
+  getProductConcernLabel,
+  getProductIngredients,
+  getProductOverviewParagraphs,
+  getProductUsage,
+} from "@/lib/merchandising";
+import { getLocalPhotoshootImages } from "@/lib/photoshoot";
 
 interface ProductPageProps {
   params: Promise<{ handle: string }>;
@@ -18,8 +26,7 @@ interface ProductData {
   id: string;
   handle: string;
   title: string;
-  description: string;
-  descriptionHtml: string;
+  description?: string;
   vendor: string;
   productType: string;
   tags: string[];
@@ -54,6 +61,12 @@ interface ProductData {
       };
     }>;
   };
+  metafields?: Array<{
+    key: string;
+    namespace: string;
+    value: string;
+    type: string;
+  }>;
 }
 
 interface FetchResult {
@@ -90,9 +103,16 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
     return { title: "Product | Animalia" };
   }
 
+  const cleanDescription = getCleanProductDescription({
+    title: product.title,
+    description: product.description,
+    tags: product.tags,
+    metafields: product.metafields,
+  });
+
   return {
     title: `${product.title} | Animalia`,
-    description: product.description?.slice(0, 160) || `Shop ${product.title}`,
+    description: cleanDescription.slice(0, 160) || `Shop ${product.title}`,
   };
 }
 
@@ -141,8 +161,40 @@ export default async function ProductPage({ params }: ProductPageProps) {
     notFound();
   }
 
-  const images = product.images.edges.map((edge) => edge.node);
+  const shopifyImages = product.images.edges.map((edge) => edge.node);
+  const localPhotoshootImages = getLocalPhotoshootImages(product.handle, product.title);
+  const images = localPhotoshootImages.length > 0 ? localPhotoshootImages : shopifyImages;
   const variants = product.variants.edges.map((edge) => edge.node);
+  const concernLabel = getProductConcernLabel({
+    title: product.title,
+    description: product.description,
+    tags: product.tags,
+    metafields: product.metafields,
+  });
+  const cleanDescription = getCleanProductDescription({
+    title: product.title,
+    description: product.description,
+    tags: product.tags,
+    metafields: product.metafields,
+  });
+  const overviewParagraphs = getProductOverviewParagraphs({
+    title: product.title,
+    description: product.description,
+    tags: product.tags,
+    metafields: product.metafields,
+  });
+  const ingredients = getProductIngredients({
+    title: product.title,
+    description: product.description,
+    tags: product.tags,
+    metafields: product.metafields,
+  });
+  const usage = getProductUsage({
+    title: product.title,
+    description: product.description,
+    tags: product.tags,
+    metafields: product.metafields,
+  });
 
   return (
     <div className="min-h-screen bg-[var(--cream)]">
@@ -151,56 +203,56 @@ export default async function ProductPage({ params }: ProductPageProps) {
       {/* Breadcrumb */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <nav className="flex items-center gap-2 text-sm text-[var(--stone-500)]">
-          <a href="/" className="hover:text-[var(--sage-600)] transition-colors">
+          <Link href="/" className="hover:text-[var(--sage-600)] transition-colors">
             Home
-          </a>
+          </Link>
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
           </svg>
-          {product.productType && (
-            <>
-              <a
-                href={`/collections/${product.productType.toLowerCase().replace(/\s+/g, "-")}`}
-                className="hover:text-[var(--sage-600)] transition-colors"
-              >
-                {product.productType}
-              </a>
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </>
-          )}
+          <Link href="/collections" className="hover:text-[var(--sage-600)] transition-colors">
+            Collections
+          </Link>
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+          </svg>
+          <span className="text-[var(--stone-500)]">{concernLabel}</span>
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+          </svg>
           <span className="text-[var(--stone-700)] truncate max-w-[200px]">{product.title}</span>
         </nav>
       </div>
 
       {/* Product Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
-          {/* Left: Gallery */}
-          <ProductGallery images={images} title={product.title} />
+        <div className="grid grid-cols-1 items-start lg:grid-cols-2 gap-8 lg:gap-12">
+          <div className="rounded-[2rem] bg-white p-4 shadow-sm ring-1 ring-[var(--stone-100)] sm:p-5">
+            <ProductGallery images={images} title={product.title} />
+          </div>
 
-          {/* Right: Info */}
           <ProductInfo
             product={{
               id: product.id,
               title: product.title,
               vendor: product.vendor,
-              description: product.description,
+              description: cleanDescription,
               options: product.options,
               variants: variants,
               priceRange: product.priceRange,
               compareAtPriceRange: product.compareAtPriceRange,
               availableForSale: product.availableForSale,
               tags: product.tags,
+              metafields: product.metafields,
             }}
           />
         </div>
 
         {/* Product Tabs */}
         <ProductTabs
-          description={product.descriptionHtml}
           vendor={product.vendor}
+          overviewParagraphs={overviewParagraphs}
+          ingredients={ingredients}
+          usage={usage}
         />
       </div>
 
@@ -215,10 +267,10 @@ export default async function ProductPage({ params }: ProductPageProps) {
           </div>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { icon: "🩺", title: "Vet Formulated", desc: "Developed with veterinary experts" },
-              { icon: "🌿", title: "Natural Ingredients", desc: "No artificial fillers or additives" },
-              { icon: "✅", title: "Quality Tested", desc: "Third-party verified for purity" },
-              { icon: "🇺🇸", title: "Made in USA", desc: "Manufactured in certified facilities" },
+              { icon: "🎯", title: "Need-Based Curation", desc: "We surface products by the problem shoppers are trying to solve." },
+              { icon: "📦", title: "Current Stock Focus", desc: "The assortment is designed around what is ready to buy now." },
+              { icon: "🚚", title: "Free Shipping $50+", desc: "Easy threshold messaging for larger, more efficient baskets." },
+              { icon: "💬", title: "Human Support", desc: "If a shopper is unsure, the next step is guidance, not overwhelm." },
             ].map((item) => (
               <div key={item.title} className="text-center">
                 <span className="text-4xl mb-4 block">{item.icon}</span>
@@ -233,7 +285,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
       {/* Lifestyle Banner */}
       <section className="relative h-[40vh] min-h-[300px]">
         <Image
-          src="/images/lifestyle-family.jpg"
+          src="/images/animalia-routine-banner.png"
           alt="Happy pets with their family"
           fill
           className="object-cover"
@@ -243,16 +295,16 @@ export default async function ProductPage({ params }: ProductPageProps) {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
             <div className="max-w-lg">
               <h2 className="font-serif text-3xl lg:text-4xl text-white mb-4">
-                For Pets Who Are Family
+                Build a Better Wellness Routine
               </h2>
               <p className="text-white/90 mb-6">
-                Every product we carry is one we&apos;d give our own pets. That&apos;s our promise.
+                Start with the product that solves the clearest problem, then add the next most natural support item.
               </p>
               <Link
-                href="/about"
+                href="/collections"
                 className="inline-flex items-center gap-2 text-white font-medium hover:gap-3 transition-all"
               >
-                Learn About Our Mission
+                Shop More Concerns
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
@@ -265,7 +317,6 @@ export default async function ProductPage({ params }: ProductPageProps) {
       {/* Related Products */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <RelatedProducts
-          productType={product.productType}
           currentProductId={product.id}
         />
       </div>

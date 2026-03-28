@@ -8,8 +8,6 @@ const PRODUCT_FRAGMENT = `
     id
     handle
     title
-    description
-    descriptionHtml
     availableForSale
     productType
     vendor
@@ -58,7 +56,6 @@ const VARIANT_FRAGMENT = `
     id
     title
     availableForSale
-    quantityAvailable
     selectedOptions {
       name
       value

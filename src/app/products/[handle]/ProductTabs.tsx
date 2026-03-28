@@ -3,28 +3,29 @@
 import { useState } from "react";
 
 interface ProductTabsProps {
-  description: string;
   vendor: string;
+  overviewParagraphs: string[];
+  ingredients: string;
+  usage: string;
 }
 
-export function ProductTabs({ description, vendor }: ProductTabsProps) {
+export function ProductTabs({ vendor, overviewParagraphs, ingredients, usage }: ProductTabsProps) {
   const [activeTab, setActiveTab] = useState("description");
 
   const tabs = [
-    { id: "description", label: "Description" },
-    { id: "ingredients", label: "Ingredients" },
+    { id: "description", label: "Overview" },
+    { id: "ingredients", label: "Details" },
     { id: "shipping", label: "Shipping & Returns" },
   ];
 
   return (
-    <div className="mt-16 border-t border-[var(--stone-200)] pt-12">
-      {/* Tab Headers */}
-      <div className="flex gap-1 border-b border-[var(--stone-200)]">
+    <div className="mt-16 rounded-[2rem] bg-white p-6 shadow-sm ring-1 ring-[var(--stone-100)] sm:p-8">
+      <div className="flex gap-1 border-b border-[var(--stone-200)] overflow-x-auto">
         {tabs.map((tab) => (
           <button
             key={tab.id}
             onClick={() => setActiveTab(tab.id)}
-            className={`px-6 py-4 text-sm font-medium border-b-2 -mb-px transition-colors ${
+            className={`px-6 py-4 text-sm font-medium border-b-2 -mb-px transition-colors whitespace-nowrap ${
               activeTab === tab.id
                 ? "border-[var(--sage-500)] text-[var(--sage-700)]"
                 : "border-transparent text-[var(--stone-500)] hover:text-[var(--stone-700)]"
@@ -35,35 +36,55 @@ export function ProductTabs({ description, vendor }: ProductTabsProps) {
         ))}
       </div>
 
-      {/* Tab Content */}
       <div className="py-8">
         {activeTab === "description" && (
-          <div className="prose prose-stone max-w-none">
-            <div
-              dangerouslySetInnerHTML={{ __html: description || "<p>No description available.</p>" }}
-              className="text-[var(--stone-600)] leading-relaxed [&>p]:mb-4 [&>ul]:list-disc [&>ul]:pl-5 [&>ul]:mb-4 [&>h3]:text-lg [&>h3]:font-semibold [&>h3]:text-[var(--stone-800)] [&>h3]:mt-6 [&>h3]:mb-3"
-            />
+          <div className="space-y-4 text-[var(--stone-600)] leading-relaxed">
+            {overviewParagraphs.map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
+            ))}
+            <div className="rounded-2xl bg-[var(--stone-50)] p-5">
+              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[var(--stone-500)] mb-2">
+                Brand
+              </p>
+              <p>{vendor}</p>
+            </div>
           </div>
         )}
 
         {activeTab === "ingredients" && (
           <div className="space-y-6">
-            <p className="text-[var(--stone-600)]">
-              Our products are made with premium, carefully selected ingredients.
-              For the complete ingredient list, please refer to the product packaging.
-            </p>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {["Natural Ingredients", "No Artificial Colors", "No Preservatives", "Made in USA"].map((badge) => (
-                <div
-                  key={badge}
-                  className="flex items-center gap-2 p-4 bg-[var(--sage-50)] rounded-xl"
-                >
-                  <svg className="w-5 h-5 text-[var(--sage-600)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span className="text-sm font-medium text-[var(--sage-700)]">{badge}</span>
+            {usage && (
+              <div>
+                <h3 className="mb-3 text-lg font-semibold text-[var(--stone-800)]">
+                  How to use
+                </h3>
+                <div className="rounded-2xl bg-[var(--stone-50)] p-5 text-[var(--stone-600)]">
+                  {usage.split("\n").map((line) => (
+                    <p key={line} className="mb-2 last:mb-0">
+                      {line}
+                    </p>
+                  ))}
                 </div>
-              ))}
+              </div>
+            )}
+
+            <div>
+              <h3 className="mb-3 text-lg font-semibold text-[var(--stone-800)]">
+                Ingredients and product details
+              </h3>
+              {ingredients ? (
+                <div className="rounded-2xl bg-[var(--stone-50)] p-5 text-[var(--stone-600)]">
+                  {ingredients.split("\n").map((line) => (
+                    <p key={line} className="mb-2 last:mb-0">
+                      {line}
+                    </p>
+                  ))}
+                </div>
+              ) : (
+                <p className="text-[var(--stone-600)]">
+                  Ingredient details from the supplier are limited or inconsistent for this item. Please review the product packaging after delivery or contact us if you want help confirming fit before you order.
+                </p>
+              )}
             </div>
           </div>
         )}
@@ -92,7 +113,7 @@ export function ProductTabs({ description, vendor }: ProductTabsProps) {
                     <svg className="w-5 h-5 text-[var(--sage-500)] mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    <span>Express shipping: 1-3 business days</span>
+                    <span>Checkout calculates final shipping and taxes.</span>
                   </li>
                 </ul>
               </div>
@@ -105,19 +126,19 @@ export function ProductTabs({ description, vendor }: ProductTabsProps) {
                     <svg className="w-5 h-5 text-[var(--sage-500)] mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    <span>30-day hassle-free returns</span>
+                    <span>30-day returns on unopened items</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <svg className="w-5 h-5 text-[var(--sage-500)] mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    <span>Full refund on unopened items</span>
+                    <span>Contact support if you need help before or after ordering.</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <svg className="w-5 h-5 text-[var(--sage-500)] mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    <span>Contact us for return authorization</span>
+                    <span>We&apos;ll help you find the right next step if a product is not the right fit.</span>
                   </li>
                 </ul>
               </div>
@@ -128,6 +149,3 @@ export function ProductTabs({ description, vendor }: ProductTabsProps) {
     </div>
   );
 }
-
-
-

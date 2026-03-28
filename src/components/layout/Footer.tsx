@@ -7,11 +7,11 @@ export function Footer() {
     shop: {
       title: "Shop",
       links: [
-        { label: "All Products", href: "/collections/all" },
+        { label: "All Products", href: "/collections" },
         { label: "Dogs", href: "/collections/organic-canine-supplements-hip-and-joint" },
         { label: "Cats", href: "/collections/calm-feline-supplements" },
         { label: "Supplements", href: "/collections/organic-canine-supplements-hip-and-joint" },
-        { label: "Food", href: "/collections/canine-dry-foods" },
+        { label: "Food", href: "/collections/canine-dry-food" },
       ],
     },
     help: {

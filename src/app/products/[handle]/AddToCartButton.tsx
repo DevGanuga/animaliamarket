@@ -26,8 +26,8 @@ export function AddToCartButton({ variantId, quantity, available }: AddToCartBut
       setIsAdded(true);
       setTimeout(() => setIsAdded(false), 2000);
       
-      // Dispatch custom event to update cart drawer
       window.dispatchEvent(new CustomEvent("cart-updated"));
+      window.dispatchEvent(new CustomEvent("cart-open"));
     } catch (err) {
       console.error("Error adding to cart:", err);
       setError(err instanceof Error ? err.message : "Failed to add to cart");

@@ -17,6 +17,12 @@ interface CollectionProduct {
   availableForSale: boolean;
   tags: string[];
   featuredImage?: { url: string; altText?: string | null };
+  options?: Array<{ name: string; values: string[] }>;
+  variants?: {
+    edges: Array<{
+      node: { id: string; title: string; availableForSale: boolean };
+    }>;
+  };
   priceRange: {
     minVariantPrice: { amount: string; currencyCode: string };
   };

@@ -3,6 +3,12 @@ import Link from "next/link";
 import Image from "next/image";
 import { storefrontClient } from "@/lib/shopify/client";
 import { Header, Footer } from "@/components/layout";
+import {
+  cleanCollectionTitle,
+  getCollectionFallbackImage,
+  getCollectionSpotlight,
+  prioritizeCollectionHandles,
+} from "@/lib/merchandising";
 
 interface ShopifyCollection {
   id: string;
@@ -20,33 +26,8 @@ export const metadata: Metadata = {
 
 // Map collection titles to appropriate images
 function getCollectionImage(title: string, image?: { url: string; altText?: string | null }) {
-  const titleLower = title.toLowerCase();
-  
   if (image?.url) return image.url;
-  
-  if (titleLower.includes("dog") || titleLower.includes("canine")) {
-    return "/images/collection-dogs.jpg";
-  }
-  if (titleLower.includes("cat") || titleLower.includes("feline")) {
-    return "/images/collection-cats.jpg";
-  }
-  if (titleLower.includes("joint") || titleLower.includes("hip")) {
-    return "/images/collection-dog-joint.jpg";
-  }
-  if (titleLower.includes("calm")) {
-    return "/images/collection-dog-calming.jpg";
-  }
-  if (titleLower.includes("supplement")) {
-    return "/images/collection-dog-supplements.jpg";
-  }
-  if (titleLower.includes("food") || titleLower.includes("nutrition")) {
-    return "/images/category-food.jpg";
-  }
-  if (titleLower.includes("treat")) {
-    return "/images/category-treats.jpg";
-  }
-  
-  return "/images/hero-wellness.jpg";
+  return getCollectionFallbackImage(title);
 }
 
 async function getAllCollections(): Promise<ShopifyCollection[]> {
@@ -90,11 +71,18 @@ async function getAllCollections(): Promise<ShopifyCollection[]> {
 
 export default async function CollectionsPage() {
   const collections = await getAllCollections();
+  const prioritizedHandles = prioritizeCollectionHandles(collections.map((collection) => collection.handle));
 
   // Filter out empty collections
-  const activeCollections = collections.filter(
-    (c) => c.products.edges.length > 0
-  );
+  const activeCollections = collections
+    .filter((c) => c.products.edges.length > 0)
+    .sort((a, b) => {
+      const aIndex = prioritizedHandles.indexOf(a.handle);
+      const bIndex = prioritizedHandles.indexOf(b.handle);
+
+      if (aIndex !== -1 && bIndex !== -1 && aIndex !== bIndex) return aIndex - bIndex;
+      return cleanCollectionTitle(a.title).localeCompare(cleanCollectionTitle(b.title));
+    });
 
   return (
     <div className="min-h-screen bg-[var(--cream)]">
@@ -104,7 +92,7 @@ export default async function CollectionsPage() {
       <section className="relative min-h-[50vh] flex items-end overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="/images/hero-main.jpg"
+            src="/images/animalia-hero-editorial.png"
             alt="Animalia Collections"
             fill
             className="object-cover"
@@ -128,8 +116,7 @@ export default async function CollectionsPage() {
             Our Collections
           </h1>
           <p className="text-xl text-white/80 max-w-2xl">
-            Explore our carefully curated selections of premium pet wellness products.
-            Each collection is designed to meet your pet&apos;s specific needs.
+            Start with the wellness concern that matters most, then compare the strongest in-stock options for that routine.
           </p>
         </div>
       </section>
@@ -138,46 +125,46 @@ export default async function CollectionsPage() {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-6">
-            {/* Dogs */}
+            {/* Joint support */}
             <Link
-              href="/collections/frontpage"
+              href="/collections/organic-canine-supplements-hip-and-joint"
               className="group relative overflow-hidden rounded-3xl aspect-[16/10]"
             >
               <Image
-                src="/images/collection-dogs.jpg"
-                alt="Shop for dogs"
+                src="/images/animalia-dog-joint-support.png"
+                alt="Shop joint support"
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-8">
-                <span className="text-4xl mb-3 block">🐕</span>
-                <h3 className="font-serif text-3xl text-white mb-2">For Dogs</h3>
-                <p className="text-white/80 mb-4">Premium wellness products for your canine companion</p>
+                <span className="text-4xl mb-3 block">🦴</span>
+                <h3 className="font-serif text-3xl text-white mb-2">Joint Support</h3>
+                <p className="text-white/80 mb-4">The clearest high-intent collection for mobility, long-term support, and larger daily-use formats.</p>
                 <span className="inline-flex items-center gap-2 text-white font-medium">
-                  Shop Now →
+                  Shop Mobility →
                 </span>
               </div>
             </Link>
 
-            {/* Cats */}
+            {/* Calming / dental */}
             <Link
-              href="/collections/frontpage"
+              href="/collections/feline-dental-supplements"
               className="group relative overflow-hidden rounded-3xl aspect-[16/10]"
             >
               <Image
-                src="/images/collection-cats.jpg"
-                alt="Shop for cats"
+                src="/images/animalia-dental-routine.png"
+                alt="Shop cat dental care"
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-8">
-                <span className="text-4xl mb-3 block">🐱</span>
-                <h3 className="font-serif text-3xl text-white mb-2">For Cats</h3>
-                <p className="text-white/80 mb-4">Thoughtfully selected products for your feline friend</p>
+                <span className="text-4xl mb-3 block">🪥</span>
+                <h3 className="font-serif text-3xl text-white mb-2">Cat Dental Care</h3>
+                <p className="text-white/80 mb-4">Low-friction daily care that pairs naturally with food, calming, and other repeat-order essentials.</p>
                 <span className="inline-flex items-center gap-2 text-white font-medium">
-                  Shop Now →
+                  Shop Dental →
                 </span>
               </div>
             </Link>
@@ -197,53 +184,58 @@ export default async function CollectionsPage() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-          {activeCollections.map((collection) => (
-            <Link
-              key={collection.id}
-              href={`/collections/${collection.handle}`}
-              className="group relative overflow-hidden rounded-2xl bg-white shadow-sm hover:shadow-xl transition-all duration-300"
-            >
+          {activeCollections.map((collection) => {
+            const spotlight = getCollectionSpotlight(collection.handle, collection.title);
+
+            return (
+              <Link
+                key={collection.id}
+                href={`/collections/${collection.handle}`}
+                className="group relative overflow-hidden rounded-2xl bg-white shadow-sm hover:shadow-xl transition-all duration-300"
+              >
               {/* Image */}
-              <div className="relative aspect-[4/3]">
-                <Image
-                  src={getCollectionImage(collection.title, collection.image)}
-                  alt={collection.title}
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-              </div>
+                <div className="relative aspect-[4/3]">
+                  <Image
+                    src={collection.image?.url || spotlight.image || getCollectionImage(collection.title, collection.image)}
+                    alt={collection.title}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
+                </div>
 
               {/* Content */}
-              <div className="absolute bottom-0 left-0 right-0 p-6">
-                <h2 className="font-serif text-xl lg:text-2xl text-white mb-2 group-hover:text-[var(--sage-200)] transition-colors">
-                  {collection.title}
-                </h2>
-                {collection.description && (
-                  <p className="text-white/80 text-sm line-clamp-2 mb-3">
-                    {collection.description}
+                <div className="absolute bottom-0 left-0 right-0 p-6">
+                  <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-white/70">
+                    {spotlight.label}
                   </p>
-                )}
-                <span className="inline-flex items-center gap-2 text-sm font-medium text-white/90 group-hover:text-white group-hover:gap-3 transition-all">
-                  Shop Collection
-                  <svg
-                    className="w-4 h-4"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
-                </span>
-              </div>
+                  <h2 className="font-serif text-xl lg:text-2xl text-white mb-2 group-hover:text-[var(--sage-200)] transition-colors">
+                    {spotlight.title || cleanCollectionTitle(collection.title)}
+                  </h2>
+                  <p className="text-white/80 text-sm line-clamp-3 mb-3">
+                    {spotlight.description || collection.description}
+                  </p>
+                  <span className="inline-flex items-center gap-2 text-sm font-medium text-white/90 group-hover:text-white group-hover:gap-3 transition-all">
+                    Shop Collection
+                    <svg
+                      className="w-4 h-4"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                  </span>
+                </div>
 
               {/* Product Count Badge */}
-              <div className="absolute top-4 right-4 px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full text-xs font-medium text-[var(--stone-700)]">
-                {collection.products.edges.length}+ products
-              </div>
-            </Link>
-          ))}
+                <div className="absolute top-4 right-4 px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full text-xs font-medium text-[var(--stone-700)]">
+                  {collection.products.edges.length}+ products
+                </div>
+              </Link>
+            );
+          })}
         </div>
 
         {/* Empty State */}
@@ -269,7 +261,7 @@ export default async function CollectionsPage() {
       {/* CTA Banner */}
       <section className="relative h-[40vh] min-h-[300px]">
         <Image
-          src="/images/lifestyle-outdoor.jpg"
+          src="/images/animalia-routine-banner.png"
           alt="Active pets"
           fill
           className="object-cover"
@@ -281,7 +273,7 @@ export default async function CollectionsPage() {
               Can&apos;t Find What You Need?
             </h2>
             <p className="text-white/90 text-lg mb-8">
-              Our team is here to help you find the perfect products for your pet.
+              If the right routine is not obvious yet, we can help narrow the best next purchase for your pet.
             </p>
             <Link
               href="/contact"

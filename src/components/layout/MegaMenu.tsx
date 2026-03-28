@@ -86,7 +86,7 @@ const menuData = {
     featured: {
       title: "Featured Products",
       description: "Top picks from our catalog",
-      href: "/collections/frontpage",
+      href: "/collections",
     },
     columns: [
       {

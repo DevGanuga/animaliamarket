@@ -17,14 +17,20 @@ export function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    const handleCartOpen = () => setCartOpen(true);
+    window.addEventListener("cart-open", handleCartOpen);
+    return () => window.removeEventListener("cart-open", handleCartOpen);
+  }, []);
+
   return (
     <>
       {/* Announcement Bar */}
       <div className="bg-[var(--sage-600)] text-white py-2.5 text-center text-sm">
         <span className="hidden sm:inline">🐾 </span>
         Free shipping on orders over $50 •{" "}
-        <Link href="/collections/all" className="underline hover:no-underline">
-          Shop Now
+        <Link href="/collections" className="underline hover:no-underline">
+          Shop top needs
         </Link>
       </div>
 
@@ -243,7 +249,7 @@ export function Header() {
               </p>
               {[
                 { label: "All Collections", href: "/collections" },
-                { label: "Featured Products", href: "/collections/frontpage" },
+                { label: "Top Needs", href: "/collections" },
               ].map((link) => (
                 <Link
                   key={link.label}

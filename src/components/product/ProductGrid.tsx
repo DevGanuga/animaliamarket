@@ -25,6 +25,19 @@ interface Product {
   };
   availableForSale?: boolean;
   tags?: string[];
+  options?: Array<{
+    name: string;
+    values: string[];
+  }>;
+  variants?: {
+    edges: Array<{
+      node: {
+        id: string;
+        title: string;
+        availableForSale?: boolean;
+      };
+    }>;
+  };
 }
 
 interface ProductGridProps {
@@ -75,6 +88,3 @@ export function ProductGrid({ products, columns = 4 }: ProductGridProps) {
     </div>
   );
 }
-
-
-

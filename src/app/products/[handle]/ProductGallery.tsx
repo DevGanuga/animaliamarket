@@ -35,38 +35,17 @@ export function ProductGallery({ images, title }: ProductGalleryProps) {
   }
 
   return (
-    <div className="space-y-4">
-      {/* Main Image */}
-      <div
-        className="relative aspect-square rounded-3xl overflow-hidden bg-[var(--stone-100)] cursor-zoom-in group"
-        onClick={() => setIsZoomed(true)}
-      >
-        <Image
-          src={selectedImage.url}
-          alt={selectedImage.altText || title}
-          fill
-          className="object-cover transition-transform duration-500 group-hover:scale-105"
-          sizes="(max-width: 1024px) 100vw, 50vw"
-          priority
-        />
-        
-        {/* Zoom indicator */}
-        <div className="absolute bottom-4 right-4 px-3 py-1.5 bg-white/90 backdrop-blur-sm rounded-full text-xs font-medium text-[var(--stone-600)] opacity-0 group-hover:opacity-100 transition-opacity">
-          Click to zoom
-        </div>
-      </div>
-
-      {/* Thumbnail Grid */}
+    <div className="space-y-4 lg:grid lg:grid-cols-[96px_minmax(0,1fr)] lg:gap-5 lg:space-y-0">
       {images.length > 1 && (
-        <div className="grid grid-cols-5 gap-3">
+        <div className="order-2 grid grid-cols-5 gap-3 lg:order-1 lg:grid-cols-1">
           {images.slice(0, 5).map((image, index) => (
             <button
               key={index}
               onClick={() => setSelectedIndex(index)}
-              className={`relative aspect-square rounded-xl overflow-hidden transition-all ${
+              className={`relative aspect-square overflow-hidden rounded-2xl transition-all ${
                 selectedIndex === index
                   ? "ring-2 ring-[var(--sage-500)] ring-offset-2"
-                  : "opacity-70 hover:opacity-100"
+                  : "opacity-75 hover:opacity-100"
               }`}
             >
               <Image
@@ -81,13 +60,43 @@ export function ProductGallery({ images, title }: ProductGalleryProps) {
         </div>
       )}
 
-      {/* Lightbox Modal */}
+      <div className="order-1 lg:order-2">
+        <div
+          className="group relative aspect-[4/5] overflow-hidden rounded-[2rem] bg-[var(--stone-100)] cursor-zoom-in lg:aspect-square"
+          onClick={() => setIsZoomed(true)}
+        >
+          <Image
+            src={selectedImage.url}
+            alt={selectedImage.altText || title}
+            fill
+            className="object-cover transition-transform duration-500 group-hover:scale-105"
+            sizes="(max-width: 1024px) 100vw, 50vw"
+            priority
+          />
+
+          <div className="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-[var(--stone-700)] shadow-sm">
+            {selectedIndex + 1} / {images.length}
+          </div>
+
+          <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/55 via-black/10 to-transparent px-5 pb-5 pt-12">
+            <div className="flex items-end justify-between gap-4">
+              <div>
+                <p className="text-xs uppercase tracking-[0.18em] text-white/60">Product gallery</p>
+                <p className="mt-1 text-sm text-white/85">Zoom in to inspect packaging and product details.</p>
+              </div>
+              <div className="rounded-full bg-white/90 px-3 py-1.5 text-xs font-medium text-[var(--stone-700)] opacity-0 transition-opacity group-hover:opacity-100">
+                Click to zoom
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {isZoomed && (
         <div
           className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center p-4"
           onClick={() => setIsZoomed(false)}
         >
-          {/* Close Button */}
           <button
             onClick={() => setIsZoomed(false)}
             className="absolute top-4 right-4 p-3 text-white/80 hover:text-white transition-colors z-10"
@@ -97,7 +106,6 @@ export function ProductGallery({ images, title }: ProductGalleryProps) {
             </svg>
           </button>
 
-          {/* Navigation */}
           {images.length > 1 && (
             <>
               <button
@@ -125,7 +133,6 @@ export function ProductGallery({ images, title }: ProductGalleryProps) {
             </>
           )}
 
-          {/* Image */}
           <div className="relative w-full max-w-4xl aspect-square" onClick={(e) => e.stopPropagation()}>
             <Image
               src={selectedImage.url}
@@ -136,7 +143,6 @@ export function ProductGallery({ images, title }: ProductGalleryProps) {
             />
           </div>
 
-          {/* Dots */}
           {images.length > 1 && (
             <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-2">
               {images.map((_, index) => (
@@ -146,8 +152,8 @@ export function ProductGallery({ images, title }: ProductGalleryProps) {
                     e.stopPropagation();
                     setSelectedIndex(index);
                   }}
-                  className={`w-2 h-2 rounded-full transition-all ${
-                    selectedIndex === index ? "bg-white w-6" : "bg-white/50"
+                  className={`h-2 rounded-full transition-all ${
+                    selectedIndex === index ? "w-6 bg-white" : "w-2 bg-white/50"
                   }`}
                 />
               ))}
@@ -158,6 +164,3 @@ export function ProductGallery({ images, title }: ProductGalleryProps) {
     </div>
   );
 }
-
-
-

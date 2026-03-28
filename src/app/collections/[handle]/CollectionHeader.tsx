@@ -1,5 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
+import {
+  cleanCollectionTitle,
+  getCollectionFallbackImage,
+  getCollectionSupportCopy,
+} from "@/lib/merchandising";
 
 interface CollectionHeaderProps {
   title: string;
@@ -10,29 +15,8 @@ interface CollectionHeaderProps {
 
 // Map collection titles to appropriate hero images
 function getCollectionImage(title: string, image?: { url: string; altText?: string | null }) {
-  const titleLower = title.toLowerCase();
-  
   if (image?.url) return image.url;
-  
-  // Map to generated images based on keywords
-  if (titleLower.includes("dog") || titleLower.includes("canine")) {
-    return "/images/collection-dogs.jpg";
-  }
-  if (titleLower.includes("cat") || titleLower.includes("feline")) {
-    return "/images/collection-cats.jpg";
-  }
-  if (titleLower.includes("joint") || titleLower.includes("hip")) {
-    return "/images/collection-dog-joint.jpg";
-  }
-  if (titleLower.includes("calm")) {
-    return "/images/collection-dog-calming.jpg";
-  }
-  if (titleLower.includes("supplement")) {
-    return "/images/collection-dog-supplements.jpg";
-  }
-  
-  // Default hero
-  return "/images/hero-wellness.jpg";
+  return getCollectionFallbackImage(title);
 }
 
 export function CollectionHeader({
@@ -42,6 +26,8 @@ export function CollectionHeader({
   productCount,
 }: CollectionHeaderProps) {
   const heroImage = getCollectionImage(title, image);
+  const cleanTitle = cleanCollectionTitle(title);
+  const supportCopy = getCollectionSupportCopy(title);
   
   return (
     <div className="relative overflow-hidden min-h-[40vh] flex items-end">
@@ -77,7 +63,7 @@ export function CollectionHeader({
 
         {/* Title */}
         <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-white mb-4">
-          {title}
+          {cleanTitle}
         </h1>
 
         {/* Description */}
@@ -87,10 +73,24 @@ export function CollectionHeader({
           </p>
         )}
 
-        {/* Product Count */}
-        <p className="text-white/60 text-sm">
-          {productCount} {productCount === 1 ? "product" : "products"} available
-        </p>
+        <div className="mb-5 flex flex-wrap gap-2">
+          {["Curated selection", "Need-based shopping", `${productCount} items in stock`].map((item) => (
+            <span
+              key={item}
+              className="rounded-full border border-white/15 bg-white/10 px-3 py-1 text-xs font-medium text-white/80 backdrop-blur-sm"
+            >
+              {item}
+            </span>
+          ))}
+        </div>
+
+        <div className="grid gap-3 text-sm text-white/75 md:grid-cols-2 md:max-w-3xl">
+          {supportCopy.map((item) => (
+            <p key={item} className="rounded-2xl border border-white/10 bg-black/10 px-4 py-3 backdrop-blur-sm">
+              {item}
+            </p>
+          ))}
+        </div>
       </div>
     </div>
   );

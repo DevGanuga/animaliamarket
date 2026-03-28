@@ -242,7 +242,9 @@ function inferPhysicalDescription(product: ShopifyProduct): string {
 
   const parts: string[] = [];
 
-  if (desc.includes("chew") || title.includes("chew")) {
+  if (desc.includes("oil") || title.includes("oil")) {
+    parts.push("retail bottle of pet wellness oil with printed label");
+  } else if (desc.includes("chew") || title.includes("chew")) {
     parts.push("resealable stand-up pouch bag containing soft chew supplements");
   } else if (desc.includes("powder") || title.includes("powder")) {
     parts.push("container of supplement powder");
@@ -411,6 +413,32 @@ const SHOT_TEMPLATES: ShotTemplate[] = [
       `Photorealistic product photography. ` +
       `${buildBrandDirective()}`,
   },
+  {
+    id: "ingredient-story",
+    filenameTemplate: "10-ingredient-story.png",
+    aspect_ratio: "4:5",
+    buildPrompt: (ctx) =>
+      `${buildPreserveDirective(ctx)} ` +
+      `Place this product standing upright on a premium light stone counter. ` +
+      `Arrange a restrained ingredient scene around it using natural salmon-colored fish oil cues, a small ceramic bowl, a folded sage linen cloth, and botanical accents. ` +
+      `This should feel like a premium ingredient story shot for a wellness brand, not a busy flat lay. ` +
+      `The product remains the dominant sharp focal point and all packaging text must stay perfectly legible. ` +
+      `Soft natural side lighting, calm shadows, elevated editorial styling. ` +
+      `${buildBrandDirective()}`,
+  },
+  {
+    id: "counter-display",
+    filenameTemplate: "11-counter-display.png",
+    aspect_ratio: "4:5",
+    buildPrompt: (ctx) =>
+      `${buildPreserveDirective(ctx)} ` +
+      `Place this product standing upright on a refined cream kitchen counter beside an elegant dog bowl and a neatly folded neutral towel. ` +
+      `The styling should communicate a premium daily routine for pet parents. ` +
+      `The product is still the main subject and must remain tack sharp, realistic, and fully readable. ` +
+      `No text overlays, no extra branded packaging, no clutter. ` +
+      `Photorealistic lifestyle product photography with warm natural daylight. ` +
+      `${buildBrandDirective()}`,
+  },
 ];
 
 // ---------------------------------------------------------------------------
@@ -500,7 +528,7 @@ async function main() {
 
   console.log("═══════════════════════════════════════════════════════════════");
   console.log("  ANIMALIA — Product Photoshoot Workflow");
-  console.log("  Model: fal-ai/nano-banana-pro/edit | 4K | 9 shots");
+  console.log(`  Model: fal-ai/nano-banana-pro/edit | 4K | ${SHOT_TEMPLATES.length} shots`);
   console.log("═══════════════════════════════════════════════════════════════\n");
 
   // 1. Fetch product

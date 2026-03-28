@@ -2,6 +2,11 @@ import { storefrontClient } from "@/lib/shopify/client";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { ProductGrid } from "@/components/product";
+import {
+  cleanCollectionTitle,
+  getCollectionSpotlight,
+  prioritizeCollectionHandles,
+} from "@/lib/merchandising";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -13,6 +18,12 @@ interface ShopifyProduct {
   availableForSale: boolean;
   tags: string[];
   featuredImage?: { url: string; altText?: string | null };
+  options?: Array<{ name: string; values: string[] }>;
+  variants?: {
+    edges: Array<{
+      node: { id: string; title: string; availableForSale: boolean };
+    }>;
+  };
   priceRange: { minVariantPrice: { amount: string; currencyCode: string } };
   compareAtPriceRange?: { minVariantPrice: { amount: string; currencyCode: string } };
 }
@@ -44,6 +55,19 @@ async function getFeaturedProducts(): Promise<ShopifyProduct[]> {
                 url
                 altText
               }
+              options {
+                name
+                values
+              }
+              variants(first: 1) {
+                edges {
+                  node {
+                    id
+                    title
+                    availableForSale
+                  }
+                }
+              }
               priceRange {
                 minVariantPrice {
                   amount
@@ -67,38 +91,41 @@ async function getFeaturedProducts(): Promise<ShopifyProduct[]> {
     }>(query, { first: 100 });
 
     const allProducts = data?.products?.edges.map((e) => e.node) || [];
-    
-    const productsByVendor: Record<string, ShopifyProduct[]> = {};
-    for (const product of allProducts) {
-      const vendor = product.vendor || 'Other';
-      if (!productsByVendor[vendor]) {
-        productsByVendor[vendor] = [];
-      }
-      productsByVendor[vendor].push(product);
+
+    const scoreProduct = (product: ShopifyProduct) => {
+      const text = `${product.title} ${product.vendor} ${product.tags.join(" ")}`.toLowerCase();
+      const price = parseFloat(product.priceRange.minVariantPrice.amount);
+
+      let score = product.availableForSale ? 20 : -100;
+      score += Math.min(price, 120) / 4;
+
+      if (text.includes("joint") || text.includes("hip") || text.includes("mobility")) score += 28;
+      if (text.includes("calm") || text.includes("stress") || text.includes("anxiety")) score += 22;
+      if (text.includes("dental") || text.includes("plaque") || text.includes("breath")) score += 20;
+      if (text.includes("salmon oil") || text.includes("pollock oil") || text.includes("omega")) score += 18;
+      if (text.includes("digest") || text.includes("probiotic")) score += 14;
+      if (product.tags.includes("bestseller")) score += 10;
+
+      return score;
+    };
+
+    const rankedProducts = [...allProducts].sort((a, b) => scoreProduct(b) - scoreProduct(a));
+    const vendorCounts = new Map<string, number>();
+    const featuredProducts: ShopifyProduct[] = [];
+
+    for (const product of rankedProducts) {
+      if (!product.availableForSale || featuredProducts.length >= 8) continue;
+
+      const vendor = product.vendor || "Other";
+      const currentVendorCount = vendorCounts.get(vendor) || 0;
+
+      if (currentVendorCount >= 2) continue;
+
+      featuredProducts.push(product);
+      vendorCounts.set(vendor, currentVendorCount + 1);
     }
-    
-    const vendors = Object.keys(productsByVendor);
-    const diverseProducts: ShopifyProduct[] = [];
-    
-    for (const vendor of vendors) {
-      if (diverseProducts.length >= 8) break;
-      const vendorProducts = productsByVendor[vendor];
-      if (vendorProducts.length > 0) {
-        diverseProducts.push(vendorProducts[0]);
-      }
-    }
-    
-    if (diverseProducts.length < 8) {
-      for (const vendor of vendors) {
-        if (diverseProducts.length >= 8) break;
-        const vendorProducts = productsByVendor[vendor];
-        if (vendorProducts.length > 1) {
-          diverseProducts.push(vendorProducts[1]);
-        }
-      }
-    }
-    
-    return diverseProducts.slice(0, 8);
+
+    return featuredProducts.slice(0, 8);
   } catch (error) {
     console.error('Failed to fetch products:', error);
     return [];
@@ -178,13 +205,70 @@ const TESTIMONIALS = [
   },
 ];
 
+const TOP_NEEDS = [
+  {
+    title: "Joint Support",
+    href: "/collections/organic-canine-supplements-hip-and-joint",
+    image: "/images/animalia-dog-joint-support.png",
+    emoji: "🦴",
+    desc: "High-intent mobility care",
+  },
+  {
+    title: "Calming",
+    href: "/collections/calm-feline-supplements",
+    image: "/images/animalia-cat-calming.png",
+    emoji: "😌",
+    desc: "Daily stress and anxiety support",
+  },
+  {
+    title: "Dental Care",
+    href: "/collections/feline-dental-supplements",
+    image: "/images/animalia-dental-routine.png",
+    emoji: "🪥",
+    desc: "Low-friction oral care",
+  },
+  {
+    title: "Omega Oils",
+    href: "/brands/alaska-naturals",
+    image: "/images/animalia-omega-wellness.png",
+    emoji: "🐟",
+    desc: "Easy add-on wellness value",
+  },
+];
+
+const START_HERE_STEPS = [
+  {
+    step: "01",
+    title: "Choose the pet",
+    copy: "Start with dogs or cats so the catalog immediately narrows to the right routine.",
+  },
+  {
+    step: "02",
+    title: "Shop the need",
+    copy: "Move into joint support, calming, dental care, or daily wellness instead of browsing aimlessly.",
+  },
+  {
+    step: "03",
+    title: "Build the basket",
+    copy: "Use larger formats and natural add-ons to cross the shipping threshold and improve reorder value.",
+  },
+];
+
 export default async function HomePage() {
   const [products, collections] = await Promise.all([
     getFeaturedProducts(),
     getCollections(),
   ]);
 
-  const priorityCollections = ['organic-canine-supplements-hip-and-joint', 'calm-feline-supplements', 'feline-dental-supplements', 'organic-canine-food', 'feline-dry-foods', 'kitten-supplements'];
+  const priorityCollections = prioritizeCollectionHandles([
+    "organic-canine-supplements-hip-and-joint",
+    "calm-feline-supplements",
+    "feline-dental-supplements",
+    "organic-supplements",
+    "organic-canine-food",
+    "feline-dry-foods",
+    "feline-digestive-supplements",
+  ]);
   const featuredCollections = collections
     .filter((c) => c.products.edges.length > 0)
     .sort((a, b) => {
@@ -287,35 +371,35 @@ export default async function HomePage() {
             </h1>
             
             <p className="text-xl lg:text-2xl text-white/60 mb-5 max-w-lg leading-relaxed font-light">
-              The pet wellness marketplace that puts quality first.
+              Curated wellness picks for joint support, calming, dental care, and everyday nutrition.
             </p>
             
             <p className="text-base text-white/40 mb-10 max-w-lg">
-              50+ trusted brands • No middlemen • Direct to your door
+              Start with the concern that matters most, then build a better routine.
             </p>
             
             <div className="flex flex-wrap gap-4 mb-14">
               <Link
-                href="/brands"
+                href="/collections"
                 className="group px-8 py-4 bg-gradient-to-r from-[var(--sage-500)] to-[var(--sage-600)] text-white font-semibold rounded-full hover:from-[var(--sage-600)] hover:to-[var(--sage-700)] transition-all shadow-lg shadow-[var(--sage-600)]/30 hover:shadow-xl hover:shadow-[var(--sage-600)]/40 hover:-translate-y-0.5"
               >
-                Explore Brands
+                Shop Top Needs
                 <span className="inline-block ml-2 transition-transform group-hover:translate-x-1">→</span>
               </Link>
               <Link
-                href="/collections"
+                href="/brands"
                 className="px-8 py-4 bg-white/5 backdrop-blur-sm text-white font-semibold rounded-full border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all"
               >
-                Shop All
+                Explore Brands
               </Link>
             </div>
             
             {/* Trust Signals - More refined */}
             <div className="flex flex-wrap items-center gap-x-8 gap-y-3 text-sm">
               {[
-                { icon: "✓", text: "Vet Approved" },
-                { icon: "✓", text: "No Fillers" },
-                { icon: "✓", text: "USA Brands" },
+                { icon: "✓", text: "Need-Based Shopping" },
+                { icon: "✓", text: "50+ Curated Brands" },
+                { icon: "✓", text: "Free Shipping $50+" },
               ].map((item) => (
                 <div key={item.text} className="flex items-center gap-2 text-white/40">
                   <span className="w-5 h-5 rounded-full bg-[var(--sage-500)]/20 flex items-center justify-center text-[var(--sage-400)] text-xs">
@@ -323,6 +407,23 @@ export default async function HomePage() {
                   </span>
                   {item.text}
                 </div>
+              ))}
+            </div>
+
+            <div className="mt-10 grid gap-3 sm:grid-cols-2">
+              {TOP_NEEDS.slice(0, 4).map((need) => (
+                <Link
+                  key={need.title}
+                  href={need.href}
+                  className="group rounded-2xl border border-white/10 bg-white/6 px-4 py-4 backdrop-blur-sm transition-all hover:bg-white/10"
+                >
+                  <div className="mb-2 flex items-center justify-between">
+                    <span className="text-xl">{need.emoji}</span>
+                    <span className="text-xs uppercase tracking-[0.16em] text-white/45">Top Need</span>
+                  </div>
+                  <p className="font-semibold text-white">{need.title}</p>
+                  <p className="mt-1 text-sm text-white/55">{need.desc}</p>
+                </Link>
               ))}
             </div>
           </div>
@@ -344,15 +445,34 @@ export default async function HomePage() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center gap-x-12 gap-y-2 text-center">
             {[
-              "Skip the Big-Box Markup",
-              "Vet-Trusted Brands",
-              "Same Products, Better Experience",
-              "30-Day Guarantee",
+              "Shop by concern, not by clutter",
+              "Bigger routines, clearer choices",
+              "Curated brands already in stock",
+              "Free shipping over $50",
             ].map((item, i) => (
               <p key={item} className="text-sm font-medium tracking-wide flex items-center gap-3">
                 {i > 0 && <span className="hidden sm:block w-1 h-1 rounded-full bg-white/30" />}
                 {item}
               </p>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-white py-10 lg:py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid gap-4 lg:grid-cols-3">
+            {START_HERE_STEPS.map((item) => (
+              <div
+                key={item.step}
+                className="rounded-3xl border border-[var(--stone-200)] bg-[var(--cream)] px-6 py-6 shadow-sm"
+              >
+                <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-[var(--sage-700)]">
+                  Step {item.step}
+                </p>
+                <h3 className="mb-2 font-serif text-2xl text-[var(--stone-800)]">{item.title}</h3>
+                <p className="text-[var(--stone-600)]">{item.copy}</p>
+              </div>
             ))}
           </div>
         </div>
@@ -371,18 +491,18 @@ export default async function HomePage() {
               Find What They Need
             </h2>
             <p className="text-[var(--stone-500)] max-w-lg mx-auto text-lg">
-              Thoughtfully curated products for every member of your family
+              Choose the aisle that matches the pet you are shopping for, then follow the strongest need.
             </p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-8">
             {/* Dogs Card */}
             <Link
-              href="/collections/dog"
+              href="/collections/canine"
               className="group relative overflow-hidden rounded-[2rem] aspect-[4/3] lg:aspect-[16/11] shadow-xl hover:shadow-2xl transition-shadow duration-500"
             >
               <Image
-                src="/images/collection-dogs.jpg"
+                src="/images/animalia-dog-joint-support.png"
                 alt="Shop for dogs"
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
@@ -392,7 +512,7 @@ export default async function HomePage() {
                 <span className="text-5xl mb-5 block drop-shadow-lg">🐕</span>
                 <h3 className="font-serif text-3xl lg:text-4xl text-white mb-3">For Dogs</h3>
                 <p className="text-white/70 mb-5 max-w-sm text-lg">
-                  Joint support, calming chews, premium food & more
+                  Joint support, oils, calming support, and everyday nutrition with repeat-purchase potential.
                 </p>
                 <span className="inline-flex items-center gap-2 text-white font-medium group-hover:gap-3 transition-all bg-white/10 backdrop-blur-sm px-5 py-2.5 rounded-full">
                   Shop Dog Products
@@ -409,7 +529,7 @@ export default async function HomePage() {
               className="group relative overflow-hidden rounded-[2rem] aspect-[4/3] lg:aspect-[16/11] shadow-xl hover:shadow-2xl transition-shadow duration-500"
             >
               <Image
-                src="/images/collection-cats.jpg"
+                src="/images/animalia-cat-calming.png"
                 alt="Shop for cats"
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
@@ -419,7 +539,7 @@ export default async function HomePage() {
                 <span className="text-5xl mb-5 block drop-shadow-lg">🐱</span>
                 <h3 className="font-serif text-3xl lg:text-4xl text-white mb-3">For Cats</h3>
                 <p className="text-white/70 mb-5 max-w-sm text-lg">
-                  Dental health, calming solutions, freeze-dried nutrition
+                  Calming, dental, digestion, and pantry staples for cat households.
                 </p>
                 <span className="inline-flex items-center gap-2 text-white font-medium group-hover:gap-3 transition-all bg-white/10 backdrop-blur-sm px-5 py-2.5 rounded-full">
                   Shop Cat Products
@@ -441,7 +561,7 @@ export default async function HomePage() {
           <div className="flex items-end justify-between mb-12">
             <div>
               <span className="text-sm font-medium text-[var(--sage-600)] uppercase tracking-wider mb-2 block">
-                By Wellness Need
+                Revenue Drivers
               </span>
               <h2 className="font-serif text-3xl lg:text-4xl text-[var(--stone-800)]">Shop by Need</h2>
             </div>
@@ -457,10 +577,10 @@ export default async function HomePage() {
           </div>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6">
             {[
-              { title: "Joint Support", href: "/collections/organic-canine-supplements-hip-and-joint", image: "/images/collection-dog-joint.jpg", emoji: "🦴", desc: "Mobility & comfort" },
-              { title: "Calming", href: "/collections/calm-feline-supplements", image: "/images/collection-dog-calming.jpg", emoji: "😌", desc: "Anxiety relief" },
-              { title: "Vitamins", href: "/collections/organic-supplements", image: "/images/collection-dog-supplements.jpg", emoji: "💊", desc: "Daily wellness" },
-              { title: "Nutrition", href: "/collections/organic-canine-food", image: "/images/category-food.jpg", emoji: "🥩", desc: "Premium food" },
+              { title: "Joint Support", href: "/collections/organic-canine-supplements-hip-and-joint", image: "/images/collection-dog-joint.jpg", emoji: "🦴", desc: "High-intent mobility care" },
+              { title: "Calming", href: "/collections/calm-feline-supplements", image: "/images/collection-dog-calming.jpg", emoji: "😌", desc: "Daily stress and anxiety support" },
+              { title: "Dental Care", href: "/collections/feline-dental-supplements", image: "/images/collection-cats.jpg", emoji: "🪥", desc: "Low-friction oral care" },
+              { title: "Omega Oils", href: "/brands/alaska-naturals", image: "/images/collection-dog-supplements.jpg", emoji: "🐟", desc: "Easy add-on wellness value" },
             ].map((cat) => (
               <Link
                 key={cat.title}
@@ -549,11 +669,14 @@ export default async function HomePage() {
             <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-14 gap-4">
               <div>
                 <span className="inline-block px-4 py-1.5 bg-[var(--sage-100)] text-[var(--sage-700)] text-xs font-semibold uppercase tracking-wider rounded-full mb-4">
-                  From 50+ Brands
+                  Built to Convert
                 </span>
                 <h2 className="font-serif text-4xl lg:text-5xl text-[var(--stone-800)]">
-                  Featured Products
+                  High-Impact Wellness Picks
                 </h2>
+                <p className="mt-4 max-w-2xl text-[var(--stone-500)]">
+                  These are the products most likely to turn current stock into stronger baskets: daily-use wellness, higher-value formats, and clear problem-solution fits.
+                </p>
               </div>
               <Link
                 href="/collections"
@@ -576,8 +699,8 @@ export default async function HomePage() {
       ═══════════════════════════════════════════════════════════════════ */}
       <section className="py-24 bg-white relative overflow-hidden">
         {/* Decorative quote marks */}
-        <div className="absolute top-20 left-10 text-[12rem] font-serif text-[var(--sage-100)] leading-none select-none">"</div>
-        <div className="absolute bottom-20 right-10 text-[12rem] font-serif text-[var(--sage-100)] leading-none select-none rotate-180">"</div>
+        <div className="absolute top-20 left-10 text-[12rem] font-serif text-[var(--sage-100)] leading-none select-none">&ldquo;</div>
+        <div className="absolute bottom-20 right-10 text-[12rem] font-serif text-[var(--sage-100)] leading-none select-none rotate-180">&ldquo;</div>
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -637,7 +760,7 @@ export default async function HomePage() {
                 Our Collections
               </h2>
               <p className="text-[var(--stone-500)] max-w-xl mx-auto text-lg">
-                Thoughtfully organized to help you find exactly what your pet needs
+                Start with the clearest need, then move shoppers toward stronger formats and better routines.
               </p>
             </div>
 
@@ -653,38 +776,46 @@ export default async function HomePage() {
                 ];
                 const colorScheme = colors[index % colors.length];
                 const productCount = collection.products.edges.length;
-                
-                const cleanTitle = collection.title
-                  .replace(/Organic\s*/gi, '')
-                  .replace(/Canine\s*/gi, 'Dog ')
-                  .replace(/Feline\s*/gi, 'Cat ')
-                  .replace(/Supplements?:?\s*/gi, '')
-                  .replace(/\s+/g, ' ')
-                  .trim();
+                const spotlight = getCollectionSpotlight(collection.handle, collection.title);
+                const cleanTitle = cleanCollectionTitle(collection.title);
                 
                 return (
                   <Link
                     key={collection.id}
                     href={`/collections/${collection.handle}`}
-                    className={`group relative overflow-hidden rounded-3xl p-8 lg:p-10 bg-gradient-to-br ${colorScheme.bg} shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1`}
+                    className={`group relative overflow-hidden rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 ${colorScheme.bg}`}
                   >
-                    {/* Decorative elements */}
-                    <div className="absolute top-0 right-0 w-48 h-48 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-2xl" />
-                    <div className="absolute bottom-0 left-0 w-36 h-36 bg-black/10 rounded-full translate-y-1/2 -translate-x-1/2 blur-xl" />
-                    
-                    <div className="relative">
-                      <span className="text-xs font-semibold uppercase tracking-wider text-white/70">
-                        {productCount}+ products
+                    <div className="absolute inset-0">
+                      <Image
+                        src={spotlight.image}
+                        alt={spotlight.title || cleanTitle}
+                        fill
+                        className="object-cover transition-transform duration-700 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/35 to-black/10" />
+                    </div>
+
+                    <div className="relative flex min-h-[340px] flex-col justify-end p-8 lg:p-10">
+                      <span className="mb-3 inline-flex w-fit rounded-full border border-white/15 bg-white/12 px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-white/75 backdrop-blur-sm">
+                        {spotlight.label}
                       </span>
-                      <h3 className="font-serif text-2xl lg:text-3xl text-white mt-3 mb-4">
-                        {cleanTitle}
+                      <h3 className="font-serif text-2xl lg:text-3xl text-white mt-1 mb-4">
+                        {spotlight.title || cleanTitle}
                       </h3>
-                      <span className="inline-flex items-center gap-2 text-white/90 font-medium group-hover:gap-3 transition-all">
-                        Shop Now
-                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                        </svg>
-                      </span>
+                      <p className="mb-6 max-w-sm text-sm leading-relaxed text-white/80">
+                        {spotlight.description}
+                      </p>
+                      <div className="flex items-center justify-between gap-4">
+                        <p className="text-xs uppercase tracking-[0.18em] text-white/60">
+                          {productCount}+ products
+                        </p>
+                        <span className="inline-flex items-center gap-2 rounded-full bg-white/12 px-4 py-2 text-white/95 font-medium backdrop-blur-sm group-hover:gap-3 transition-all">
+                          Shop Now
+                          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                          </svg>
+                        </span>
+                      </div>
                     </div>
                   </Link>
                 );
@@ -724,15 +855,14 @@ export default async function HomePage() {
                 Your Pet Store, <span className="text-[var(--sage-400)]">Reimagined</span>
               </h2>
               <p className="text-xl text-white/60 leading-relaxed mb-10">
-                Get the brands you trust—from premium naturals to vet-recommended essentials—without 
-                the corporate clutter. Same products, better experience, direct to you.
+                We help pet parents shop by real problems instead of endless catalog pages. Start with the need, find the best-fit product, and build a routine worth reordering.
               </p>
               <ul className="space-y-5 mb-12">
                 {[
-                  "50+ brands from naturals to trusted essentials",
-                  "Skip the markup—go direct to the source",
-                  "No algorithms, just products we stand behind",
-                  "Real support from real pet people",
+                  "Higher-intent categories surfaced first",
+                  "Curated formats that reward stock-up behavior",
+                  "Cleaner discovery for joint, calming, dental, and wellness",
+                  "Store-level promises that stay accurate",
                 ].map((item) => (
                   <li key={item} className="flex items-center gap-4 text-white/80">
                     <span className="w-6 h-6 rounded-full bg-[var(--sage-500)]/30 flex items-center justify-center flex-shrink-0">
@@ -779,8 +909,7 @@ export default async function HomePage() {
       <section className="py-6 bg-[var(--stone-100)]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-sm text-[var(--stone-400)]">
-            Animalia brings together 50+ brands—from boutique naturals to trusted household names—all 
-            in one place. Why shop corporate when you can shop smarter?
+            Animalia is built to help shoppers solve one clear wellness need at a time, then build a stronger cart around it.
           </p>
         </div>
       </section>

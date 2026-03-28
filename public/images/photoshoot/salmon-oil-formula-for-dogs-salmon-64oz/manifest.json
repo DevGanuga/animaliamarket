@@ -1,0 +1,86 @@
+{
+  "product": {
+    "id": "gid://shopify/Product/10166424535342",
+    "title": "Salmon Oil Formula For Dogs Salmon 64oz.",
+    "handle": "salmon-oil-formula-for-dogs-salmon-64oz"
+  },
+  "vendor": "Alaska Naturals",
+  "productType": "Dog Supplements Hip and Joint",
+  "model": "fal-ai/nano-banana-pro/edit",
+  "resolution": "4K",
+  "generated": "2026-03-26T14:01:28.949Z",
+  "sourceImage": "https://cdn.shopify.com/s/files/1/0944/8629/8926/files/028029173215.jpg?v=1764936157",
+  "context": {
+    "physicalDescription": "retail bottle of pet wellness oil with printed label. square product image on white background",
+    "shortDescription": "• Formulated using only Wild Alaska Salmon-fresh caught in the pristine waters off of the 34,000 miles of Alaska. • A balanced ratio of EPA and DHA. Ingredients: Acid Blue 9 Dye Sold in Qty of: 1",
+    "variants": []
+  },
+  "shots": [
+    {
+      "id": "studio-white",
+      "filename": "01-studio-white.png",
+      "aspect_ratio": "1:1",
+      "path": "/Users/Dev/Desktop/development/animaliamarket/public/images/photoshoot/salmon-oil-formula-for-dogs-salmon-64oz/01-studio-white.png"
+    },
+    {
+      "id": "hero-banner",
+      "filename": "02-hero-banner.png",
+      "aspect_ratio": "16:9",
+      "path": "/Users/Dev/Desktop/development/animaliamarket/public/images/photoshoot/salmon-oil-formula-for-dogs-salmon-64oz/02-hero-banner.png"
+    },
+    {
+      "id": "warm-marble",
+      "filename": "03-warm-marble.png",
+      "aspect_ratio": "1:1",
+      "path": "/Users/Dev/Desktop/development/animaliamarket/public/images/photoshoot/salmon-oil-formula-for-dogs-salmon-64oz/03-warm-marble.png"
+    },
+    {
+      "id": "sage-backdrop",
+      "filename": "04-sage-backdrop.png",
+      "aspect_ratio": "4:5",
+      "path": "/Users/Dev/Desktop/development/animaliamarket/public/images/photoshoot/salmon-oil-formula-for-dogs-salmon-64oz/04-sage-backdrop.png"
+    },
+    {
+      "id": "three-quarter-angle",
+      "filename": "05-three-quarter.png",
+      "aspect_ratio": "1:1",
+      "path": "/Users/Dev/Desktop/development/animaliamarket/public/images/photoshoot/salmon-oil-formula-for-dogs-salmon-64oz/05-three-quarter.png"
+    },
+    {
+      "id": "elevated-display",
+      "filename": "06-elevated-display.png",
+      "aspect_ratio": "4:5",
+      "path": "/Users/Dev/Desktop/development/animaliamarket/public/images/photoshoot/salmon-oil-formula-for-dogs-salmon-64oz/06-elevated-display.png"
+    },
+    {
+      "id": "natural-linen",
+      "filename": "07-natural-linen.png",
+      "aspect_ratio": "1:1",
+      "path": "/Users/Dev/Desktop/development/animaliamarket/public/images/photoshoot/salmon-oil-formula-for-dogs-salmon-64oz/07-natural-linen.png"
+    },
+    {
+      "id": "botanical-accent",
+      "filename": "08-botanical-accent.png",
+      "aspect_ratio": "1:1",
+      "path": "/Users/Dev/Desktop/development/animaliamarket/public/images/photoshoot/salmon-oil-formula-for-dogs-salmon-64oz/08-botanical-accent.png"
+    },
+    {
+      "id": "warm-wood",
+      "filename": "09-warm-wood.png",
+      "aspect_ratio": "16:9",
+      "path": "/Users/Dev/Desktop/development/animaliamarket/public/images/photoshoot/salmon-oil-formula-for-dogs-salmon-64oz/09-warm-wood.png"
+    },
+    {
+      "id": "ingredient-story",
+      "filename": "10-ingredient-story.png",
+      "aspect_ratio": "4:5",
+      "path": "/Users/Dev/Desktop/development/animaliamarket/public/images/photoshoot/salmon-oil-formula-for-dogs-salmon-64oz/10-ingredient-story.png"
+    },
+    {
+      "id": "counter-display",
+      "filename": "11-counter-display.png",
+      "aspect_ratio": "4:5",
+      "path": "/Users/Dev/Desktop/development/animaliamarket/public/images/photoshoot/salmon-oil-formula-for-dogs-salmon-64oz/11-counter-display.png"
+    }
+  ]
+}

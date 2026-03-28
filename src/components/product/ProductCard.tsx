@@ -2,7 +2,8 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { useMemo, useState } from "react";
+import { addToCart } from "@/app/actions/cart";
 
 interface ProductCardProps {
   product: {
@@ -28,6 +29,19 @@ interface ProductCardProps {
     };
     availableForSale?: boolean;
     tags?: string[];
+    options?: Array<{
+      name: string;
+      values: string[];
+    }>;
+    variants?: {
+      edges: Array<{
+        node: {
+          id: string;
+          title: string;
+          availableForSale?: boolean;
+        };
+      }>;
+    };
   };
   priority?: boolean;
 }
@@ -35,6 +49,8 @@ interface ProductCardProps {
 export function ProductCard({ product, priority = false }: ProductCardProps) {
   const [isHovered, setIsHovered] = useState(false);
   const [imageLoaded, setImageLoaded] = useState(false);
+  const [isAdding, setIsAdding] = useState(false);
+  const [isAdded, setIsAdded] = useState(false);
 
   const price = parseFloat(product.priceRange.minVariantPrice.amount);
   const compareAtPrice = product.compareAtPriceRange?.minVariantPrice
@@ -45,7 +61,23 @@ export function ProductCard({ product, priority = false }: ProductCardProps) {
     ? Math.round(((compareAtPrice - price) / compareAtPrice) * 100)
     : 0;
 
-  // Determine badge
+  const firstVariant = product.variants?.edges?.[0]?.node;
+  const hasSingleOptionConfiguration =
+    !product.options ||
+    product.options.length === 0 ||
+    product.options.every((option) => option.values.length === 1);
+  const canQuickAdd = Boolean(
+    product.availableForSale &&
+      firstVariant?.id &&
+      (firstVariant.title === "Default Title" || hasSingleOptionConfiguration)
+  );
+
+  const quickAddLabel = useMemo(() => {
+    if (isAdding) return "Adding...";
+    if (isAdded) return "Added";
+    return canQuickAdd ? "Quick Add" : "View Product";
+  }, [canQuickAdd, isAdded, isAdding]);
+
   const getBadge = () => {
     if (!product.availableForSale) return { text: "Sold Out", color: "bg-stone-500" };
     if (isOnSale) return { text: `${discountPercent}% Off`, color: "bg-amber-500" };
@@ -56,6 +88,29 @@ export function ProductCard({ product, priority = false }: ProductCardProps) {
 
   const badge = getBadge();
 
+  const handleQuickAdd = async (e: React.MouseEvent<HTMLButtonElement>) => {
+    if (!canQuickAdd || !firstVariant?.id || isAdding) {
+      return;
+    }
+
+    e.preventDefault();
+    e.stopPropagation();
+
+    setIsAdding(true);
+
+    try {
+      await addToCart(firstVariant.id, 1);
+      setIsAdded(true);
+      window.dispatchEvent(new CustomEvent("cart-updated"));
+      window.dispatchEvent(new CustomEvent("cart-open"));
+      window.setTimeout(() => setIsAdded(false), 1800);
+    } catch (error) {
+      console.error("Quick add failed:", error);
+    } finally {
+      setIsAdding(false);
+    }
+  };
+
   return (
     <Link
       href={`/products/${product.handle}`}
@@ -63,9 +118,7 @@ export function ProductCard({ product, priority = false }: ProductCardProps) {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      {/* Image Container */}
       <div className="relative aspect-square rounded-2xl overflow-hidden bg-[var(--stone-100)] mb-4">
-        {/* Badge */}
         {badge && (
           <span
             className={`absolute top-3 left-3 z-10 px-2.5 py-1 ${badge.color} text-white text-xs font-semibold rounded-full`}
@@ -74,7 +127,6 @@ export function ProductCard({ product, priority = false }: ProductCardProps) {
           </span>
         )}
 
-        {/* Image */}
         {product.featuredImage ? (
           <>
             <Image
@@ -88,7 +140,6 @@ export function ProductCard({ product, priority = false }: ProductCardProps) {
               priority={priority}
               onLoad={() => setImageLoaded(true)}
             />
-            {/* Skeleton while loading */}
             {!imageLoaded && (
               <div className="absolute inset-0 bg-gradient-to-br from-[var(--stone-100)] to-[var(--stone-200)] animate-pulse" />
             )}
@@ -111,12 +162,8 @@ export function ProductCard({ product, priority = false }: ProductCardProps) {
           </div>
         )}
 
-        {/* Hover Overlay */}
-        <div
-          className={`absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300`}
-        />
+        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300" />
 
-        {/* Quick Add Button */}
         {product.availableForSale && (
           <div
             className={`absolute bottom-3 left-3 right-3 transition-all duration-300 ${
@@ -124,19 +171,14 @@ export function ProductCard({ product, priority = false }: ProductCardProps) {
             }`}
           >
             <button
-              onClick={(e) => {
-                e.preventDefault();
-                // TODO: Add to cart logic
-                console.log("Quick add:", product.id);
-              }}
+              onClick={handleQuickAdd}
               className="w-full py-2.5 bg-white/95 backdrop-blur-sm text-[var(--stone-800)] text-sm font-medium rounded-xl hover:bg-[var(--sage-500)] hover:text-white transition-colors shadow-lg"
             >
-              Quick Add
+              {quickAddLabel}
             </button>
           </div>
         )}
 
-        {/* Sold Out Overlay */}
         {!product.availableForSale && (
           <div className="absolute inset-0 bg-white/60 flex items-center justify-center">
             <span className="px-4 py-2 bg-[var(--stone-800)] text-white text-sm font-medium rounded-full">
@@ -146,21 +188,17 @@ export function ProductCard({ product, priority = false }: ProductCardProps) {
         )}
       </div>
 
-      {/* Product Info */}
       <div className="space-y-1">
-        {/* Vendor */}
         {product.vendor && (
           <p className="text-xs font-medium text-[var(--stone-500)] uppercase tracking-wider">
             {product.vendor}
           </p>
         )}
 
-        {/* Title */}
         <h3 className="font-medium text-[var(--stone-800)] group-hover:text-[var(--sage-600)] transition-colors line-clamp-2 leading-snug">
           {product.title}
         </h3>
 
-        {/* Price */}
         <div className="flex items-center gap-2 pt-1">
           <span className={`font-semibold ${isOnSale ? "text-[var(--sage-600)]" : "text-[var(--stone-800)]"}`}>
             ${price.toFixed(2)}
@@ -175,6 +213,3 @@ export function ProductCard({ product, priority = false }: ProductCardProps) {
     </Link>
   );
 }
-
-
-
