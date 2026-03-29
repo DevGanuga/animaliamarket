@@ -1,0 +1,16 @@
+<svg width="1080" height="1350" viewBox="0 0 1080 1350" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="fade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0.0"/>
+      <stop offset="55%" stop-color="#000000" stop-opacity="0.0"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.55"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#fade)"/>
+  <text x="74" y="930" font-family="Georgia" font-size="68" fill="#FFFFFF" font-weight="700">They Aren't Giving</text>
+  <text x="74" y="1006" font-family="Georgia" font-size="68" fill="#FFFFFF" font-weight="700">You a Hard Time.</text>
+  <text x="74" y="1082" font-family="Georgia" font-size="68" fill="#FFFFFF" font-weight="700">They're Having One.</text>
+  <text x="74" y="1144" font-family="Arial" font-size="30" fill="#FFFFFF" fill-opacity="0.92">Calming support for stressful moments and routine changes.</text>
+  <rect x="74" y="1186" width="252" height="60" rx="30" fill="#F7F2E8"/>
+  <text x="200" y="1225" text-anchor="middle" font-family="Arial" font-size="25" fill="#23312C" font-weight="700">Shop Calm Canine</text>
+</svg>

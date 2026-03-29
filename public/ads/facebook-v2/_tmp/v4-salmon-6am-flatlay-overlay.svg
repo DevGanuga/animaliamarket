@@ -1,0 +1,14 @@
+<svg width="1080" height="1350" viewBox="0 0 1080 1350" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="fade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="black" stop-opacity="0"/>
+      <stop offset="40%" stop-color="black" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="black" stop-opacity="0.82"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="1070" width="1080" height="280" fill="url(#fade)"/>
+  <text x="60" y="1190" font-family="/System/Library/Fonts/Supplemental/Georgia.ttf" font-size="52" fill="white" font-weight="700">6 AM. Same Bowl. One Thing</text>
+  <text x="60" y="1250" font-family="/System/Library/Fonts/Supplemental/Georgia.ttf" font-size="52" fill="white" font-weight="700">Changed.</text>
+  <text x="60" y="1314" font-family="/System/Library/Fonts/Supplemental/Arial.ttf" font-size="24" fill="white" fill-opacity="0.85">Wild Alaska salmon oil. The simplest upgrade to their</text>
+  <text x="60" y="1346" font-family="/System/Library/Fonts/Supplemental/Arial.ttf" font-size="24" fill="white" fill-opacity="0.85">bowl.</text>
+</svg>

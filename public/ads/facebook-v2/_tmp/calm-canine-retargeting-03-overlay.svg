@@ -1,0 +1,15 @@
+<svg width="1080" height="1350" viewBox="0 0 1080 1350" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="28" flood-color="#000000" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+  <rect x="52" y="56" width="790" height="420" rx="34" fill="#F7F2E8" fill-opacity="0.94" filter="url(#shadow)"/>
+  <text x="98" y="118" font-family="Georgia" font-size="24" letter-spacing="5" fill="#6F8B78" font-weight="700">CALM CANINE</text>
+  <text x="98" y="205" font-family="Georgia" font-size="66" fill="#23312C" font-weight="700">A Better Calm</text>
+  <text x="98" y="280" font-family="Georgia" font-size="66" fill="#23312C" font-weight="700">Routine Starts Here</text>
+  <text x="98" y="360" font-family="Arial" font-size="31" fill="#23312C" fill-opacity="0.84">Keep support on hand for storms, vet visits,</text>
+  <text x="98" y="401" font-family="Arial" font-size="31" fill="#23312C" fill-opacity="0.84">travel days and stressful routine changes.</text>
+  <rect x="98" y="422" width="285" height="62" rx="31" fill="#23312C"/>
+  <text x="240" y="462" text-anchor="middle" font-family="Arial" font-size="27" fill="#FFFFFF" font-weight="700">Shop Calm Canine</text>
+</svg>

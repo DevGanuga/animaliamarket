@@ -1,0 +1,15 @@
+<svg width="1080" height="1350" viewBox="0 0 1080 1350" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="28" flood-color="#000000" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+  <rect x="52" y="56" width="760" height="420" rx="34" fill="#F7F2E8" fill-opacity="0.94" filter="url(#shadow)"/>
+  <text x="98" y="118" font-family="Georgia" font-size="24" letter-spacing="5" fill="#6F8B78" font-weight="700">OMEGA SUPPORT</text>
+  <text x="98" y="205" font-family="Georgia" font-size="70" fill="#23312C" font-weight="700">A Better Bowl</text>
+  <text x="98" y="284" font-family="Georgia" font-size="70" fill="#23312C" font-weight="700">Starts Here</text>
+  <text x="98" y="366" font-family="Arial" font-size="31" fill="#23312C" fill-opacity="0.84">Wild Alaska omega support for skin, coat</text>
+  <text x="98" y="407" font-family="Arial" font-size="31" fill="#23312C" fill-opacity="0.84">and everyday wellness.</text>
+  <rect x="98" y="430" width="255" height="62" rx="31" fill="#23312C"/>
+  <text x="226" y="470" text-anchor="middle" font-family="Arial" font-size="27" fill="#FFFFFF" font-weight="700">Shop omega oils</text>
+</svg>

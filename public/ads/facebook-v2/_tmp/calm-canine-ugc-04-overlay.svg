@@ -1,0 +1,15 @@
+<svg width="1080" height="1350" viewBox="0 0 1080 1350" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="16" stdDeviation="24" flood-color="#000000" flood-opacity="0.10"/>
+    </filter>
+  </defs>
+  <rect x="72" y="82" width="760" height="370" rx="30" fill="#FFFDF9" fill-opacity="0.96" filter="url(#shadow)"/>
+  <text x="112" y="132" font-family="Arial" font-size="24" fill="#6F8B78" font-weight="700">REAL-LIFE CALM SUPPORT</text>
+  <text x="112" y="198" font-family="Arial" font-size="28" fill="#23312C">“I started keeping these by the door for vet days</text>
+  <text x="112" y="238" font-family="Arial" font-size="28" fill="#23312C">and in the car for travel. It just makes those</text>
+  <text x="112" y="278" font-family="Arial" font-size="28" fill="#23312C">stressful moments feel more manageable.”</text>
+  <text x="112" y="338" font-family="Arial" font-size="24" fill="#23312C" fill-opacity="0.72">— Calm Canine customer angle</text>
+  <rect x="112" y="370" width="240" height="60" rx="30" fill="#23312C"/>
+  <text x="232" y="409" text-anchor="middle" font-family="Arial" font-size="27" fill="#FFFFFF" font-weight="700">Shop Calm Canine</text>
+</svg>

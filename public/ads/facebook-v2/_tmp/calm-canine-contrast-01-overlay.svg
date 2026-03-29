@@ -1,0 +1,15 @@
+<svg width="1080" height="1350" viewBox="0 0 1080 1350" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="28" flood-color="#000000" flood-opacity="0.10"/>
+    </filter>
+  </defs>
+  <rect x="56" y="64" width="760" height="440" rx="34" fill="#F7F2E8" fill-opacity="0.95" filter="url(#shadow)"/>
+  <text x="100" y="125" font-family="Georgia" font-size="24" letter-spacing="5" fill="#6F8B78" font-weight="700">ANIMALIA</text>
+  <text x="100" y="210" font-family="Georgia" font-size="64" fill="#23312C" font-weight="700">A Calmer Alternative</text>
+  <text x="100" y="286" font-family="Georgia" font-size="58" fill="#23312C" font-weight="700">to the Corporate</text>
+  <text x="100" y="356" font-family="Georgia" font-size="58" fill="#23312C" font-weight="700">Pet Aisle</text>
+  <text x="100" y="432" font-family="Arial" font-size="31" fill="#23312C" fill-opacity="0.84">Curated calming support from brands we trust.</text>
+  <rect x="100" y="454" width="255" height="62" rx="31" fill="#23312C"/>
+  <text x="228" y="494" text-anchor="middle" font-family="Arial" font-size="27" fill="#FFFFFF" font-weight="700">Explore Animalia</text>
+</svg>
