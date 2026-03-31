@@ -1,0 +1,320 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e3]:
+      - text: 🐾 Free shipping on orders over $50 •
+      - link "Shop top needs" [ref=e4] [cursor=pointer]:
+        - /url: /collections
+    - banner [ref=e5]:
+      - generic [ref=e7]:
+        - link "🐾 animalia" [ref=e8] [cursor=pointer]:
+          - /url: /
+          - generic [ref=e9]: 🐾
+          - generic [ref=e10]: animalia
+        - navigation [ref=e11]:
+          - generic [ref=e12]:
+            - button "🐕 Dogs" [ref=e14]:
+              - generic [ref=e15]: 🐕
+              - generic [ref=e16]: Dogs
+              - img [ref=e17]
+            - button "🐱 Cats" [ref=e20]:
+              - generic [ref=e21]: 🐱
+              - generic [ref=e22]: Cats
+              - img [ref=e23]
+            - button "✦ Brands" [ref=e26]:
+              - generic [ref=e27]: ✦
+              - generic [ref=e28]: Brands
+              - img [ref=e29]
+          - link "Collections" [ref=e31] [cursor=pointer]:
+            - /url: /collections
+        - generic [ref=e32]:
+          - button [ref=e33]:
+            - img [ref=e34]
+          - link [ref=e36] [cursor=pointer]:
+            - /url: /account
+            - img [ref=e37]
+          - button "0" [ref=e39]:
+            - img [ref=e40]
+            - generic [ref=e42]: "0"
+    - generic [ref=e44]:
+      - generic [ref=e45]:
+        - heading "Your Cart" [level=2] [ref=e46]
+        - button [ref=e47]:
+          - img [ref=e48]
+      - generic [ref=e51]:
+        - img [ref=e53]
+        - heading "Your cart is empty" [level=3] [ref=e55]
+        - paragraph [ref=e56]: Start with a high-intent need so the store can guide you toward a stronger wellness routine.
+        - generic [ref=e57]:
+          - link "Add daily omega support Shop omega oils" [ref=e58] [cursor=pointer]:
+            - /url: /brands/alaska-naturals
+            - paragraph [ref=e59]: Add daily omega support
+            - paragraph [ref=e60]: Shop omega oils
+          - link "Add a dental routine Shop dental care" [ref=e61] [cursor=pointer]:
+            - /url: /collections/feline-dental-supplements
+            - paragraph [ref=e62]: Add a dental routine
+            - paragraph [ref=e63]: Shop dental care
+          - link "Stock up on mobility Shop joint support" [ref=e64] [cursor=pointer]:
+            - /url: /collections/organic-canine-supplements-hip-and-joint
+            - paragraph [ref=e65]: Stock up on mobility
+            - paragraph [ref=e66]: Shop joint support
+        - button "Continue Shopping" [ref=e67]
+    - navigation [ref=e69]:
+      - link "Home" [ref=e70] [cursor=pointer]:
+        - /url: /
+      - img [ref=e71]
+      - link "Collections" [ref=e73] [cursor=pointer]:
+        - /url: /collections
+      - img [ref=e74]
+      - generic [ref=e76]: Omega support
+      - img [ref=e77]
+      - generic [ref=e79]: Salmon Oil Formula For Dogs Salmon 64oz.
+    - generic [ref=e80]:
+      - generic [ref=e81]:
+        - generic [ref=e83]:
+          - generic [ref=e84]:
+            - button "Salmon Oil Formula For Dogs Salmon 64oz. — studio white" [ref=e85]:
+              - img "Salmon Oil Formula For Dogs Salmon 64oz. — studio white" [ref=e86]
+            - button "Salmon Oil Formula For Dogs Salmon 64oz. — hero banner" [ref=e87]:
+              - img "Salmon Oil Formula For Dogs Salmon 64oz. — hero banner" [ref=e88]
+            - button "Salmon Oil Formula For Dogs Salmon 64oz. — warm marble" [ref=e89]:
+              - img "Salmon Oil Formula For Dogs Salmon 64oz. — warm marble" [ref=e90]
+            - button "Salmon Oil Formula For Dogs Salmon 64oz. — sage backdrop" [ref=e91]:
+              - img "Salmon Oil Formula For Dogs Salmon 64oz. — sage backdrop" [ref=e92]
+            - button "Salmon Oil Formula For Dogs Salmon 64oz. — three quarter angle" [ref=e93]:
+              - img "Salmon Oil Formula For Dogs Salmon 64oz. — three quarter angle" [ref=e94]
+          - generic [ref=e96]:
+            - img "Salmon Oil Formula For Dogs Salmon 64oz. — studio white" [ref=e97]
+            - generic [ref=e98]: 1 / 11
+            - generic [ref=e100]:
+              - generic [ref=e101]:
+                - paragraph [ref=e102]: Product gallery
+                - paragraph [ref=e103]: Zoom in to inspect packaging and product details.
+              - generic [ref=e104]: Click to zoom
+        - generic [ref=e106]:
+          - generic [ref=e107]:
+            - generic [ref=e108]: Alaska Naturals
+            - generic [ref=e109]: Omega support
+          - heading "Salmon Oil Formula For Dogs Salmon 64oz." [level=1] [ref=e110]
+          - generic [ref=e112]: $117.99
+          - paragraph [ref=e113]: Wild Alaska fish oil for dogs that adds EPA and DHA omega support to a simple daily feeding routine.
+          - generic [ref=e114]:
+            - generic [ref=e115]: Daily feeding add-on
+            - generic [ref=e116]: Skin and coat support
+            - generic [ref=e117]: Easy basket builder
+          - generic [ref=e118]:
+            - paragraph [ref=e119]: Why shoppers buy this
+            - list [ref=e120]:
+              - listitem [ref=e121]:
+                - generic [ref=e122]: ✓
+                - generic [ref=e123]: Adds omega support for skin, coat, and everyday wellness.
+              - listitem [ref=e124]:
+                - generic [ref=e125]: ✓
+                - generic [ref=e126]: Easy to use as part of a daily feeding routine.
+              - listitem [ref=e127]:
+                - generic [ref=e128]: ✓
+                - generic [ref=e129]: Supports daily joint comfort and mobility.
+          - separator [ref=e130]
+          - generic [ref=e131]:
+            - generic [ref=e132]: Quantity
+            - generic [ref=e133]:
+              - button [disabled] [ref=e134]:
+                - img [ref=e135]
+              - generic [ref=e136]: "1"
+              - button [ref=e137]:
+                - img [ref=e138]
+          - generic [ref=e140]:
+            - button "Add to Cart" [ref=e141]:
+              - img [ref=e142]
+              - text: Add to Cart
+            - generic [ref=e144]: This item qualifies for free shipping on its own.
+          - generic [ref=e145]:
+            - generic [ref=e146]:
+              - img [ref=e147]
+              - text: Free shipping $50+
+            - generic [ref=e149]:
+              - img [ref=e150]
+              - text: Curated for clear wellness needs
+            - generic [ref=e152]:
+              - img [ref=e153]
+              - text: Repeat-use friendly formats
+            - generic [ref=e155]:
+              - img [ref=e156]
+              - text: Built for smarter basket building
+      - generic [ref=e158]:
+        - generic [ref=e159]:
+          - button "Overview" [ref=e160]
+          - button "Details" [ref=e161]
+          - button "Shipping & Returns" [ref=e162]
+        - generic [ref=e164]:
+          - paragraph [ref=e165]: Wild Alaska fish oil for dogs that adds EPA and DHA omega support to a simple daily feeding routine.
+          - generic [ref=e166]:
+            - paragraph [ref=e167]: Brand
+            - paragraph [ref=e168]: Alaska Naturals
+    - generic [ref=e170]:
+      - generic [ref=e171]:
+        - heading "Why Pet Parents Trust Animalia" [level=2] [ref=e172]
+        - paragraph [ref=e173]: Quality you can count on
+      - generic [ref=e174]:
+        - generic [ref=e175]:
+          - generic [ref=e176]: 🎯
+          - heading "Need-Based Curation" [level=3] [ref=e177]
+          - paragraph [ref=e178]: We surface products by the problem shoppers are trying to solve.
+        - generic [ref=e179]:
+          - generic [ref=e180]: 📦
+          - heading "Current Stock Focus" [level=3] [ref=e181]
+          - paragraph [ref=e182]: The assortment is designed around what is ready to buy now.
+        - generic [ref=e183]:
+          - generic [ref=e184]: 🚚
+          - heading "Free Shipping $50+" [level=3] [ref=e185]
+          - paragraph [ref=e186]: Easy threshold messaging for larger, more efficient baskets.
+        - generic [ref=e187]:
+          - generic [ref=e188]: 💬
+          - heading "Human Support" [level=3] [ref=e189]
+          - paragraph [ref=e190]: If a shopper is unsure, the next step is guidance, not overwhelm.
+    - generic [ref=e191]:
+      - img "Happy pets with their family" [ref=e192]
+      - generic [ref=e196]:
+        - heading "Build a Better Wellness Routine" [level=2] [ref=e197]
+        - paragraph [ref=e198]: Start with the product that solves the clearest problem, then add the next most natural support item.
+        - link "Shop More Concerns" [ref=e199] [cursor=pointer]:
+          - /url: /collections
+          - text: Shop More Concerns
+          - img [ref=e200]
+    - generic [ref=e203]:
+      - generic [ref=e204]:
+        - heading "Build a better routine" [level=2] [ref=e205]
+        - link "Shop more concerns" [ref=e206] [cursor=pointer]:
+          - /url: /collections
+          - text: Shop more concerns
+          - img [ref=e207]
+      - generic [ref=e209]:
+        - link "Salmon Oil Formula For Dogs Salmon 15.5oz. Quick Add Alaska Naturals Salmon Oil Formula For Dogs Salmon 15.5oz. $30.99" [ref=e210] [cursor=pointer]:
+          - /url: /products/salmon-oil-formula-for-dogs-salmon-15-5oz
+          - generic [ref=e211]:
+            - img "Salmon Oil Formula For Dogs Salmon 15.5oz." [ref=e212]
+            - button "Quick Add" [ref=e216]
+          - generic [ref=e217]:
+            - paragraph [ref=e218]: Alaska Naturals
+            - heading "Salmon Oil Formula For Dogs Salmon 15.5oz." [level=3] [ref=e219]
+            - generic [ref=e221]: $30.99
+        - link "Salmon Oil Formula For Dogs Salmon Quick Add Alaska Naturals Salmon Oil Formula For Dogs Salmon $22.99" [ref=e222] [cursor=pointer]:
+          - /url: /products/salmon-oil-formula-for-dogs-salmon-8oz
+          - generic [ref=e223]:
+            - img "Salmon Oil Formula For Dogs Salmon" [ref=e224]
+            - button "Quick Add" [ref=e228]
+          - generic [ref=e229]:
+            - paragraph [ref=e230]: Alaska Naturals
+            - heading "Salmon Oil Formula For Dogs Salmon" [level=3] [ref=e231]
+            - generic [ref=e233]: $22.99
+        - link "Salmon Oil Formula For Dogs Salmon 32oz. Quick Add Alaska Naturals Salmon Oil Formula For Dogs Salmon 32oz. $55.99" [ref=e234] [cursor=pointer]:
+          - /url: /products/salmon-oil-formula-for-dogs-salmon-32oz
+          - generic [ref=e235]:
+            - img "Salmon Oil Formula For Dogs Salmon 32oz." [ref=e236]
+            - button "Quick Add" [ref=e240]
+          - generic [ref=e241]:
+            - paragraph [ref=e242]: Alaska Naturals
+            - heading "Salmon Oil Formula For Dogs Salmon 32oz." [level=3] [ref=e243]
+            - generic [ref=e245]: $55.99
+        - link "Salmon Oil Formula For Cats Salmon 4oz. Quick Add Alaska Naturals Salmon Oil Formula For Cats Salmon 4oz. $9.99" [ref=e246] [cursor=pointer]:
+          - /url: /products/salmon-oil-formula-for-cats-salmon-4oz
+          - generic [ref=e247]:
+            - img "Salmon Oil Formula For Cats Salmon 4oz." [ref=e248]
+            - button "Quick Add" [ref=e252]
+          - generic [ref=e253]:
+            - paragraph [ref=e254]: Alaska Naturals
+            - heading "Salmon Oil Formula For Cats Salmon 4oz." [level=3] [ref=e255]
+            - generic [ref=e257]: $9.99
+    - contentinfo [ref=e258]:
+      - generic [ref=e260]:
+        - generic [ref=e261]:
+          - link "🐾 animalia" [ref=e262] [cursor=pointer]:
+            - /url: /
+            - generic [ref=e263]: 🐾
+            - generic [ref=e264]: animalia
+          - paragraph [ref=e265]: Premium, curated pet wellness products for pets who are family. Vet-approved, transparent, and made with love.
+          - generic [ref=e266]:
+            - link "Instagram" [ref=e267] [cursor=pointer]:
+              - /url: "#"
+              - img [ref=e268]
+            - link "Facebook" [ref=e270] [cursor=pointer]:
+              - /url: "#"
+              - img [ref=e271]
+            - link "Twitter" [ref=e273] [cursor=pointer]:
+              - /url: "#"
+              - img [ref=e274]
+            - link "YouTube" [ref=e276] [cursor=pointer]:
+              - /url: "#"
+              - img [ref=e277]
+        - generic [ref=e279]:
+          - heading "Shop" [level=4] [ref=e280]
+          - list [ref=e281]:
+            - listitem [ref=e282]:
+              - link "All Products" [ref=e283] [cursor=pointer]:
+                - /url: /collections
+            - listitem [ref=e284]:
+              - link "Dogs" [ref=e285] [cursor=pointer]:
+                - /url: /collections/organic-canine-supplements-hip-and-joint
+            - listitem [ref=e286]:
+              - link "Cats" [ref=e287] [cursor=pointer]:
+                - /url: /collections/calm-feline-supplements
+            - listitem [ref=e288]:
+              - link "Supplements" [ref=e289] [cursor=pointer]:
+                - /url: /collections/organic-canine-supplements-hip-and-joint
+            - listitem [ref=e290]:
+              - link "Food" [ref=e291] [cursor=pointer]:
+                - /url: /collections/canine-dry-food
+        - generic [ref=e292]:
+          - heading "Help" [level=4] [ref=e293]
+          - list [ref=e294]:
+            - listitem [ref=e295]:
+              - link "Contact Us" [ref=e296] [cursor=pointer]:
+                - /url: /contact
+            - listitem [ref=e297]:
+              - link "FAQ" [ref=e298] [cursor=pointer]:
+                - /url: /faq
+            - listitem [ref=e299]:
+              - link "Shipping" [ref=e300] [cursor=pointer]:
+                - /url: /shipping
+            - listitem [ref=e301]:
+              - link "Returns" [ref=e302] [cursor=pointer]:
+                - /url: /returns
+            - listitem [ref=e303]:
+              - link "Track Order" [ref=e304] [cursor=pointer]:
+                - /url: /track-order
+        - generic [ref=e305]:
+          - heading "Company" [level=4] [ref=e306]
+          - list [ref=e307]:
+            - listitem [ref=e308]:
+              - link "About Us" [ref=e309] [cursor=pointer]:
+                - /url: /about
+            - listitem [ref=e310]:
+              - link "Our Story" [ref=e311] [cursor=pointer]:
+                - /url: /about
+            - listitem [ref=e312]:
+              - link "Blog" [ref=e313] [cursor=pointer]:
+                - /url: /blog
+            - listitem [ref=e314]:
+              - link "Careers" [ref=e315] [cursor=pointer]:
+                - /url: /careers
+        - generic [ref=e316]:
+          - heading "Legal" [level=4] [ref=e317]
+          - list [ref=e318]:
+            - listitem [ref=e319]:
+              - link "Privacy Policy" [ref=e320] [cursor=pointer]:
+                - /url: /privacy
+            - listitem [ref=e321]:
+              - link "Terms of Service" [ref=e322] [cursor=pointer]:
+                - /url: /terms
+            - listitem [ref=e323]:
+              - link "Accessibility" [ref=e324] [cursor=pointer]:
+                - /url: /accessibility
+      - generic [ref=e327]:
+        - paragraph [ref=e328]: © 2026 Animalia. All rights reserved.
+        - generic [ref=e330]:
+          - generic [ref=e331]: Visa
+          - generic [ref=e332]: Mastercard
+          - generic [ref=e333]: Amex
+          - generic [ref=e334]: PayPal
+          - generic [ref=e335]: Apple Pay
+  - button "Open Next.js Dev Tools" [ref=e341] [cursor=pointer]:
+    - img [ref=e342]

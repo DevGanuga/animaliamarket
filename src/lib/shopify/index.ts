@@ -40,6 +40,33 @@ import { GET_COLLECTIONS, GET_COLLECTION_BY_HANDLE, GET_FEATURED_COLLECTION } fr
 import { GET_SHOP, GET_MENU, GET_PAGE } from './queries/shop';
 import { CREATE_CART, GET_CART, ADD_TO_CART, UPDATE_CART_LINES, REMOVE_FROM_CART, APPLY_DISCOUNT_CODE } from './mutations/cart';
 
+const SHOPIFY_CHECKOUT_DOMAIN = process.env.SHOPIFY_CHECKOUT_DOMAIN;
+
+function normalizeCheckoutUrl(checkoutUrl: string): string {
+  if (!SHOPIFY_CHECKOUT_DOMAIN || !checkoutUrl) {
+    return checkoutUrl;
+  }
+
+  try {
+    const url = new URL(checkoutUrl);
+    url.protocol = "https:";
+    url.host = SHOPIFY_CHECKOUT_DOMAIN;
+    return url.toString();
+  } catch (error) {
+    console.error("Failed to normalize checkout URL:", error);
+    return checkoutUrl;
+  }
+}
+
+function normalizeCart<T extends Cart | null>(cart: T): T {
+  if (!cart) return cart;
+
+  return {
+    ...cart,
+    checkoutUrl: normalizeCheckoutUrl(cart.checkoutUrl),
+  } as T;
+}
+
 // ============================================================================
 // Product Operations
 // ============================================================================
@@ -176,12 +203,12 @@ export async function createCart(input: {
     throw new Error(data.cartCreate.userErrors.map((e) => e.message).join(', '));
   }
 
-  return data.cartCreate.cart;
+  return normalizeCart(data.cartCreate.cart);
 }
 
 export async function getCart(cartId: string) {
   const data = await fetchCart<{ cart: Cart | null }>(GET_CART, { cartId });
-  return data.cart;
+  return normalizeCart(data.cart);
 }
 
 export async function addToCart(
@@ -196,7 +223,7 @@ export async function addToCart(
     throw new Error(data.cartLinesAdd.userErrors.map((e) => e.message).join(', '));
   }
 
-  return data.cartLinesAdd.cart;
+  return normalizeCart(data.cartLinesAdd.cart);
 }
 
 export async function updateCartLines(
@@ -211,7 +238,7 @@ export async function updateCartLines(
     throw new Error(data.cartLinesUpdate.userErrors.map((e) => e.message).join(', '));
   }
 
-  return data.cartLinesUpdate.cart;
+  return normalizeCart(data.cartLinesUpdate.cart);
 }
 
 export async function removeFromCart(cartId: string, lineIds: string[]) {
@@ -223,7 +250,7 @@ export async function removeFromCart(cartId: string, lineIds: string[]) {
     throw new Error(data.cartLinesRemove.userErrors.map((e) => e.message).join(', '));
   }
 
-  return data.cartLinesRemove.cart;
+  return normalizeCart(data.cartLinesRemove.cart);
 }
 
 export async function applyDiscountCode(cartId: string, discountCodes: string[]) {
@@ -238,7 +265,7 @@ export async function applyDiscountCode(cartId: string, discountCodes: string[])
     throw new Error(data.cartDiscountCodesUpdate.userErrors.map((e) => e.message).join(', '));
   }
 
-  return data.cartDiscountCodesUpdate.cart;
+  return normalizeCart(data.cartDiscountCodesUpdate.cart);
 }
 
 // ============================================================================

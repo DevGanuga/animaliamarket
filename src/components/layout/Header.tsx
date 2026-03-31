@@ -4,12 +4,14 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { MegaMenu } from "./MegaMenu";
 import { CartDrawer } from "../cart";
+import { getCurrentCart } from "@/app/actions/cart";
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
   const [cartOpen, setCartOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [cartCount, setCartCount] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20);
@@ -21,6 +23,29 @@ export function Header() {
     const handleCartOpen = () => setCartOpen(true);
     window.addEventListener("cart-open", handleCartOpen);
     return () => window.removeEventListener("cart-open", handleCartOpen);
+  }, []);
+
+  useEffect(() => {
+    let isMounted = true;
+
+    const syncCartCount = async () => {
+      try {
+        const cart = await getCurrentCart();
+        if (isMounted) {
+          setCartCount(cart?.totalQuantity || 0);
+        }
+      } catch (error) {
+        console.error("Failed to sync cart count:", error);
+      }
+    };
+
+    syncCartCount();
+    window.addEventListener("cart-updated", syncCartCount);
+
+    return () => {
+      isMounted = false;
+      window.removeEventListener("cart-updated", syncCartCount);
+    };
   }, []);
 
   return (
@@ -101,7 +126,7 @@ export function Header() {
                 </svg>
                 {/* Cart Count Badge */}
                 <span className="absolute -top-0.5 -right-0.5 w-5 h-5 bg-[var(--sage-500)] text-white text-xs font-bold rounded-full flex items-center justify-center">
-                  0
+                  {cartCount}
                 </span>
               </button>
             </div>

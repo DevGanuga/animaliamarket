@@ -217,10 +217,10 @@ export function getCollectionSupportCopy(title: string) {
 export function getProductConcernLabel(input: ProductSignalInput) {
   const text = `${normalize(input.title)} ${normalize(input.description)} ${input.tags?.map(normalize).join(" ") || ""}`;
 
+  if (text.includes("salmon oil") || text.includes("pollock oil") || text.includes("omega")) return "Omega support";
   if (text.includes("joint") || text.includes("mobility") || text.includes("hip")) return "Mobility support";
   if (text.includes("calm") || text.includes("anxiety") || text.includes("stress")) return "Calming support";
   if (text.includes("dental") || text.includes("plaque") || text.includes("breath")) return "Dental support";
-  if (text.includes("salmon oil") || text.includes("pollock oil") || text.includes("omega")) return "Omega support";
   if (text.includes("digest") || text.includes("probiotic") || text.includes("gut")) return "Digestive support";
   if (text.includes("skin") || text.includes("coat")) return "Skin and coat support";
 
@@ -280,6 +280,10 @@ export function getProductOverviewParagraphs(input: ProductSignalInput) {
 export function getProductUseCases(input: ProductSignalInput) {
   const text = `${normalize(input.title)} ${normalize(input.description)} ${input.tags?.map(normalize).join(" ") || ""}`;
 
+  if (text.includes("salmon oil") || text.includes("pollock oil") || text.includes("omega")) {
+    return ["Daily feeding add-on", "Skin and coat support", "Easy basket builder"];
+  }
+
   if (text.includes("joint") || text.includes("mobility") || text.includes("hip")) {
     return ["Senior pets", "Active breeds", "Daily mobility routine"];
   }
@@ -290,10 +294,6 @@ export function getProductUseCases(input: ProductSignalInput) {
 
   if (text.includes("dental") || text.includes("plaque") || text.includes("breath")) {
     return ["Daily oral care", "Low-friction routine", "Repeat purchase"];
-  }
-
-  if (text.includes("salmon oil") || text.includes("pollock oil") || text.includes("omega")) {
-    return ["Daily feeding add-on", "Skin and coat support", "Easy basket builder"];
   }
 
   if (text.includes("digest") || text.includes("probiotic") || text.includes("gut")) {
@@ -314,6 +314,11 @@ export function getProductBenefits(input: ProductSignalInput) {
 
   const benefits: string[] = [];
 
+  if (text.includes("salmon oil") || text.includes("pollock oil") || text.includes("omega")) {
+    benefits.push("Adds omega support for skin, coat, and everyday wellness.");
+    benefits.push("Easy to use as part of a daily feeding routine.");
+  }
+
   if (text.includes("joint") || text.includes("mobility") || text.includes("hip")) {
     benefits.push("Supports daily joint comfort and mobility.");
     benefits.push("A strong fit for aging pets or active routines.");
@@ -327,11 +332,6 @@ export function getProductBenefits(input: ProductSignalInput) {
   if (text.includes("dental") || text.includes("plaque") || text.includes("breath")) {
     benefits.push("Supports daily dental care with an easy wellness routine.");
     benefits.push("A practical fit for repeat-purchase oral care baskets.");
-  }
-
-  if (text.includes("salmon oil") || text.includes("pollock oil") || text.includes("omega")) {
-    benefits.push("Adds omega support for skin, coat, and everyday wellness.");
-    benefits.push("Easy to use as part of a daily feeding routine.");
   }
 
   if (text.includes("digest") || text.includes("probiotic") || text.includes("gut")) {
