@@ -8,6 +8,7 @@ const PRODUCT_FRAGMENT = `
     id
     handle
     title
+    description
     availableForSale
     productType
     vendor

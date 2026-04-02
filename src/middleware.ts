@@ -20,7 +20,8 @@ export function middleware(request: NextRequest) {
 
   const redirectUrl = new URL(request.url);
   redirectUrl.protocol = "https:";
-  redirectUrl.host = SHOPIFY_CHECKOUT_DOMAIN;
+  redirectUrl.hostname = SHOPIFY_CHECKOUT_DOMAIN;
+  redirectUrl.port = "";
   redirectUrl.pathname = pathname;
   redirectUrl.search = search;
 

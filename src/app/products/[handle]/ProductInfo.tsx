@@ -122,19 +122,26 @@ export function ProductInfo({ product }: ProductInfoProps) {
           {product.title}
         </h1>
 
-        <div className="mt-5 flex items-baseline gap-3">
-          <span className="text-3xl font-semibold text-[var(--stone-800)]">
-            ${price.toFixed(2)}
-          </span>
+        <div className="mt-5">
+          <div className="flex items-baseline gap-3">
+            <span className="text-3xl font-semibold text-[var(--stone-800)]">
+              ${price.toFixed(2)}
+            </span>
+            {isOnSale && (
+              <>
+                <span className="text-xl text-[var(--stone-400)] line-through">
+                  ${compareAtPrice.toFixed(2)}
+                </span>
+                <span className="px-2.5 py-1 bg-amber-100 text-amber-800 text-sm font-bold rounded-full">
+                  Save {Math.round((savings / compareAtPrice) * 100)}%
+                </span>
+              </>
+            )}
+          </div>
           {isOnSale && (
-            <>
-              <span className="text-xl text-[var(--stone-400)] line-through">
-                ${compareAtPrice.toFixed(2)}
-              </span>
-              <span className="px-2.5 py-1 bg-[var(--sage-100)] text-[var(--sage-700)] text-sm font-semibold rounded-full">
-                Save ${savings.toFixed(2)}
-              </span>
-            </>
+            <p className="mt-1.5 text-sm font-medium text-[var(--sage-700)]">
+              You save ${savings.toFixed(2)} on this item
+            </p>
           )}
         </div>
 
@@ -254,6 +261,13 @@ export function ProductInfo({ product }: ProductInfoProps) {
         </div>
 
         <div className="mt-6 space-y-3">
+          {isAvailable && (
+            <div className="flex items-center gap-2 text-sm">
+              <span className="inline-block h-2.5 w-2.5 rounded-full bg-emerald-500 animate-pulse" />
+              <span className="font-medium text-emerald-700">In Stock &mdash; Ready to Ship</span>
+            </div>
+          )}
+
           <AddToCartButton
             variantId={selectedVariant?.id || product.variants[0]?.id}
             quantity={quantity}
@@ -288,7 +302,7 @@ export function ProductInfo({ product }: ProductInfoProps) {
             <svg className="w-5 h-5 text-[var(--sage-500)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
-            Built for smarter basket building
+            Great value for daily wellness routines
           </div>
         </div>
       </div>

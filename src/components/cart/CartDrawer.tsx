@@ -21,19 +21,19 @@ interface CartDrawerProps {
 const DEFAULT_SUGGESTIONS: DrawerSuggestion[] = [
   {
     title: "Add daily omega support",
-    description: "Easy add-on products that help lift basket value without making the cart feel heavy.",
+    description: "Omega oils are a simple daily add-on most pet parents love.",
     href: "/brands/alaska-naturals",
     cta: "Shop omega oils",
   },
   {
     title: "Add a dental routine",
-    description: "Low-friction dental care is one of the simplest ways to turn a one-item cart into a repeat routine.",
+    description: "Keep their teeth clean with easy daily dental care products.",
     href: "/collections/feline-dental-supplements",
     cta: "Shop dental care",
   },
   {
     title: "Stock up on mobility",
-    description: "Larger-count joint support and daily-use products are a natural way to build a stronger wellness basket.",
+    description: "Joint supplements and mobility support for active and senior pets.",
     href: "/collections/organic-canine-supplements-hip-and-joint",
     cta: "Shop joint support",
   },
@@ -44,7 +44,7 @@ function getSuggestions(cartTitles: string[], remainingForFreeShipping: number):
   const freeShippingPrompt =
     remainingForFreeShipping > 0
       ? `Add one more easy item to close the $${remainingForFreeShipping.toFixed(2)} gap.`
-      : "Your cart already qualifies for free shipping, so these are pure basket-builders.";
+      : "You've already unlocked free shipping! Here are some great additions.";
 
   if (text.includes("joint") || text.includes("hip") || text.includes("mobility")) {
     return [
@@ -62,7 +62,7 @@ function getSuggestions(cartTitles: string[], remainingForFreeShipping: number):
       },
       {
         title: "Round out the routine",
-        description: "Dental care is one of the lowest-friction ways to improve basket size without changing the main purchase intent.",
+        description: "Dental care is easy to add to any routine — and your pet's teeth will thank you.",
         href: "/collections/feline-dental-supplements",
         cta: "Add dental care",
       },
@@ -79,13 +79,13 @@ function getSuggestions(cartTitles: string[], remainingForFreeShipping: number):
       },
       {
         title: "Support everyday wellness",
-        description: "Omega and daily supplement products are easy to justify as a second item in a calm-focused basket.",
+        description: "Omega oils and daily supplements pair perfectly with calming products.",
         href: "/collections/organic-supplements",
         cta: "Shop daily wellness",
       },
       {
         title: "Build a larger routine",
-        description: "Joint support is another strong high-intent category if this household also has a senior or active pet.",
+        description: "Add joint support if you have a senior or active pet in the family.",
         href: "/collections/organic-canine-supplements-hip-and-joint",
         cta: "Shop joint support",
       },
@@ -96,19 +96,19 @@ function getSuggestions(cartTitles: string[], remainingForFreeShipping: number):
     return [
       {
         title: "Add gut or daily wellness",
-        description: `${freeShippingPrompt} Dental and digestion products make an easy recurring-care combination.`,
+        description: `${freeShippingPrompt} Dental and digestion care go great together.`,
         href: "/collections/feline-digestive-supplements",
         cta: "Shop digestion",
       },
       {
         title: "Add calming support",
-        description: "Calming is another low-complexity category that pairs naturally with everyday wellness baskets.",
+        description: "Help your pet stay relaxed with our popular calming supplements.",
         href: "/collections/calm-feline-supplements",
         cta: "Shop calming",
       },
       {
         title: "Add omega oils",
-        description: "Omega products are simple add-ons with good perceived value and repeat-use potential.",
+        description: "Omega oils support coat health, joints, and overall wellness.",
         href: "/brands/alaska-naturals",
         cta: "Browse omega oils",
       },
@@ -300,7 +300,7 @@ export function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
                   Your cart is empty
                 </h3>
                 <p className="text-[var(--stone-500)] mb-6 max-w-xs">
-                  Start with a high-intent need so the store can guide you toward a stronger wellness routine.
+                  Browse our bestsellers and find the perfect products for your pet.
                 </p>
                 <div className="grid w-full gap-3 mb-6">
                   {DEFAULT_SUGGESTIONS.map((item) => (
@@ -425,7 +425,7 @@ export function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
                         Complete the routine
                       </p>
                       <h3 className="mt-1 font-serif text-xl text-[var(--stone-800)]">
-                        Still room in the basket
+                        You might also like
                       </h3>
                     </div>
                     <span className="rounded-full bg-[var(--sage-50)] px-3 py-1 text-xs font-medium text-[var(--sage-700)]">

@@ -34,9 +34,11 @@ export function ProductGallery({ images, title }: ProductGalleryProps) {
     );
   }
 
+  const hasMultipleImages = images.length > 1;
+
   return (
-    <div className="space-y-4 lg:grid lg:grid-cols-[96px_minmax(0,1fr)] lg:gap-5 lg:space-y-0">
-      {images.length > 1 && (
+    <div className={`space-y-4 ${hasMultipleImages ? "lg:grid lg:grid-cols-[96px_minmax(0,1fr)] lg:gap-5 lg:space-y-0" : ""}`}>
+      {hasMultipleImages && (
         <div className="order-2 grid grid-cols-5 gap-3 lg:order-1 lg:grid-cols-1">
           {images.slice(0, 5).map((image, index) => (
             <button
@@ -60,7 +62,7 @@ export function ProductGallery({ images, title }: ProductGalleryProps) {
         </div>
       )}
 
-      <div className="order-1 lg:order-2">
+      <div className={hasMultipleImages ? "order-1 lg:order-2" : ""}>
         <div
           className="group relative aspect-[4/5] overflow-hidden rounded-[2rem] bg-[var(--stone-100)] cursor-zoom-in lg:aspect-square"
           onClick={() => setIsZoomed(true)}

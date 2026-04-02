@@ -166,6 +166,11 @@ export default async function CollectionPage({ params, searchParams }: Collectio
     }
   }
 
+  // Push out-of-stock products to the end (preserving relative order within each group)
+  const inStock = products.filter((p) => p.availableForSale);
+  const oos = products.filter((p) => !p.availableForSale);
+  products = [...inStock, ...oos];
+
   // Get unique vendors for filters
   const vendors = [...new Set(products.map((p) => p.vendor).filter(Boolean))];
 

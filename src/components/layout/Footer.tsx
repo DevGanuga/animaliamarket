@@ -45,6 +45,26 @@ export function Footer() {
 
   return (
     <footer className="bg-[var(--stone-900)] text-white">
+      {/* Pre-Footer USP Bar */}
+      <div className="bg-[var(--stone-800)] border-b border-white/5">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            {[
+              { icon: "🐾", title: "50+ Premium Brands", desc: "Handpicked and vet-approved" },
+              { icon: "🚀", title: "Fast Shipping", desc: "Free on orders over $50" },
+              { icon: "💯", title: "Satisfaction Guarantee", desc: "Love it or your money back" },
+              { icon: "💬", title: "Expert Support", desc: "Real pet people, real help" },
+            ].map((item) => (
+              <div key={item.title} className="flex flex-col items-center gap-2">
+                <span className="text-2xl">{item.icon}</span>
+                <p className="font-semibold text-sm text-white">{item.title}</p>
+                <p className="text-xs text-[var(--stone-400)]">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
       {/* Main Footer */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-2 md:grid-cols-6 gap-8 lg:gap-12">
@@ -54,10 +74,20 @@ export function Footer() {
               <span className="text-2xl">🐾</span>
               <span className="font-serif text-2xl">animalia</span>
             </Link>
-            <p className="text-[var(--stone-400)] text-sm leading-relaxed mb-6 max-w-xs">
+            <p className="text-[var(--stone-400)] text-sm leading-relaxed mb-4 max-w-xs">
               Premium, curated pet wellness products for pets who are family. 
               Vet-approved, transparent, and made with love.
             </p>
+            <div className="flex items-center gap-2 mb-6">
+              <div className="flex gap-0.5">
+                {[...Array(5)].map((_, i) => (
+                  <svg key={i} className="w-4 h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                ))}
+              </div>
+              <span className="text-xs text-[var(--stone-400)]">4.8/5 from 2,000+ reviews</span>
+            </div>
             {/* Social Links */}
             <div className="flex gap-4">
               {[

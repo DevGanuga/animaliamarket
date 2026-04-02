@@ -267,10 +267,10 @@ export default async function ProductPage({ params }: ProductPageProps) {
           </div>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { icon: "🎯", title: "Need-Based Curation", desc: "We surface products by the problem shoppers are trying to solve." },
-              { icon: "📦", title: "Current Stock Focus", desc: "The assortment is designed around what is ready to buy now." },
-              { icon: "🚚", title: "Free Shipping $50+", desc: "Easy threshold messaging for larger, more efficient baskets." },
-              { icon: "💬", title: "Human Support", desc: "If a shopper is unsure, the next step is guidance, not overwhelm." },
+              { icon: "🎯", title: "Curated Selection", desc: "Every product is chosen to solve a real pet wellness need." },
+              { icon: "📦", title: "In Stock & Ready", desc: "Everything you see is available and ready to ship today." },
+              { icon: "🚚", title: "Free Shipping $50+", desc: "Free standard shipping on all orders over $50." },
+              { icon: "💬", title: "Expert Support", desc: "Real pet people here to help you find the right product." },
             ].map((item) => (
               <div key={item.title} className="text-center">
                 <span className="text-4xl mb-4 block">{item.icon}</span>

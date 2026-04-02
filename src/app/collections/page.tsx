@@ -140,7 +140,7 @@ export default async function CollectionsPage() {
               <div className="absolute bottom-0 left-0 right-0 p-8">
                 <span className="text-4xl mb-3 block">🦴</span>
                 <h3 className="font-serif text-3xl text-white mb-2">Joint Support</h3>
-                <p className="text-white/80 mb-4">The clearest high-intent collection for mobility, long-term support, and larger daily-use formats.</p>
+                <p className="text-white/80 mb-4">Our most popular collection for mobility supplements, joint chews, and long-term support.</p>
                 <span className="inline-flex items-center gap-2 text-white font-medium">
                   Shop Mobility →
                 </span>

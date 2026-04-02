@@ -44,16 +44,16 @@ const COLLECTION_SPOTLIGHTS: CollectionSpotlight[] = [
   },
   {
     handle: "organic-canine-food",
-    label: "Repeat Purchase",
+    label: "Everyday Essential",
     title: "Dog Nutrition",
-    description: "Premium everyday food and topper options built for recurring baskets.",
+    description: "Premium everyday food and topper options your dog will love.",
     image: "/images/animalia-omega-wellness.png",
   },
   {
     handle: "feline-dry-foods",
-    label: "Pantry Refill",
+    label: "Cat Favorite",
     title: "Cat Dry Food",
-    description: "High-frequency essentials for cat households that reorder often.",
+    description: "Quality dry food essentials for healthy, happy cats.",
     image: "/images/animalia-cat-calming.png",
   },
   {
@@ -197,7 +197,7 @@ export function getCollectionSupportCopy(title: string) {
   if (text.includes("dental")) {
     return [
       "Best for daily breath and plaque support with low-friction routines.",
-      "Use these alongside food or wellness staples to grow basket size naturally.",
+      "Pairs well with food or wellness staples for a complete daily routine.",
     ];
   }
 
@@ -281,7 +281,7 @@ export function getProductUseCases(input: ProductSignalInput) {
   const text = `${normalize(input.title)} ${normalize(input.description)} ${input.tags?.map(normalize).join(" ") || ""}`;
 
   if (text.includes("salmon oil") || text.includes("pollock oil") || text.includes("omega")) {
-    return ["Daily feeding add-on", "Skin and coat support", "Easy basket builder"];
+    return ["Daily feeding add-on", "Skin and coat support", "Simple wellness boost"];
   }
 
   if (text.includes("joint") || text.includes("mobility") || text.includes("hip")) {
@@ -331,7 +331,7 @@ export function getProductBenefits(input: ProductSignalInput) {
 
   if (text.includes("dental") || text.includes("plaque") || text.includes("breath")) {
     benefits.push("Supports daily dental care with an easy wellness routine.");
-    benefits.push("A practical fit for repeat-purchase oral care baskets.");
+    benefits.push("Perfect for a simple daily oral care routine.");
   }
 
   if (text.includes("digest") || text.includes("probiotic") || text.includes("gut")) {
